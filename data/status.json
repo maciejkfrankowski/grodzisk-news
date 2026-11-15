@@ -4,10 +4,10 @@
   "name": "Urząd Miejski w Grodzisku Mazowieckim",
   "url": "https://grodzisk.pl/feed",
   "home": "https://grodzisk.pl",
-  "checked_at": "2026-11-15T11:00:59+00:00",
+  "checked_at": "2026-11-15T11:21:08+00:00",
   "ok": true,
   "found": 10,
-  "added": 10,
+  "added": 0,
   "error": ""
  },
  {
@@ -15,10 +15,10 @@
   "name": "Powiat Grodziski",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/wszystkie/",
   "home": "https://www.powiat-grodziski.pl",
-  "checked_at": "2026-11-15T11:01:00+00:00",
+  "checked_at": "2026-11-15T11:21:09+00:00",
   "ok": true,
   "found": 10,
-  "added": 10,
+  "added": 0,
   "error": ""
  },
  {
@@ -26,10 +26,54 @@
   "name": "Grodziskie Przewozy Autobusowe",
   "url": "https://gpagrodzisk.pl/aktualnosci/wszystkie/",
   "home": "https://gpagrodzisk.pl",
-  "checked_at": "2026-11-15T11:01:01+00:00",
+  "checked_at": "2026-11-15T11:21:10+00:00",
+  "ok": true,
+  "found": 10,
+  "added": 0,
+  "error": ""
+ },
+ {
+  "id": "biblioteka",
+  "name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "url": "https://biblioteka.grodzisk.pl/feed/",
+  "home": "https://biblioteka.grodzisk.pl",
+  "checked_at": "2026-11-15T11:21:11+00:00",
   "ok": true,
   "found": 10,
   "added": 10,
   "error": ""
+ },
+ {
+  "id": "ck-wydarzenia",
+  "name": "Centrum Kultury",
+  "url": "https://www.centrumkultury.eu/wp-json/tribe/events/v1/events?per_page=50",
+  "home": "https://www.centrumkultury.eu/wydarzenia/",
+  "checked_at": "2026-11-15T11:21:12+00:00",
+  "ok": true,
+  "found": 50,
+  "added": 50,
+  "error": ""
+ },
+ {
+  "id": "ck",
+  "name": "Centrum Kultury – ogłoszenia",
+  "url": "https://www.centrumkultury.eu/feed/",
+  "home": "https://www.centrumkultury.eu",
+  "checked_at": "2026-11-15T11:21:16+00:00",
+  "ok": true,
+  "found": 10,
+  "added": 10,
+  "error": ""
+ },
+ {
+  "id": "psp",
+  "name": "Straż Pożarna – KP PSP w Grodzisku Mazowieckim",
+  "url": "https://www.gov.pl/web/kppsp-grodzisk-mazowiecki/aktualnosci",
+  "home": "https://www.gov.pl/web/kppsp-grodzisk-mazowiecki",
+  "checked_at": "2026-11-15T11:21:17+00:00",
+  "ok": false,
+  "found": 0,
+  "added": 0,
+  "error": "https://www.gov.pl/web/kppsp-grodzisk-mazowiecki/aktualnosci: HTTPSConnectionPool(host='www.gov.pl', port=443): Max retries exceeded with url: /web/kppsp-grodzisk-mazowiecki/aktualnosci (Caused by NewConnectionError(\"HTTPSConnection(host='www.gov.pl', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
  }
 ]

@@ -89,8 +89,7 @@ sources:
   - id: wkd
     name: Warszawska Kolej Dojazdowa
     category: transport
-    adapter: html_links
-    url: https://wkd.com.pl/aktualnosci
-    link_pattern: 'wkd\.com\.pl/aktualnosci/\d+-[^/?#]+$'
+    adapter: rss
+    url: https://wkd.com.pl/aktualnosci?format=feed&type=rss
     home: https://wkd.com.pl
-    # jest też RSS: https://wkd.com.pl/aktualnosci?format=feed&type=rss (niesprawdzony)
+    

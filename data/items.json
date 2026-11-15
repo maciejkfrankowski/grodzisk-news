@@ -837,6 +837,18 @@
   "event_date": ""
  },
  {
+  "id": "ae02c61dda794fdd",
+  "source": "odpady",
+  "source_name": "Gospodarka odpadami – Urząd Miejski",
+  "category": "miasto",
+  "title": "Piknik ekologiczny pełen inspiracji!",
+  "lead": "Jak dbać o środowisko i dać drugie życie niepotrzebnym przedmiotom? – o tym przekonali się uczestnicy rodzinnego pikniku ekologicznego, który odbył się we wrześniu br. na terenie naszej Gminy. Na mieszkańców czekało…",
+  "url": "https://gospodarkaodpadami.grodzisk.pl/2026/11/03/piknik-ekologiczny-pelen-inspiracji/",
+  "published": "2026-11-03",
+  "fetched_at": "2026-11-15T17:29:09+00:00",
+  "event_date": ""
+ },
+ {
   "id": "9ee7ffed96e7111e",
   "source": "policja",
   "source_name": "Policja – KPP w Grodzisku Mazowieckim",
@@ -869,6 +881,18 @@
   "url": "https://biblioteka.grodzisk.pl/rodzinne-warsztaty-z-ilustratorka-magdalena-koziel-nowak/",
   "published": "2026-11-02",
   "fetched_at": "2026-11-15T11:21:12+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "62e3df655588e9b6",
+  "source": "odpady",
+  "source_name": "Gospodarka odpadami – Urząd Miejski",
+  "category": "miasto",
+  "title": "Odbiór odpadów tekstylnych",
+  "lead": "",
+  "url": "https://gospodarkaodpadami.grodzisk.pl/2026/10/30/odbior-odpadow-tekstylnych/",
+  "published": "2026-10-30",
+  "fetched_at": "2026-11-15T17:29:09+00:00",
   "event_date": ""
  },
  {
@@ -1374,6 +1398,18 @@
   "fetched_at": "2026-11-15T11:01:02+00:00"
  },
  {
+  "id": "e9c60f049345b54c",
+  "source": "odpady",
+  "source_name": "Gospodarka odpadami – Urząd Miejski",
+  "category": "miasto",
+  "title": "Rodzinny piknik ekologiczny",
+  "lead": "",
+  "url": "https://gospodarkaodpadami.grodzisk.pl/2026/09/10/rodzinny-piknik-ekologiczny/",
+  "published": "2026-09-10",
+  "fetched_at": "2026-11-15T17:29:09+00:00",
+  "event_date": ""
+ },
+ {
   "id": "27c10b1f755bc43d",
   "source": "solectwa",
   "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
@@ -1470,6 +1506,18 @@
   "event_date": ""
  },
  {
+  "id": "b77d2d34c2254406",
+  "source": "odpady",
+  "source_name": "Gospodarka odpadami – Urząd Miejski",
+  "category": "miasto",
+  "title": "Nie wyrzucaj – kompostuj!",
+  "lead": "Poradnik dotyczący kompostowania (plik PDF – 4 MB)",
+  "url": "https://gospodarkaodpadami.grodzisk.pl/2026/06/26/nie-wyrzucaj-kompostuj/",
+  "published": "2026-06-26",
+  "fetched_at": "2026-11-15T17:29:09+00:00",
+  "event_date": ""
+ },
+ {
   "id": "7b5c01bb0e13aba0",
   "source": "solectwa",
   "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
@@ -1491,6 +1539,18 @@
   "url": "https://solectwa.grodzisk.pl/piknik-rodzinny/",
   "published": "2026-06-25",
   "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "74ec65a87d7d6f65",
+  "source": "odpady",
+  "source_name": "Gospodarka odpadami – Urząd Miejski",
+  "category": "miasto",
+  "title": "Odpady",
+  "lead": "",
+  "url": "https://gospodarkaodpadami.grodzisk.pl/2026/06/16/odpady/",
+  "published": "2026-06-16",
+  "fetched_at": "2026-11-15T17:29:09+00:00",
   "event_date": ""
  },
  {
@@ -1527,6 +1587,18 @@
   "url": "https://www.centrumkultury.eu/warszawska-syrenka-eliminacje/",
   "published": "2026-02-17",
   "fetched_at": "2026-11-15T11:21:17+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "d40fa50b6d93061f",
+  "source": "odpady",
+  "source_name": "Gospodarka odpadami – Urząd Miejski",
+  "category": "miasto",
+  "title": "Zmiana godzin pracy",
+  "lead": "Uwaga! Zmiana godzin pracy Referatu Gospodarki Odpadami od 01 stycznia 2026 r. poniedziałek 8:00 – 17:00wtorek 8:00 – 16:00środa 8:00 – 16:00czwartek 8:00 – 16:00piątek 8:00 – 15:00",
+  "url": "https://gospodarkaodpadami.grodzisk.pl/2025/12/18/zmiana-godzin-pracy/",
+  "published": "2025-12-18",
+  "fetched_at": "2026-11-15T17:29:09+00:00",
   "event_date": ""
  },
  {

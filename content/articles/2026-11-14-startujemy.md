@@ -2,7 +2,7 @@
 title: Grodzisk lokalnie – startujemy
 date: 2026-11-14
 category: redakcja
-lead: Codzienny przegląd wiadomości z urzędów i instytucji Grodziska Mazowieckiego w jednym miejscu.
+lead: 'Codzienny przegląd wiadomości z urzędów i instytucji Grodziska Mazowieckiego w jednym miejscu. Foto: UM Grodzisk Mazowiecki'
 image: /static/img/uploads/umgrodzik.jpg
 featured: true
 draft: false

@@ -1,5 +1,53 @@
 [
  {
+  "id": "44a8e25b5dca6652",
+  "source": "osir-wydarzenia",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Kliknij aby przejść do LOTTO SUPERLIGA: Orlen Bogoria Grodzisk Mazowiecki VS. KS Energia TTCup.",
+  "lead": "",
+  "url": "https://grodzisksport.pl/kalendarz-wydarzen/lotto-superliga-orlen-bogoria-grodzisk-mazowiecki-vs-ks-energia-ttcup.html",
+  "published": "2026-11-15",
+  "fetched_at": "2026-11-15T13:45:06+00:00",
+  "event_date": "2026-11-18 18:00:00"
+ },
+ {
+  "id": "c437823f07ee1d6d",
+  "source": "osir-wydarzenia",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "TAURON I liga: KS SPARTA vs. SMS PZPS Spała",
+  "lead": "",
+  "url": "https://grodzisksport.pl/kalendarz-wydarzen/tauron-i-liga-ks-sparta-vs-sms-pzps-spala.html",
+  "published": "2026-11-15",
+  "fetched_at": "2026-11-15T13:45:06+00:00",
+  "event_date": "2026-11-22 20:30:00"
+ },
+ {
+  "id": "3ae43084d99559cd",
+  "source": "osir-wydarzenia",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "LOTTO SUPERLIGA: Orlen Bogoria Grodzisk Mazowiecki...",
+  "lead": "",
+  "url": "https://grodzisksport.pl/kalendarz-wydarzen/372-lotto-superliga-orlen-bogoria-grodzisk-mazowiecki-vs-energa-manekin-torun.html",
+  "published": "2026-11-15",
+  "fetched_at": "2026-11-15T13:45:06+00:00",
+  "event_date": "2026-12-09 18:00:00"
+ },
+ {
+  "id": "893dcd1c1680a3b5",
+  "source": "osir-wydarzenia",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Grodzisk Folk Festiwal - Górale na Mazowszu",
+  "lead": "",
+  "url": "https://grodzisksport.pl/kalendarz-wydarzen/grodzisk-folk-festiwal.html",
+  "published": "2026-11-15",
+  "fetched_at": "2026-11-15T13:45:06+00:00",
+  "event_date": "2026-12-13 17:00:00"
+ },
+ {
   "id": "fad1f5a02a8458c0",
   "source": "ck-wydarzenia",
   "source_name": "Centrum Kultury",

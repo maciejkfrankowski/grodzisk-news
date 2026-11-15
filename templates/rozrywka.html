@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Sudoku dnia – {{ site.title }} {{ site.subtitle }}{% endblock %}
+{% block title %}Rozrywka: sudoku i krzyżówki – {{ site.title }} {{ site.subtitle }}{% endblock %}
 {% block main %}
 <p class="crumbs"><a href="{{ root }}">Strona główna</a> › Rozrywka</p>
 <header class="sec"><h1>Sudoku dnia</h1><span class="sudoku-date">{{ sudoku_date }}</span></header>
@@ -19,7 +19,20 @@
   </div>
   <p class="su-help">Wybierz pole i wpisz cyfrę 1–9. W każdym wierszu, kolumnie i kwadracie 3×3 każda cyfra występuje raz. Nowa plansza codziennie.</p>
 </section>
-<p class="panel empty">Krzyżówka pojawi się w kolejnym etapie.</p>
+<header class="sec" id="krzyzowki"><h2>Krzyżówki</h2></header>
+{% if crosswords %}
+<div class="grid">
+  {% for c in crosswords %}
+  <article class="card">
+    <a class="thumb" href="{{ root ~ c.href }}" style="--c: #7a1f1f">{{ m.icon('puzzle') }}<span class="tag">Krzyżówka</span></a>
+    <div class="card-body"><h3><a href="{{ root ~ c.href }}">{{ c.title }}</a></h3>
+      <a class="btn" href="{{ root ~ c.href }}">Rozwiąż →</a></div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p class="panel empty">Krzyżówki pojawią się wkrótce.</p>
+{% endif %}
 <script type="application/json" id="sudoku-data">{{ sudoku|tojson }}</script>
 {% endblock %}
 {% block scripts %}<script src="{{ root }}static/sudoku.js" defer></script>{% endblock %}

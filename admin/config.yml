@@ -45,6 +45,8 @@ collections:
           - {label: Miasto i gmina, value: miasto}
           - {label: Powiat, value: powiat}
           - {label: Kultura, value: kultura}
+          - {label: Sport, value: sport}
+          - {label: Zdrowie, value: zdrowie}
           - {label: Bezpieczeństwo, value: bezpieczenstwo}
           - {label: Transport, value: transport}
       - {label: Zajawka, name: lead, widget: text, required: false, hint: "Jedno–dwa zdania widoczne na kartach i pod tytułem."}

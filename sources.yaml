@@ -2,6 +2,7 @@
 # adapter: rss | html_links | tribe_events
 #   html_links: wymaga link_pattern (regex na pełnym URL wpisu); opcje: strip, require_date
 #   tribe_events: REST API kalendarza WordPress (wydarzenia z terminem)
+# opcje wspólne: enabled (false = pomiń), exclude_title (regex – pomija wpisy o takim tytule)
 sources:
   - id: gmina
     name: Urząd Miejski w Grodzisku Mazowieckim
@@ -62,3 +63,34 @@ sources:
     require_date: true        # wzorzec łapie też menu; wpisy z listy mają datę
     enabled: false            # gov.pl nieosiągalne z serwerów GitHub Actions; włączyć po migracji na VPS
     home: https://www.gov.pl/web/kppsp-grodzisk-mazowiecki
+
+  - id: osir
+    name: OSiR Grodzisk Mazowiecki
+    category: sport
+    adapter: rss
+    url: https://grodzisksport.pl/rss/aktualnosci.xml
+    home: https://grodzisksport.pl
+
+  - id: solectwa
+    name: Sołectwa Gminy Grodzisk Mazowiecki
+    category: miasto
+    adapter: rss
+    url: https://solectwa.grodzisk.pl/feed/
+    home: https://solectwa.grodzisk.pl
+
+  - id: szpital
+    name: Szpital Zachodni
+    category: zdrowie
+    adapter: rss
+    url: https://szpitalzachodni.pl/feed/
+    exclude_title: '^(konkurs ofert|jadłospis)'
+    home: https://szpitalzachodni.pl
+
+  - id: wkd
+    name: Warszawska Kolej Dojazdowa
+    category: transport
+    adapter: html_links
+    url: https://wkd.com.pl/aktualnosci
+    link_pattern: 'wkd\.com\.pl/aktualnosci/\d+-[^/?#]+$'
+    home: https://wkd.com.pl
+    # jest też RSS: https://wkd.com.pl/aktualnosci?format=feed&type=rss (niesprawdzony)

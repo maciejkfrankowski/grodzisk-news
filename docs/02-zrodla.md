@@ -1,6 +1,6 @@
 # 02 – Katalog źródeł (stan: 2026-11-14)
 
-Wdrożone w `sources.yaml`: **gmina**, **powiat**, **gpa**, **biblioteka**, **ck-wydarzenia**, **ck**, **psp**. Reszta to kandydaci na kolejne etapy.
+Wdrożone w `sources.yaml`: **gmina**, **powiat**, **gpa**, **biblioteka**, **ck-wydarzenia**, **ck**, **osir**, **solectwa**, **szpital**, **wkd** (html_links, sprawdzony na zapisanej stronie); **psp** wyłączone (gov.pl nieosiągalne z GitHub Actions). Reszta to kandydaci na kolejne etapy.
 
 ## A. Instytucje publiczne
 
@@ -17,8 +17,12 @@ Wdrożone w `sources.yaml`: **gmina**, **powiat**, **gpa**, **biblioteka**, **ck
 | 8 | Szpital Zachodni | https://szpitalzachodni.pl/aktualnosci/ | ? | struktura niesprawdzona |
 | 9 | Sołectwa | np. https://kludzienko.grodzisk.pl , https://opypy.grodzisk.pl | rss | pełna lista do zebrania |
 
+| 10 | OSiR | https://grodzisksport.pl/rss/aktualnosci.xml | rss | wdrożone; kalendarz `/kalendarz-wydarzen/` do zrobienia |
+
+Sołectwa: wdrożone przez wspólny kanał https://solectwa.grodzisk.pl/feed/. Szpital: RSS https://szpitalzachodni.pl/feed/ z filtrem `exclude_title` (konkursy ofert, jadłospisy).
+
 ## B. Adresy do znalezienia
-OSiR / pływalnia, Straż Miejska, ZWiK (awarie wody), OPS, WKD (utrudnienia), PGE (wyłączenia prądu),
+Straż Miejska, ZWiK (awarie wody), OPS, policja (potrzebny zapisany HTML listy aktualności), PGE (wyłączenia prądu),
 BIP i eSesja Rady Miejskiej, PUP, sanepid, kluby sportowe, dyżury aptek.
 
 ## C. Media komercyjne – nie pobieramy

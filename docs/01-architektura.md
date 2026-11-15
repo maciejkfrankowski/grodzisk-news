@@ -54,6 +54,10 @@ i komplet na `/wydarzenia/`.
 (fine-grained, Contents: Read and write, tylko to repo). Zapis = commit na `main` = przebudowa.
 Workflow robi `git pull --rebase` przed wypchnięciem danych, żeby nie kolidować z commitami z panelu.
 
+## Krzyżówki
+Pliki `content/krzyzowki/*.html` są samodzielnymi stronami (własny CSS i JS). `gn/build.py` kopiuje je do
+`dist/rozrywka/krzyzowki/{slug}/index.html`, dokleja pasek powrotu i listuje na `/rozrywka/`.
+
 ## Sudoku dnia
 `gn/sudoku.py` generuje przy każdym buildzie trzy plansze (łatwe 40, średnie 33, trudne 28 podanych cyfr)
 z seedem `data:poziom`, więc w danym dniu plansze są stałe. Każda ma dokładnie jedno rozwiązanie

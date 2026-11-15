@@ -9,6 +9,8 @@ categories:
   - {slug: miasto, name: Miasto i gmina, icon: building, color: "#1557d6"}
   - {slug: powiat, name: Powiat, icon: map, color: "#0b7a75"}
   - {slug: kultura, name: Kultura, icon: ticket, color: "#8a3ffc"}
+  - {slug: sport, name: Sport, icon: ball, color: "#b45309"}
+  - {slug: zdrowie, name: Zdrowie, icon: heart, color: "#be123c"}
   - {slug: bezpieczenstwo, name: Bezpieczeństwo, icon: shield, color: "#c2410c"}
   - {slug: transport, name: Transport, icon: bus, color: "#2e9e4f"}
   - {slug: redakcja, name: Od redakcji, icon: pen, color: "#0b2a5b", nav: false}

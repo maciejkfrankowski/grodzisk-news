@@ -29,12 +29,14 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 | `gn/build.py` | generator `dist/` |
 | `templates/`, `static/` | szablony Jinja2, CSS, JS |
 | `content/articles/` | własne artykuły (Markdown + YAML) |
+| `content/krzyzowki/` | gotowe krzyżówki jako samodzielne pliki HTML |
 | `admin/` | panel redakcji: Sveltia CMS (wersja przypięta w `index.html`), pola w `config.yml` |
 | `.github/workflows/build.yml` | cron, commit danych, deploy Pages |
 
 ## Otwarte
 - Potwierdzić, że źródła nie blokują adresów IP GitHub Actions (strona `/zrodla/`).
-- Krzyżówka – etap 4 (sudoku i panel redakcji gotowe).
+- Policja: brak wglądu w budowę strony – potrzebny zapisany HTML listy aktualności.
+- Kalendarz OSiR (`grodzisksport.pl/kalendarz-wydarzen/`) do podpięcia pod Wydarzenia.
 - Kategorie w `admin/config.yml` trzeba zmieniać razem z `site.yaml`.
 - Logowanie do panelu dla osób bez konta GitHub (wymaga pośrednika OAuth) – na później.
 - PSP (gov.pl) wyłączone: nieosiągalne z GitHub Actions.

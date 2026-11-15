@@ -36,7 +36,7 @@ def now_iso() -> str:
 def clean_text(value: str, limit: int | None = None) -> str:
     """Usuwa tagi HTML i nadmiarowe białe znaki; opcjonalnie przycina do `limit`."""
     text = re.sub(r"<[^>]+>", " ", value or "").replace("\u00ad", "")
-    text = re.sub(r"\s+", " ", unescape(text)).strip()
+    text = re.sub(r"\s+", " ", unescape(unescape(text))).strip()
     text = re.sub(r"\s+([,.;:!?…])", r"\1", text)
     # stopka dodawana przez WordPressa do zajawek w RSS
     text = re.sub(r"\s*(Artykuł .{0,200} pochodzi z serwisu|The post .{0,200} appeared first on) .*$", "", text)

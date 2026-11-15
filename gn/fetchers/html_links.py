@@ -46,7 +46,7 @@ def _tidy(text: str, strip: list[re.Pattern]) -> str:
     """Usuwa fragmenty z `strip` (sources.yaml) oraz daty wplecione w tekst."""
     for pattern in strip:
         text = pattern.sub(" ", text)
-    text = re.sub(r"\b\d{1,2}\.\d{1,2}\.\d{4}\b|\b\d{4}-\d{2}-\d{2}\b", " ", text)
+    text = re.sub(r"(\b\d{1,2}\.\d{1,2}\.\d{4}\b(\s*r\.)?|\b\d{4}-\d{2}-\d{2}\b)", " ", text)
     return clean_text(text)
 
 

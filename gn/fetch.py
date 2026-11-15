@@ -6,6 +6,7 @@ Błąd jednego źródła nie przerywa pozostałych; wynik każdego trafia do dat
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import yaml
@@ -65,6 +66,9 @@ def run() -> int:
                  "home": source.get("home", source["url"]), "checked_at": now_iso()}
         try:
             fetched = ADAPTERS[source["adapter"]](source)
+            if source.get("exclude_title"):  # np. powtarzalne ogłoszenia bez wartości dla czytelnika
+                skip = re.compile(source["exclude_title"], re.I)
+                fetched = [item for item in fetched if not skip.search(item.title)]
             fresh = sorted((i.to_dict() for i in fetched), key=lambda i: i["published"],
                            reverse=True)[:MAX_PER_RUN]
             items, added = merge(items, fresh)

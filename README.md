@@ -62,6 +62,12 @@ Treść w Markdownie.
 
 Commit do `main` uruchamia przebudowę.
 
+## Nowa krzyżówka
+
+Wrzuć samodzielny plik HTML do `content/krzyzowki/` (np. `potop.html`). Generator skopiuje go do
+`/rozrywka/krzyzowki/{nazwa}/`, doklei pasek powrotu do serwisu i doda kartę na stronie Rozrywka
+(tytuł karty bierze z `<title>` pliku).
+
 ## Nowe źródło
 
 Dopisz wpis w `sources.yaml` (`adapter: rss` albo `html_links` + `link_pattern`). Szczegóły:

@@ -80,6 +80,31 @@ def event_labels(stamp: str) -> dict:
             "event_day": day, "event_mon": MONTHS[month - 1][:3]}
 
 
+BACK_BAR = ('<a href="../../" style="display:block;padding:10px 14px;background:#0b2a5b;color:#fff;'
+            'font:600 14px system-ui,sans-serif;text-decoration:none">← Grodzisk lokalnie · Rozrywka</a>')
+
+
+def build_crosswords() -> list[dict]:
+    """Kopiuje gotowe krzyżówki (samodzielne pliki HTML) do dist/rozrywka/krzyzowki/.
+
+    Do każdej dokleja pasek powrotu do serwisu; plik źródłowy pozostaje bez zmian.
+    """
+    found = []
+    for path in sorted((ROOT / "content" / "krzyzowki").glob("*.html")):
+        html = path.read_text(encoding="utf-8")
+        title = re.search(r"<title>(.*?)</title>", html, re.S | re.I)
+        slug = slugify(path.stem)
+        html = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + BACK_BAR.replace("../../", "../../"),
+                      html, count=1, flags=re.I)
+        target = DIST / "rozrywka" / "krzyzowki" / slug / "index.html"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(html, encoding="utf-8")
+        name = (title.group(1).strip() if title else path.stem)
+        found.append({"title": re.sub(r"\s*[–-]\s*krzyżówka\s*$", "", name, flags=re.I),
+                      "href": f"rozrywka/krzyzowki/{slug}/"})
+    return found
+
+
 def build() -> None:
     site = yaml.safe_load((ROOT / "site.yaml").read_text(encoding="utf-8"))
     categories = {c["slug"]: c for c in site["categories"]}
@@ -144,8 +169,9 @@ def build() -> None:
         if not entry["external"]:
             render("article.html", entry["href"].strip("/"), entry=entry, active="")
 
+    crosswords = build_crosswords()
     render("wydarzenia.html", "wydarzenia", entries=events[:80], active="wydarzenia")
-    render("rozrywka.html", "rozrywka", active="rozrywka", sudoku=daily(today_iso),
+    render("rozrywka.html", "rozrywka", active="rozrywka", sudoku=daily(today_iso), crosswords=crosswords,
            sudoku_date=date_pl(today_iso))
     render("zrodla.html", "zrodla", sources=sources, active="",
            status={s["id"]: s for s in status})

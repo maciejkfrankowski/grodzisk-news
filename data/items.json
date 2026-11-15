@@ -600,6 +600,18 @@
   "event_date": "2027-03-06 19:00:00"
  },
  {
+  "id": "ffe769e8477e7c33",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Funkcjonowanie Hali Widowiskowo-Sportowej w dniu 14.11.2026 r.",
+  "lead": "‼️INFORMACJA‼️ W związku z organizacją wydarzenia o charakterze masowym w dniu 14.11.2026 r. nasz obiekt będzie czynny w godz.: 14.11 (sobota) • Taras Widokowy: 7:00-17:00 • Siłownia CAIIS: 8:00-17:00 • Planetarium…",
+  "url": "https://grodzisksport.pl/aktualnosci/funkcjonowanie-hali-widowiskowo-sportowej-w-dniu-14112026-r.html",
+  "published": "2026-11-14",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
+ },
+ {
   "id": "1f0fbe46758206bb",
   "source": "gmina",
   "source_name": "Urząd Miejski w Grodzisku Mazowieckim",
@@ -609,6 +621,18 @@
   "url": "https://grodzisk.pl/2026/11/12/zakonczono-przebudowe-drogi-w-krasniczej-woli/",
   "published": "2026-11-12",
   "fetched_at": "2026-11-15T11:01:00+00:00"
+ },
+ {
+  "id": "ee9f425ddff020c2",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Hala Widowiskowo-Sportowa CAiIS nieczynna w dniu 11 listopada",
+  "lead": "W dniu 11 listopada Hala Widowiskowo-Sportowa będzie nieczynna.",
+  "url": "https://grodzisksport.pl/aktualnosci/hala-widowiskowo-sportowa-caiis-nieczynna-w-dniu-11-listopada.html",
+  "published": "2026-11-10",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
  },
  {
   "id": "650015d49bffffc7",
@@ -632,6 +656,30 @@
   "url": "https://biblioteka.grodzisk.pl/11-listopada-narodowe-swieto-niepodleglosci/",
   "published": "2026-11-10",
   "fetched_at": "2026-11-15T11:21:12+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "eb44b4b6ca7ef680",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Funkcjonowanie Pływalni Miejskiej w dniu 11.11",
+  "lead": "Szanowni Państwo, uprzejmie informujemy, że w środę 11.11 br. Pływalnia Miejska będzie CZYNNA w godz. 7:00-22:00 (wejścia do godz. 21:00). Strefa relaksu będzie czynna według harmonogramu, a sauny dolne w godzinach…",
+  "url": "https://grodzisksport.pl/aktualnosci/funkcjonowanie-plywalni-miejskiej-w-dniu-1111.html",
+  "published": "2026-11-09",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "c54167cd17274cdd",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Hala Widowiskowo-Sportowa CAiIS nieczynna w dniach 7-8 listopada",
+  "lead": "W związku z wydarzeniem o charakterze masowym w dniach 7-8.11.2026 r. nasz obiekt będzie nieczynny.",
+  "url": "https://grodzisksport.pl/aktualnosci/hala-widowiskowo-sportowa-caiis-nieczynna-w-dniach-7-8-listopada.html",
+  "published": "2026-11-06",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
   "event_date": ""
  },
  {
@@ -704,6 +752,18 @@
   "event_date": ""
  },
  {
+  "id": "3525d9a950cdd0fe",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Hala Widowiskowo-Sportowa CAiIS nieczynna w dniu 1 listopada",
+  "lead": "W dniu 1 listopada br. Hala Widowiskowo-Sportowa będzie nieczynna.",
+  "url": "https://grodzisksport.pl/aktualnosci/hala-widowiskowo-sportowa-caiis-nieczynna-w-dniu-1-listopada.html",
+  "published": "2026-10-30",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
+ },
+ {
   "id": "c97b98561ac5cfc0",
   "source": "biblioteka",
   "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
@@ -747,6 +807,18 @@
   "url": "https://grodzisk.pl/2026/10/30/zakonczono-termomodernizacje-budynkow-oswiatowych/",
   "published": "2026-10-30",
   "fetched_at": "2026-11-15T11:01:00+00:00"
+ },
+ {
+  "id": "8b901d3dcf6b3222",
+  "source": "szpital",
+  "source_name": "Szpital Zachodni",
+  "category": "zdrowie",
+  "title": "Światowy Dzień Udaru Mózgu",
+  "lead": "",
+  "url": "https://szpitalzachodni.pl/swiatowy-dzien-udaru-mozgu/",
+  "published": "2026-10-29",
+  "fetched_at": "2026-11-15T12:42:32+00:00",
+  "event_date": ""
  },
  {
   "id": "06f150ed010d60de",
@@ -849,6 +921,18 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/725/",
   "published": "2026-10-27",
   "fetched_at": "2026-11-15T11:01:01+00:00"
+ },
+ {
+  "id": "1763982593f9a645",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Hala Widowiskowo-Sportowa CAiIS w dniu 24.10 jest nieczynna",
+  "lead": "W związku z wydarzeniem o charakterze masowym w dniu 24.10.2026 r. nasz obiekt będzie nieczynny. Wstęp wyłącznie na wydarzenie wejściem A i B.",
+  "url": "https://grodzisksport.pl/aktualnosci/hala-widowiskowo-sportowa-caiis-w-dniu-2410-jest-nieczynna.html",
+  "published": "2026-10-23",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
  },
  {
   "id": "5a24265adbd6acf5",
@@ -962,6 +1046,30 @@
   "fetched_at": "2026-11-15T11:01:00+00:00"
  },
  {
+  "id": "3f733ec549635d43",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Oferta pracy na stanowisko: Kasjer / Kasjerka",
+  "lead": "Oferta pracy na stanowisko: Kasjer / Kasjerka Kasjer / kasjerka do zespołu Pływalni Miejskiej „Wodnik 2000” - szukamy. Dyrektor Ośrodka Sportu i Rekreacji Gminy Grodzisk Mazowiecki ogłasza otwarty i konkurencyjny nabór…",
+  "url": "https://grodzisksport.pl/aktualnosci/oferta-pracy-na-stanowisko-kasjer-kasjerka.html",
+  "published": "2026-10-19",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "0635846d54824724",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Sylwester w stylu PRL „Gdzie się podziały tamte prywatki”?",
+  "lead": "Sylwester w stylu PRL „Gdzie się podziały tamte prywatki”? BILETY Pamiętacie czasy, gdy na sylwestrowej imprezie królowały kasety magnetofonowe, domowe przekąski i muzyka, przy której bawili się wszyscy? 31 grudnia br…",
+  "url": "https://grodzisksport.pl/aktualnosci/sylwester-w-stylu-prl-gdzie-sie-podzialy-tamte-prywatki.html",
+  "published": "2026-10-16",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
+ },
+ {
   "id": "dddb19e80f9f52a9",
   "source": "powiat",
   "source_name": "Powiat Grodziski",
@@ -982,6 +1090,42 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/721/",
   "published": "2026-10-16",
   "fetched_at": "2026-11-15T11:01:01+00:00"
+ },
+ {
+  "id": "14da7a2e76cbb21c",
+  "source": "szpital",
+  "source_name": "Szpital Zachodni",
+  "category": "zdrowie",
+  "title": "Oświadczanie Dyrekcji Szpitala Zachodniego w Grodzisku Mazowieckim",
+  "lead": "",
+  "url": "https://szpitalzachodni.pl/oswiadczanie-dyrekcji-szpitala-zachodniego-w-grodzisku-mazowieckim/",
+  "published": "2026-10-14",
+  "fetched_at": "2026-11-15T12:42:32+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "a4fd5a9454ffe342",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "W dniu dzisiejszym (14.10) Pływalnia Miejska zostanie ponownie otwarta od godz. 17:00",
+  "lead": "Szanowni Państwo! Informujemy, że w związku z koniecznością przełączenia głównego zasilania gazu do stacji redukcyjnej związanego z trwającą rozbudową obiektu, w dniu dzisiejszym (14.10) Pływalnia Miejska zostanie…",
+  "url": "https://grodzisksport.pl/aktualnosci/w-dniu-dzisiejszym-1410-plywalnia-miejska-zostanie-ponownie-otwarta-od-godz-1700.html",
+  "published": "2026-10-14",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "1de46b5ea10040c6",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "14.10 br. Pływalnia Miejska będzie nieczynna w godz. 8:00-16:00",
+  "lead": "Szanowni Państwo! Uprzejmie informujemy, że w środę 14.10 br. Pływalnia Miejska będzie nieczynna w godz. 8:00-16:00 ze względu na prace związane z przełączeniem zasilania energii elektrycznej oraz gazu na nowe…",
+  "url": "https://grodzisksport.pl/aktualnosci/1410-br-plywalnia-miejska-bedzie-nieczynna-w-godz-800-1600.html",
+  "published": "2026-10-13",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
  },
  {
   "id": "92b8664a16301713",
@@ -1006,6 +1150,18 @@
   "fetched_at": "2026-11-15T11:01:01+00:00"
  },
  {
+  "id": "fec8d50ee4f3e8cf",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Musical legend Mazowsza \"Gdzie jest Róża?\"",
+  "lead": "Musical legend Mazowsza \"Gdzie jest Róża?\" POBIERZ BEZPŁATNY BILET GDZIE JEST RÓŻA? Musical legend Mazowsza Nowy polski musical o Mazowszu, jego legendach i wszystkim, czego nie da się zamknąć w urzędowej rubryce. 16…",
+  "url": "https://grodzisksport.pl/aktualnosci/musical-legend-mazowsza-gdzie-jest-roza-kopia.html",
+  "published": "2026-10-08",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
+ },
+ {
   "id": "3f259c4927f203f0",
   "source": "gpa",
   "source_name": "Grodziskie Przewozy Autobusowe",
@@ -1028,6 +1184,18 @@
   "fetched_at": "2026-11-15T11:01:02+00:00"
  },
  {
+  "id": "b1cd5d9e39a9a15f",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "III Targi Sprzętu Branży DJ'skiej",
+  "lead": "Już 7 października nasza Hala zamieni się w miejsce spotkania miłośników muzyki i nowoczesnych technologii! Podczas 3. edycji Targów Branży DJ-skiej czekać będzie: ponad 25 wystawców 70+ marek sprzęt, technologie i…",
+  "url": "https://grodzisksport.pl/aktualnosci/iii-targi-sprzetu-branzy-djskiej.html",
+  "published": "2026-10-05",
+  "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
+ },
+ {
   "id": "994a8334b9b402a3",
   "source": "gpa",
   "source_name": "Grodziskie Przewozy Autobusowe",
@@ -1039,6 +1207,30 @@
   "fetched_at": "2026-11-15T11:01:02+00:00"
  },
  {
+  "id": "2c0454903f8056e2",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "Informacja PGE",
+  "lead": "Informacja PGE (plik PDF – 212 KB) List do mieszkańców (plik PDF – 500 KB)",
+  "url": "https://solectwa.grodzisk.pl/informacja-pge/",
+  "published": "2026-09-18",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "24fdf2a09fbea522",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "Informacja o wściekliźnie wśród lisów",
+  "lead": "Informacja o wściekliźnie wśród lisów (plik PDF – 708 KB)",
+  "url": "https://solectwa.grodzisk.pl/informacja-o-wsciekliznie-wsrod-lisow/",
+  "published": "2026-09-15",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
+ },
+ {
   "id": "f25a5725ce7e5262",
   "source": "gpa",
   "source_name": "Grodziskie Przewozy Autobusowe",
@@ -1048,6 +1240,54 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/92/",
   "published": "2026-09-15",
   "fetched_at": "2026-11-15T11:01:02+00:00"
+ },
+ {
+  "id": "27c10b1f755bc43d",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "DOJAZD na Dożynki",
+  "lead": "Na miejsce wydarzenia można dojechać komunikacją miejską z terenu całej gminy. Gmina Grodzisk Mazowiecki uruchamia trzy specjalne, BEZPŁATNE linie autobusowe D1, D2 i D3, które zapewnią zarówno dojazd, jak i... Dowiedz…",
+  "url": "https://solectwa.grodzisk.pl/dojazd-na-dozynki/",
+  "published": "2026-08-28",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "d6211271c7c5e6b1",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "Szczepienie lisów przeciwko wściekliźnie",
+  "lead": "KOMUNIKAT MAZOWIECKIEGO WOJEWÓDZKIEGO LEKARZA WETERYNARII Na podstawie przepisów Rozporządzenia Ministra Rolnictwa i Rozwoju Wsi z dnia 11 marca 2026 r. w sprawie warunków i sposobu przeprowadzania ochronnych szczepień…",
+  "url": "https://solectwa.grodzisk.pl/szczepienie-lisow-przeciwko-wsciekliznie-2/",
+  "published": "2026-08-21",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "5abd2d3c248270a9",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "Otwarcie Placu Zabaw w Kozerach Nowych",
+  "lead": "",
+  "url": "https://solectwa.grodzisk.pl/otwarcie-placu-zabaw-w-kozerach-nowych/",
+  "published": "2026-08-14",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "dd699ed013fd19ad",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "Dożynki gminne",
+  "lead": "BURMISTRZ GRODZISKA MAZOWIECKIEGO TOMASZ KRUPSKI, RADA MIEJSKA, OŚRODEK KULTURY ORAZ SOŁTYS MAKÓWKI ZAPRASZAJĄ NA DOŻYNKI GMINNE Makówka, plac przy ul. Radziejowickiej 30 sierpnia 2026 Makówka Grodzisk Mazowiecki W…",
+  "url": "https://solectwa.grodzisk.pl/dozynki-gminne/",
+  "published": "2026-08-05",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
  },
  {
   "id": "30eedea81dd9bb67",
@@ -1062,6 +1302,18 @@
   "event_date": ""
  },
  {
+  "id": "fbd4c0996cc3238f",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "Szkody spowodowane przez suszę",
+  "lead": "ZGŁOSZENIA SZKÓD SPOWODOWANYCH PRZEZ WYSOKIE TEMPERATURY W UPRAWACH OWOCÓW I WARZYW Szanowni Państwo,w nawiązaniu do komunikatu Ministra Rolnictwa i Rozwoju Wsi, dotyczącego konieczności ustalenia skali szkód…",
+  "url": "https://solectwa.grodzisk.pl/szkody-spowodowane-przez-susze/",
+  "published": "2026-07-24",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
+ },
+ {
   "id": "06b997b2d91ecd71",
   "source": "ck",
   "source_name": "Centrum Kultury – ogłoszenia",
@@ -1071,6 +1323,42 @@
   "url": "https://www.centrumkultury.eu/regulaminy/",
   "published": "2026-07-23",
   "fetched_at": "2026-11-15T11:21:17+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "66c8dab4dbc3316b",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "Festiwal Kultur Świata 2026",
+  "lead": "",
+  "url": "https://solectwa.grodzisk.pl/festiwal-kultur-swiata-2026/",
+  "published": "2026-07-17",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "7b5c01bb0e13aba0",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "Chroń zwierzęta w upały!",
+  "lead": "W czasie upałów należy przede wszystkim zapewnić zwierzętom stały dostęp do świeżej, chłodnej wody oraz zacienione, przewiewne miejsce do odpoczynku. Ze względu na to, że psy i koty nie mają... Dowiedz się więcej",
+  "url": "https://solectwa.grodzisk.pl/chron-zwierzeta-w-upaly/",
+  "published": "2026-06-26",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "0f8215a751ec269c",
+  "source": "solectwa",
+  "source_name": "Sołectwa Gminy Grodzisk Mazowiecki",
+  "category": "miasto",
+  "title": "PIKNIK RODZINNY",
+  "lead": "",
+  "url": "https://solectwa.grodzisk.pl/piknik-rodzinny/",
+  "published": "2026-06-25",
+  "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": ""
  },
  {

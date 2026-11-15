@@ -25,3 +25,14 @@ ad:
   url: https://www.arespetfood.com
   image: static/img/ad-pies.svg
   image_alt: Uśmiechnięty pies
+
+# Blok „Przydatne” na stronie głównej: stałe skróty dla mieszkańców (icon: nazwy z templates/_macros.html)
+useful:
+  - {label: Harmonogram odbioru odpadów, note: Terminy wywozu, icon: trash, url: "https://gospodarkaodpadami.grodzisk.pl/harmonogram-odbioru-odpadow/"}
+  - {label: PSZOK, note: Punkt zbiórki odpadów, icon: recycle, url: "https://gospodarkaodpadami.grodzisk.pl/punkt-selektywnej-zbiorki-odpadow-komunalnych-pszok/"}
+  - {label: Autobusy GPA, note: Rozkłady i komunikaty, icon: bus, url: "https://gpagrodzisk.pl"}
+  - {label: WKD, note: Kolej dojazdowa, icon: train, url: "https://wkd.com.pl"}
+  - {label: OSiR, note: Pływalnia i hala, icon: ball, url: "https://grodzisksport.pl"}
+  - {label: Urząd Miejski, note: Sprawy urzędowe, icon: building, url: "https://grodzisk.pl"}
+  - {label: Szpital Zachodni, note: Informacje dla pacjentów, icon: heart, url: "https://szpitalzachodni.pl"}
+  - {label: Policja, note: KPP w Grodzisku, icon: shield, url: "https://grodzisk.policja.gov.pl"}

@@ -180,3 +180,13 @@ th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--lin
 .su-msg.ok { color: #1a7f37; }
 .su-msg.err { color: #b42318; }
 .su-help { margin: 0; font-size: .82rem; color: var(--muted); text-align: center; }
+
+/* Przydatne */
+.useful { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.useful a { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; color: var(--ink); }
+.useful a:hover { text-decoration: none; border-color: var(--blue); }
+.useful a:hover strong { color: var(--blue); }
+.useful .ico { width: 26px; height: 26px; color: var(--blue); }
+.useful strong { display: block; font-size: .92rem; line-height: 1.25; }
+.useful small { display: block; color: var(--muted); font-size: .78rem; line-height: 1.3; }
+@media (max-width: 860px) { .useful { grid-template-columns: 1fr 1fr; } .useful a { padding: 10px; gap: 8px; } }

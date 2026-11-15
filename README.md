@@ -67,6 +67,11 @@ Commit do `main` uruchamia przebudowę.
 Karta „Partner lokalny · Reklama” jest opisana w `site.yaml` w sekcji `ad`: `name`, `text`, `cta`, `url`
 (dokąd prowadzi), `image` (plik w `static/img/`). `enabled: false` ukrywa kartę.
 
+## Blok „Przydatne”
+
+Stałe skróty na stronie głównej (harmonogram odpadów, PSZOK, rozkłady itd.) są listą `useful` w `site.yaml`:
+`label`, `note`, `icon`, `url`. Usunięcie całej listy ukrywa blok.
+
 ## Nowa krzyżówka
 
 Wrzuć samodzielny plik HTML do `content/krzyzowki/` (np. `potop.html`). Generator skopiuje go do

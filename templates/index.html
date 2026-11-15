@@ -45,6 +45,18 @@
   </div>
 </section>
 
+{% if site.useful %}
+<section>
+  <header class="sec"><h2>Przydatne</h2></header>
+  <div class="useful">
+    {% for u in site.useful %}
+    <a href="{{ u.url }}" target="_blank" rel="noopener">{{ m.icon(u.icon) }}
+      <span><strong>{{ u.label }}</strong>{% if u.note %}<small>{{ u.note }}</small>{% endif %}</span></a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 {% if events %}
 <section>
   <header class="sec"><h2>Najbliższe wydarzenia</h2><a href="{{ root }}wydarzenia/">Zobacz wszystkie →</a></header>

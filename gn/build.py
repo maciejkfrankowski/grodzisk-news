@@ -43,15 +43,15 @@ def load_articles() -> list[dict]:
             print(f"[POMINIĘTO] {path.name}: brak nagłówka YAML")
             continue
         meta = yaml.safe_load(match.group(1)) or {}
-        if meta.get("draft"):
+        if meta.get("draft") or not meta.get("title") or not meta.get("date"):
             continue
         slug = meta.get("slug") or slugify(path.stem)
         articles.append({
             "title": meta["title"],
-            "lead": meta.get("lead", ""),
+            "lead": meta.get("lead") or "",
             "published": str(meta["date"])[:10],
-            "category": meta.get("category", "redakcja"),
-            "image": meta.get("image", ""),
+            "category": meta.get("category") or "redakcja",
+            "image": str(meta.get("image") or "").lstrip("/"),
             "featured": bool(meta.get("featured")),
             "href": f"artykul/{slug}/",
             "external": False,
@@ -111,6 +111,7 @@ def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
     shutil.copytree(ROOT / "static", DIST / "static")
+    shutil.copytree(ROOT / "admin", DIST / "admin")
     (DIST / ".nojekyll").write_text("")
 
     def render(template: str, target: str, **context) -> None:

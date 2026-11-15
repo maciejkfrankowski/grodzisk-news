@@ -48,6 +48,12 @@ Wpisy z `event_date` nie trafiają do strumienia wiadomości. Generator pokazuje
 (od dnia budowy), od najbliższego: dwa pierwsze w „Grodzisk dziś”, kolejne w sekcji „Najbliższe wydarzenia”
 i komplet na `/wydarzenia/`.
 
+## Panel redakcji
+`admin/index.html` ładuje Sveltia CMS (wersja przypięta, z unpkg), `admin/config.yml` opisuje kolekcję
+`content/articles` (pola zgodne z nagłówkiem YAML czytanym przez `gn/build.py`). Logowanie: token GitHuba
+(fine-grained, Contents: Read and write, tylko to repo). Zapis = commit na `main` = przebudowa.
+Workflow robi `git pull --rebase` przed wypchnięciem danych, żeby nie kolidować z commitami z panelu.
+
 ## Sudoku dnia
 `gn/sudoku.py` generuje przy każdym buildzie trzy plansze (łatwe 40, średnie 33, trudne 28 podanych cyfr)
 z seedem `data:poziom`, więc w danym dniu plansze są stałe. Każda ma dokładnie jedno rozwiązanie

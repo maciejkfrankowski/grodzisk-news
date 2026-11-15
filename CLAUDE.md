@@ -29,10 +29,13 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 | `gn/build.py` | generator `dist/` |
 | `templates/`, `static/` | szablony Jinja2, CSS, JS |
 | `content/articles/` | własne artykuły (Markdown + YAML) |
+| `admin/` | panel redakcji: Sveltia CMS (wersja przypięta w `index.html`), pola w `config.yml` |
 | `.github/workflows/build.yml` | cron, commit danych, deploy Pages |
 
 ## Otwarte
 - Potwierdzić, że źródła nie blokują adresów IP GitHub Actions (strona `/zrodla/`).
-- CMS w przeglądarce (Sveltia CMS / Pages CMS) – etap 3.
-- Krzyżówka – etap 4 (sudoku gotowe).
+- Krzyżówka – etap 4 (sudoku i panel redakcji gotowe).
+- Kategorie w `admin/config.yml` trzeba zmieniać razem z `site.yaml`.
+- Logowanie do panelu dla osób bez konta GitHub (wymaga pośrednika OAuth) – na później.
+- PSP (gov.pl) wyłączone: nieosiągalne z GitHub Actions.
 - Policja: ustalić działający adres aktualności KPP.

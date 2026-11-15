@@ -28,7 +28,22 @@ python -m http.server -d dist 8000     # podgląd: http://localhost:8000
 4. Actions → „Pobierz i opublikuj” → Run workflow (albo poczekaj na push/cron).
 5. Strona: `https://maciejkfrankowski.github.io/grodzisk-news/`; stan źródeł: `/zrodla/`.
 
-## Nowy artykuł
+## Panel redakcji (CMS)
+
+Adres: `https://maciejkfrankowski.github.io/grodzisk-news/admin/` (link „Panel redakcji” w stopce).
+Panel to Sveltia CMS – działa w przeglądarce i zapisuje artykuły jako commity do tego repo.
+
+Logowanie tokenem GitHuba (jednorazowo na przeglądarkę):
+
+1. GitHub → Settings → Developer settings → Personal access tokens → **Fine-grained tokens** → Generate new token.
+2. Repository access: **Only select repositories** → `grodzisk-news`.
+3. Permissions → Repository permissions → **Contents: Read and write**.
+4. Skopiuj token, w panelu wybierz **Sign In Using Access Token** i wklej go.
+
+Token daje prawo zapisu do repo – nie udostępniaj go i ustaw datę wygaśnięcia.
+Po zapisaniu artykułu strona przebudowuje się sama (ok. 1–2 min). Zdjęcia trafiają do `static/img/uploads/`.
+
+## Nowy artykuł ręcznie
 
 Plik `content/articles/RRRR-MM-DD-tytul.md`:
 

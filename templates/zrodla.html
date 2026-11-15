@@ -9,7 +9,7 @@
   {% for s in sources %}{% set st = status.get(s.id) %}
   <tr>
     <td><a href="{{ s.home or s.url }}" target="_blank" rel="noopener">{{ s.name }}</a></td>
-    <td>{% if not st %}jeszcze nie pobierano{% elif st.ok %}<span class="ok">OK</span>{% else %}<span class="err">Błąd</span> <small>{{ st.error }}</small>{% endif %}</td>
+    <td>{% if s.enabled is defined and not s.enabled %}wyłączone{% elif not st %}jeszcze nie pobierano{% elif st.ok %}<span class="ok">OK</span>{% else %}<span class="err">Błąd</span> <small>{{ st.error }}</small>{% endif %}</td>
     <td>{{ st.found if st else '–' }}</td><td>{{ st.added if st else '–' }}</td>
     <td>{{ st.checked_at[:16]|replace('T', ' ') if st else '–' }}</td>
   </tr>

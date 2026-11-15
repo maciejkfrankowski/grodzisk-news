@@ -33,7 +33,7 @@
 </main>
 <footer class="foot wrap">
   <p>{{ site.title }} {{ site.subtitle }} · aktualizacja: {{ build_date }}</p>
-  <p><a href="{{ root }}zrodla/">Źródła i stan pobierania</a> · Wpisy zewnętrzne prowadzą do stron źródłowych.</p>
+  <p><a href="{{ root }}zrodla/">Źródła i stan pobierania</a> · <a href="{{ root }}admin/" rel="nofollow">Panel redakcji</a> · Wpisy zewnętrzne prowadzą do stron źródłowych.</p>
 </footer>
 <nav class="tabbar" aria-label="Skróty">
   <a href="{{ root or './' }}"{% if not active %} class="on"{% endif %}>{{ m.icon('home') }}Aktualności</a>

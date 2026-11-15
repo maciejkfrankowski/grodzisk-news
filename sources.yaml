@@ -60,4 +60,5 @@ sources:
     url: https://www.gov.pl/web/kppsp-grodzisk-mazowiecki/aktualnosci
     link_pattern: '/web/kppsp-grodzisk-mazowiecki/[^/?#]+$'
     require_date: true        # wzorzec łapie też menu; wpisy z listy mają datę
+    enabled: false            # gov.pl nieosiągalne z serwerów GitHub Actions; włączyć po migracji na VPS
     home: https://www.gov.pl/web/kppsp-grodzisk-mazowiecki

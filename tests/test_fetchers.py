@@ -2,7 +2,9 @@
 import unittest
 
 from gn.fetch import merge
-from gn.fetchers import html_links, rss
+from gn.fetchers import html_links, rss, tribe_events
+from gn.models import clean_lead
+from gn.sudoku import count_solutions, daily
 
 SOURCE = {"id": "t", "name": "Test", "category": "powiat",
           "url": "https://example.org/aktualnosci/wszystkie/", "link_pattern": r"/aktualnosci/\d+/?$"}
@@ -57,6 +59,69 @@ class StripTest(unittest.TestCase):
         self.assertEqual(first.published, "2026-11-06")
         self.assertEqual(first.lead, "Zapraszamy na uroczystości.")
         self.assertEqual(second.title, "Inny wpis powiatu")
+
+
+GOV_LIST = """<html><body>
+<nav><ul><li><a href="/web/kppsp-grodzisk-mazowiecki/kontakt">Kontakt z komendą</a></li>
+<li><a href="/web/kppsp-grodzisk-mazowiecki/aktualnosci">Aktualności komendy</a></li></ul></nav>
+<div class="art-prev"><ul>
+<li><a href="/web/kppsp-grodzisk-mazowiecki/dzien-flagi"><picture><img src="x.jpg" alt=""></picture>
+  <div><div class="event"><span class="date">02.05.2026</span></div>
+  <div class="title">Dzień Flagi Rzeczypospolitej Polskiej</div>
+  <div class="intro">Strażacy uczcili święto państwowe.</div></div></a></li>
+<li><a href="/web/kppsp-grodzisk-mazowiecki/24-04-2026-polmaraton"><div><span class="date">24.04.2026</span>
+  <div class="title">Mistrzostwa Polski w Półmaratonie Strażaków</div></div></a></li>
+</ul></div><a href="/web/kppsp-grodzisk-mazowiecki/aktualnosci?page=2">2</a></body></html>"""
+
+
+class GovListTest(unittest.TestCase):
+    def test_require_date_and_title_class(self):
+        source = dict(SOURCE, url="https://www.gov.pl/web/kppsp-grodzisk-mazowiecki/aktualnosci",
+                      link_pattern=r"/web/kppsp-grodzisk-mazowiecki/[^/?#]+$", require_date=True)
+        items = html_links.parse(GOV_LIST, source)
+        self.assertEqual([i.title for i in items], ["Dzień Flagi Rzeczypospolitej Polskiej",
+                                                    "Mistrzostwa Polski w Półmaratonie Strażaków"])
+        self.assertEqual(items[0].published, "2026-05-02")
+        self.assertEqual(items[0].lead, "Strażacy uczcili święto państwowe.")
+        self.assertEqual(items[1].lead, "")
+
+
+class EventsTest(unittest.TestCase):
+    def test_parse_and_refresh(self):
+        payload = """{"events": [
+          {"url": "https://e.org/wydarzenie/a/", "title": "Koncert &#8211; dla dzieci", "start_date": "2026-11-15 13:00:00",
+           "all_day": false, "excerpt": "", "description": "<p>Zapraszamy na koncert familijny.</p>", "venue": {"venue": "Mediateka"}},
+          {"url": "https://e.org/wydarzenie/b/", "title": "Wystawa plakatu", "start_date": "2026-11-20 00:00:00",
+           "all_day": true, "excerpt": "", "description": "", "venue": []}]}"""
+        first, second = tribe_events.parse(payload, SOURCE)
+        self.assertEqual(first.title, "Koncert – dla dzieci")
+        self.assertEqual(first.event_date, "2026-11-15 13:00:00")
+        self.assertEqual(first.lead, "Mediateka · Zapraszamy na koncert familijny.")
+        self.assertEqual((second.lead, second.event_date), ("", "2026-11-20 00:00:00"))
+        merged, _ = merge([], [first.to_dict()])
+        moved = dict(first.to_dict(), event_date="2026-11-16 18:00:00")
+        merged, added = merge(merged, [moved])
+        self.assertEqual((added, merged[0]["event_date"]), (0, "2026-11-16 18:00:00"))
+
+
+class LeadTest(unittest.TestCase):
+    def test_empty_like_leads(self):
+        self.assertEqual(clean_lead("."), "")
+        self.assertEqual(clean_lead(" – "), "")
+        self.assertEqual(clean_lead("Szczegóły na plakacie"), "Szczegóły na plakacie")
+
+
+class SudokuTest(unittest.TestCase):
+    def test_daily_is_valid_unique_and_stable(self):
+        today = daily("2026-11-15")
+        self.assertEqual(today, daily("2026-11-15"))
+        self.assertNotEqual(today, daily("2026-11-16"))
+        for level in today["levels"]:
+            grid = [int(c) for c in level["puzzle"]]
+            self.assertEqual(count_solutions(grid[:]), 1)
+            self.assertTrue(all(p in ("0", s) for p, s in zip(level["puzzle"], level["solution"])))
+            for unit in range(9):
+                self.assertEqual(sorted(level["solution"][unit * 9:unit * 9 + 9]), list("123456789"))
 
 
 class RssTest(unittest.TestCase):

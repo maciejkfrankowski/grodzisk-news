@@ -6,7 +6,7 @@ from datetime import date
 
 import feedparser
 
-from ..models import Item, clean_text, make_id, now_iso
+from ..models import Item, clean_lead, clean_text, make_id, now_iso
 from . import http
 
 
@@ -28,7 +28,7 @@ def parse(content: bytes | str, source: dict) -> list[Item]:
                 source_name=source["name"],
                 category=source["category"],
                 title=title,
-                lead=clean_text(entry.get("summary", ""), limit=220),
+                lead=clean_lead(entry.get("summary", "")),
                 url=url,
                 published=published,
                 fetched_at=fetched,

@@ -15,10 +15,11 @@
       {% for e in today %}
       <li><a {{ m.link(e, root) }}>
         <span class="row-ico" style="--c: {{ e.cat.color }}">{{ m.icon(e.cat.icon) }}</span>
-        <span><strong>{{ e.title }}</strong><small>{{ e.cat.name }} · {{ e.date_pl }}</small></span>
+        <span><strong>{{ e.title }}</strong><small>{% if e.event_date %}Wydarzenie · {{ e.event_pl }}{% else %}{{ e.cat.name }} · {{ e.date_pl }}{% endif %}</small></span>
       </a></li>
       {% endfor %}
     </ul>
+    <a class="today-more" href="{{ root }}rozrywka/">{{ m.icon('puzzle') }}Sudoku dnia →</a>
   </aside>
 </section>
 
@@ -38,6 +39,13 @@
     {% endif %}
   </div>
 </section>
+
+{% if events %}
+<section>
+  <header class="sec"><h2>Najbliższe wydarzenia</h2><a href="{{ root }}wydarzenia/">Zobacz wszystkie →</a></header>
+  <div class="grid">{% for e in events %}{{ m.card(e, root) }}{% endfor %}</div>
+</section>
+{% endif %}
 
 <section class="panel contact">
   <div class="contact-head">{{ m.icon('mail') }}

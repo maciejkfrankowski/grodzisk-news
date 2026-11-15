@@ -1,7 +1,25 @@
 {% extends "base.html" %}
-{% block title %}Rozrywka – {{ site.title }} {{ site.subtitle }}{% endblock %}
+{% block title %}Sudoku dnia – {{ site.title }} {{ site.subtitle }}{% endblock %}
 {% block main %}
 <p class="crumbs"><a href="{{ root }}">Strona główna</a> › Rozrywka</p>
-<header class="sec"><h1>Rozrywka</h1></header>
-<p class="panel empty">Sudoku dnia i krzyżówka pojawią się w kolejnym etapie.</p>
+<header class="sec"><h1>Sudoku dnia</h1><span class="sudoku-date">{{ sudoku_date }}</span></header>
+<section class="sudoku" id="sudoku">
+  <div class="su-levels" role="tablist" aria-label="Poziom trudności">
+    {% for level in sudoku.levels %}<button type="button" role="tab" data-level="{{ level.slug }}">{{ level.name }}</button>{% endfor %}
+  </div>
+  <div class="su-board" id="su-board" role="grid" aria-label="Plansza sudoku"></div>
+  <p class="su-msg" id="su-msg" role="status" aria-live="polite"></p>
+  <div class="su-pad" id="su-pad" aria-label="Cyfry">
+    {% for n in range(1, 10) %}<button type="button" data-n="{{ n }}">{{ n }}</button>{% endfor %}
+    <button type="button" data-n="0" aria-label="Wyczyść pole">⌫</button>
+  </div>
+  <div class="su-actions">
+    <button type="button" id="su-check">Sprawdź</button>
+    <button type="button" id="su-reset">Od nowa</button>
+  </div>
+  <p class="su-help">Wybierz pole i wpisz cyfrę 1–9. W każdym wierszu, kolumnie i kwadracie 3×3 każda cyfra występuje raz. Nowa plansza codziennie.</p>
+</section>
+<p class="panel empty">Krzyżówka pojawi się w kolejnym etapie.</p>
+<script type="application/json" id="sudoku-data">{{ sudoku|tojson }}</script>
 {% endblock %}
+{% block scripts %}<script src="{{ root }}static/sudoku.js" defer></script>{% endblock %}

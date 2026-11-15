@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ITEMS_PATH = ROOT / "data" / "items.json"
 STATUS_PATH = ROOT / "data" / "status.json"
 MAX_ITEMS = 600
-MAX_PER_RUN = 30  # ile najnowszych wpisów bierzemy z jednego źródła na przebieg
+MAX_PER_RUN = 50  # ile najnowszych wpisów bierzemy z jednego źródła na przebieg
 
 
 def load_json(path: Path, default):
@@ -30,16 +30,24 @@ def save_json(path: Path, payload) -> None:
 
 
 def merge(existing: list[dict], fresh: list[dict]) -> tuple[list[dict], int]:
-    """Dokleja nowe wpisy; istniejące zostają bez zmian (stabilna data i tytuł)."""
-    known = {item["id"] for item in existing}
+    """Dokleja nowe wpisy; istniejące zostają bez zmian (stabilna data i tytuł).
+
+    Wyjątek: wydarzenia (`event_date`) – termin, tytuł i opis są odświeżane.
+    """
+    known = {item["id"]: item for item in existing}
     titles = {(item["source"], item["title"].casefold()) for item in existing}
     added = 0
     for item in fresh:
         key = (item["source"], item["title"].casefold())
-        if item["id"] in known or key in titles:
+        if item["id"] in known:
+            if item.get("event_date"):
+                known[item["id"]].update(title=item["title"], lead=item["lead"],
+                                         event_date=item["event_date"])
+            continue
+        if key in titles and not item.get("event_date"):
             continue
         existing.append(item)
-        known.add(item["id"])
+        known[item["id"]] = item
         titles.add(key)
         added += 1
     existing.sort(key=lambda i: (i["published"], i["fetched_at"]), reverse=True)

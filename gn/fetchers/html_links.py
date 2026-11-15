@@ -3,6 +3,9 @@
 Szuka linków pasujących do `link_pattern` (regex na pełnym URL), a tytuł, datę
 i lead bierze z najbliższego kontenera, który zawiera dokładnie jeden taki wpis.
 Dzięki temu jeden adapter obsługuje strony typu /aktualnosci/{id}.
+
+Opcje źródła: `strip` (regexy wycinane z tytułu i leadu), `require_date` (pomija linki,
+przy których nie ma daty – przydatne, gdy wzorzec URL łapie też menu).
 """
 from __future__ import annotations
 
@@ -12,11 +15,12 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup, Tag
 
-from ..models import Item, clean_text, find_date, make_id, now_iso
+from ..models import Item, clean_lead, clean_text, find_date, make_id, now_iso
 from . import http
 
 MAX_CLIMB = 5
 MIN_TITLE = 8
+TITLE_CLASS = re.compile(r"title|tytul", re.I)
 
 
 def _container(anchor: Tag, url: str, base: str, pattern: re.Pattern) -> Tag:
@@ -62,7 +66,7 @@ def parse(html: str, source: dict) -> list[Item]:
     items: list[Item] = []
     for url, group in anchors.items():
         box = _container(group[0], url, base, pattern)
-        heading = box.find(re.compile(r"^h[1-6]$"))
+        heading = box.find(re.compile(r"^h[1-6]$")) or box.find(class_=TITLE_CLASS)
         candidates = [clean_text(a.get_text(" ")) for a in group]
         if heading:
             candidates.insert(0, clean_text(heading.get_text(" ")))
@@ -73,7 +77,10 @@ def parse(html: str, source: dict) -> list[Item]:
         raw_title = titles[0] if heading else max(titles, key=len)
 
         box_text = clean_text(box.get_text(" "))
-        published = find_date(box_text) or date.today().isoformat()
+        published = find_date(box_text)
+        if not published and source.get("require_date"):
+            continue  # link z menu lub stopki, nie wpis z listy
+        published = published or date.today().isoformat()
         title = _tidy(raw_title, strip)
         lead = _tidy(box_text.replace(raw_title, " "), strip).replace(title, " ")
         lead = re.sub(r"(?i)\b(czytaj (więcej|dalej)|więcej|zobacz)\b\s*[»>→]*", " ", lead)
@@ -86,7 +93,7 @@ def parse(html: str, source: dict) -> list[Item]:
                 source_name=source["name"],
                 category=source["category"],
                 title=title,
-                lead=clean_text(lead, limit=220),
+                lead=clean_lead(lead),
                 url=url,
                 published=published,
                 fetched_at=fetched,

@@ -22,15 +22,17 @@ href="{{ entry.href if entry.external else root ~ entry.href }}"{% if entry.exte
 {%- endmacro %}
 
 {% macro meta(entry) %}
-<p class="meta">{{ icon('calendar') }}<time datetime="{{ entry.published }}">{{ entry.date_pl }}</time>
+<p class="meta">{{ icon('calendar') }}{% if entry.event_date %}<time datetime="{{ entry.event_date[:10] }}">{{ entry.event_pl }}</time>{% else %}<time datetime="{{ entry.published }}">{{ entry.date_pl }}</time>{% endif %}
 <span class="src">{{ entry.source_name }}{% if entry.external %} ↗{% endif %}</span></p>
 {% endmacro %}
 
 {% macro card(entry, root) %}
 <article class="card">
   <a class="thumb" {{ link(entry, root) }} style="--c: {{ entry.cat.color }}"{% if entry.image %} data-img{% endif %}>
-    {% if entry.image %}<img src="{{ root ~ entry.image }}" alt="" loading="lazy">{% else %}{{ icon(entry.cat.icon) }}{% endif %}
-    <span class="tag">{{ entry.cat.name }}</span>
+    {% if entry.image %}<img src="{{ root ~ entry.image }}" alt="" loading="lazy">
+    {% elif entry.event_date %}<span class="when"><b>{{ entry.event_day }}</b>{{ entry.event_mon }}</span>
+    {% else %}{{ icon(entry.cat.icon) }}{% endif %}
+    <span class="tag">{{ 'Wydarzenie' if entry.event_date else entry.cat.name }}</span>
   </a>
   <div class="card-body">
     <h3><a {{ link(entry, root) }}>{{ entry.title }}</a></h3>

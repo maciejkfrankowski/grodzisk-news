@@ -17,6 +17,7 @@
   </a>
   <nav class="nav" aria-label="Główna">
     <a href="{{ root or './' }}"{% if not active %} class="on"{% endif %}>Aktualności</a>
+    <a href="{{ root }}wydarzenia/"{% if active == 'wydarzenia' %} class="on"{% endif %}>Wydarzenia</a>
     {% for c in nav %}<a href="{{ root }}kategoria/{{ c.slug }}/"{% if active == c.slug %} class="on"{% endif %}>{{ c.name }}</a>{% endfor %}
     <a href="{{ root }}rozrywka/"{% if active == 'rozrywka' %} class="on"{% endif %}>Rozrywka</a>
   </nav>
@@ -37,10 +38,11 @@
 <nav class="tabbar" aria-label="Skróty">
   <a href="{{ root or './' }}"{% if not active %} class="on"{% endif %}>{{ m.icon('home') }}Aktualności</a>
   <a href="{{ root }}kategoria/miasto/"{% if active == 'miasto' %} class="on"{% endif %}>{{ m.icon('building') }}Miasto</a>
-  <a href="{{ root }}kategoria/kultura/"{% if active == 'kultura' %} class="on"{% endif %}>{{ m.icon('ticket') }}Kultura</a>
+  <a href="{{ root }}wydarzenia/"{% if active == 'wydarzenia' %} class="on"{% endif %}>{{ m.icon('calendar') }}Wydarzenia</a>
   <a href="{{ root }}kategoria/transport/"{% if active == 'transport' %} class="on"{% endif %}>{{ m.icon('bus') }}Transport</a>
   <a href="{{ root }}rozrywka/"{% if active == 'rozrywka' %} class="on"{% endif %}>{{ m.icon('puzzle') }}Rozrywka</a>
 </nav>
 <script src="{{ root }}static/app.js" defer></script>
+{% block scripts %}{% endblock %}
 </body>
 </html>

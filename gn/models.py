@@ -19,6 +19,7 @@ class Item:
     url: str
     published: str  # ISO: YYYY-MM-DD
     fetched_at: str  # ISO datetime UTC
+    event_date: str = ""  # tylko wydarzenia: RRRR-MM-DD GG:MM:SS (czas lokalny)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -42,6 +43,12 @@ def clean_text(value: str, limit: int | None = None) -> str:
     if limit and len(text) > limit:
         text = text[:limit].rsplit(" ", 1)[0].rstrip(",.;:–- ") + "…"
     return text
+
+
+def clean_lead(value: str, limit: int = 220) -> str:
+    """Zajawka; puste lub szczątkowe („.”, „–”) zwraca jako pusty tekst."""
+    text = clean_text(value, limit=limit)
+    return text if len(re.findall(r"\w", text)) >= 8 else ""
 
 
 _DATE_PATTERNS = (

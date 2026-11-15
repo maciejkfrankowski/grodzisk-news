@@ -14,6 +14,9 @@ import markdown
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from .models import clean_lead
+from .sudoku import daily
+
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 MONTHS = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca",
@@ -62,8 +65,19 @@ def load_items() -> list[dict]:
     path = ROOT / "data" / "items.json"
     items = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
     for item in items:
-        item.update(href=item["url"], external=True, featured=False, image="")
+        item.update(href=item["url"], external=True, featured=False, image="",
+                    event_date=item.get("event_date", ""))
+        if not item["event_date"]:
+            item["lead"] = clean_lead(item["lead"])
     return items
+
+
+def event_labels(stamp: str) -> dict:
+    """Etykiety terminu wydarzenia z `RRRR-MM-DD GG:MM:SS`."""
+    year, month, day = (int(part) for part in stamp[:10].split("-"))
+    time = stamp[11:16] if stamp[11:16] not in ("", "00:00") else ""
+    return {"event_pl": f"{day} {MONTHS[month - 1]}" + (f", godz. {time}" if time else ""),
+            "event_day": day, "event_mon": MONTHS[month - 1][:3]}
 
 
 def build() -> None:
@@ -71,10 +85,18 @@ def build() -> None:
     categories = {c["slug"]: c for c in site["categories"]}
     fallback = site["categories"][0]
 
-    entries = load_articles() + load_items()
-    for entry in entries:
+    today_iso = date.today().isoformat()
+    everything = load_articles() + load_items()
+    for entry in everything:
+        entry.setdefault("event_date", "")
         entry["cat"] = categories.get(entry["category"], fallback)
         entry["date_pl"] = date_pl(entry["published"])
+        if entry["event_date"]:
+            entry.update(event_labels(entry["event_date"]))
+    # Wydarzenia (z terminem) idą osobnym torem: tylko nadchodzące, od najbliższego
+    events = sorted((e for e in everything if e["event_date"][:10] >= today_iso),
+                    key=lambda e: e["event_date"])
+    entries = [e for e in everything if not e["event_date"]]
     entries.sort(key=lambda e: (e["published"], not e["external"]), reverse=True)
 
     status_path = ROOT / "data" / "status.json"
@@ -100,7 +122,7 @@ def build() -> None:
     # Strona główna
     hero = next((e for e in entries if e["featured"]), entries[0] if entries else None)
     rest = [e for e in entries if e is not hero]
-    today, seen = [], set()
+    today, seen = events[:2], set()
     for entry in rest:  # „Grodzisk dziś”: najnowszy wpis z każdej kategorii
         if entry["category"] not in seen:
             seen.add(entry["category"])
@@ -108,7 +130,7 @@ def build() -> None:
     top = [e for e in rest if e not in today[:4]][:3]
     columns = [{"cat": c, "entries": [e for e in rest if e["category"] == c["slug"]][:4]}
                for c in env.globals["nav"]]
-    render("index.html", "", hero=hero, today=today[:4], top=top,
+    render("index.html", "", hero=hero, today=today[:4], top=top, events=events[2:6] or events[:4],
            columns=[c for c in columns if c["entries"]][:3], active="")
 
     # Kategorie
@@ -121,14 +143,17 @@ def build() -> None:
         if not entry["external"]:
             render("article.html", entry["href"].strip("/"), entry=entry, active="")
 
-    render("rozrywka.html", "rozrywka", active="rozrywka")
+    render("wydarzenia.html", "wydarzenia", entries=events[:80], active="wydarzenia")
+    render("rozrywka.html", "rozrywka", active="rozrywka", sudoku=daily(today_iso),
+           sudoku_date=date_pl(today_iso))
     render("zrodla.html", "zrodla", sources=sources, active="",
            status={s["id"]: s for s in status})
 
     search = [{"t": e["title"], "l": e["lead"], "u": e["href"], "x": e["external"],
-               "d": e["date_pl"], "s": e["source_name"]} for e in entries[:300]]
+               "d": e.get("event_pl") or e["date_pl"], "s": e["source_name"]}
+              for e in events[:80] + entries[:300]]
     (DIST / "search.json").write_text(json.dumps(search, ensure_ascii=False), encoding="utf-8")
-    print(f"Zbudowano dist/: {len(entries)} wpisów, {len(site['categories'])} kategorii")
+    print(f"Zbudowano dist/: {len(entries)} wpisów, {len(events)} wydarzeń, {len(site['categories'])} kategorii")
 
 
 if __name__ == "__main__":

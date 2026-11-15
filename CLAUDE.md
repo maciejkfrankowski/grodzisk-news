@@ -10,7 +10,8 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 - Brak backendu: stan trzymamy w repo (`data/*.json`, `content/articles/*.md`).
 - Wpisy zewnętrzne: tylko tytuł, krótki lead (≤220 znaków), data i link do źródła.
   Nie kopiujemy pełnych treści ani zdjęć. Mediów komercyjnych nie pobieramy.
-- Każde źródło = wpis w `sources.yaml`. Nowy adapter tylko wtedy, gdy `rss` i `html_links` nie wystarczą.
+- Każde źródło = wpis w `sources.yaml`. Nowy adapter tylko wtedy, gdy istniejące nie wystarczą.
+- Paczki z poprawkami nie zawierają katalogu `data/` (żeby nie nadpisać danych pobranych przez bota).
 - Adapter ma funkcję `parse(content, source) -> list[Item]` (testowalna offline) i `fetch(source)`.
 - Błąd jednego źródła nie może przerwać przebiegu; wynik trafia do `data/status.json`.
 - Linki w szablonach zawsze przez zmienną `root` (serwis działa w podkatalogu `/grodzisk-news/`).
@@ -23,7 +24,8 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 | `sources.yaml` | katalog źródeł |
 | `site.yaml` | nazwa, kategorie, slot reklamowy, e-mail kontaktowy |
 | `gn/fetch.py` | pobieranie + scalanie z `data/items.json` |
-| `gn/fetchers/` | adaptery `rss`, `html_links`, klient HTTP |
+| `gn/fetchers/` | adaptery `rss`, `html_links`, `tribe_events`, klient HTTP |
+| `gn/sudoku.py`, `static/sudoku.js` | generator i gra „Sudoku dnia” |
 | `gn/build.py` | generator `dist/` |
 | `templates/`, `static/` | szablony Jinja2, CSS, JS |
 | `content/articles/` | własne artykuły (Markdown + YAML) |
@@ -32,4 +34,5 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 ## Otwarte
 - Potwierdzić, że źródła nie blokują adresów IP GitHub Actions (strona `/zrodla/`).
 - CMS w przeglądarce (Sveltia CMS / Pages CMS) – etap 3.
-- Sudoku dnia, potem krzyżówka – etap 4.
+- Krzyżówka – etap 4 (sudoku gotowe).
+- Policja: ustalić działający adres aktualności KPP.

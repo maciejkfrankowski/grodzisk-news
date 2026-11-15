@@ -29,17 +29,32 @@ flowchart LR
 | `url` | link do oryginału |
 | `published` | data ISO; gdy strona jej nie podaje – data pobrania |
 | `fetched_at` | czas pobrania (UTC) |
+| `event_date` | tylko wydarzenia: `RRRR-MM-DD GG:MM:SS`; `00:00:00` = cały dzień |
 
 ## Adaptery
-- **`rss`** – RSS/Atom przez `feedparser`.
+- **`rss`** – RSS/Atom przez `feedparser`; opcja `fallback_urls` na wypadek pustej odpowiedzi.
+- **`tribe_events`** – kalendarz „The Events Calendar” przez REST API (`/wp-json/tribe/events/v1/events`).
+  Wpisy dostają `event_date`; przy kolejnych pobraniach termin, tytuł i opis są odświeżane.
 - **`html_links`** – bez selektorów CSS: zbiera linki pasujące do `link_pattern`, a tytuł, datę
   (`DD.MM.RRRR` lub `RRRR-MM-DD`) i lead bierze z najbliższego kontenera zawierającego tylko ten wpis.
   Odporny na zmiany klas; zawodzi, gdy lista nie ma linków z unikalnym wzorcem URL.
+  Opcje: `strip` (regexy wycinane z tytułu i leadu), `require_date` (pomija linki bez daty, np. menu).
 
 ## Strony w `dist/`
-`/` · `/kategoria/{slug}/` · `/artykul/{slug}/` · `/rozrywka/` · `/zrodla/` · `search.json`
+`/` · `/wydarzenia/` · `/kategoria/{slug}/` · `/artykul/{slug}/` · `/rozrywka/` · `/zrodla/` · `search.json`
+
+## Wydarzenia
+Wpisy z `event_date` nie trafiają do strumienia wiadomości. Generator pokazuje tylko nadchodzące
+(od dnia budowy), od najbliższego: dwa pierwsze w „Grodzisk dziś”, kolejne w sekcji „Najbliższe wydarzenia”
+i komplet na `/wydarzenia/`.
+
+## Sudoku dnia
+`gn/sudoku.py` generuje przy każdym buildzie trzy plansze (łatwe 40, średnie 33, trudne 28 podanych cyfr)
+z seedem `data:poziom`, więc w danym dniu plansze są stałe. Każda ma dokładnie jedno rozwiązanie
+(sprawdzane solverem). Gra działa w przeglądarce (`static/sudoku.js`), postęp zapisuje się w `localStorage`.
 
 ## Ograniczenia wersji demo
 - Adaptery są przetestowane na próbkach offline; pierwszy przebieg na żywych stronach następuje w Actions.
 - Cron w Actions bywa opóźniony; harmonogram wyłącza się po 60 dniach bez aktywności w repo.
 - Pogoda (Open-Meteo) i wyszukiwarka działają w przeglądarce; brak newslettera i formularzy.
+- Policja (KSP) nie jest podłączona: strona z filtrem jednostki nie dała się odczytać – do ustalenia adres.

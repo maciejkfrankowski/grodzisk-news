@@ -62,6 +62,11 @@ Treść w Markdownie.
 
 Commit do `main` uruchamia przebudowę.
 
+## Reklama na stronie głównej
+
+Karta „Partner lokalny · Reklama” jest opisana w `site.yaml` w sekcji `ad`: `name`, `text`, `cta`, `url`
+(dokąd prowadzi), `image` (plik w `static/img/`). `enabled: false` ukrywa kartę.
+
 ## Nowa krzyżówka
 
 Wrzuć samodzielny plik HTML do `content/krzyzowki/` (np. `potop.html`). Generator skopiuje go do

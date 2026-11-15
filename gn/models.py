@@ -52,7 +52,7 @@ def clean_lead(value: str, limit: int = 220) -> str:
 
 
 _DATE_PATTERNS = (
-    (re.compile(r"\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b"), ("d", "m", "y")),
+    (re.compile(r"\b(\d{1,2})\s?[.\-]\s?(\d{1,2})\s?[.\-]\s?(\d{4})\b"), ("d", "m", "y")),
     (re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b"), ("y", "m", "d")),
 )
 

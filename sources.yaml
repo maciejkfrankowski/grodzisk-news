@@ -1,6 +1,6 @@
 # Katalog źródeł. Pełna lista kandydatów: docs/02-zrodla.md
 # adapter: rss | html_links | tribe_events
-#   html_links: wymaga link_pattern (regex na pełnym URL wpisu); opcje: strip, require_date
+#   html_links: wymaga link_pattern (regex na pełnym URL wpisu); opcje: strip, require_date, events
 #   tribe_events: REST API kalendarza WordPress (wydarzenia z terminem)
 # opcje wspólne: enabled (false = pomiń), exclude_title (regex – pomija wpisy o takim tytule)
 sources:
@@ -92,13 +92,23 @@ sources:
     adapter: rss
     url: https://wkd.com.pl/aktualnosci?format=feed&type=rss
     home: https://wkd.com.pl
+    enabled: false   # 403 dla GitHub Actions (strona HTML i RSS); włączyć po migracji na VPS lub zgodzie WKD
 
   - id: policja
     name: Policja – KPP w Grodzisku Mazowieckim
     category: bezpieczenstwo
     adapter: html_links
     url: https://grodzisk.policja.gov.pl/pgm/aktualnosci
+    # tylko wpisy własne komendy; lista zawiera też komunikaty KSP i policja.pl
     link_pattern: 'grodzisk\.policja\.gov\.pl/pgm/aktualnosci/\d+,[^/?#]+\.html$'
     require_date: true
     home: https://grodzisk.policja.gov.pl
-    
+
+  - id: osir-wydarzenia
+    name: OSiR Grodzisk Mazowiecki
+    category: sport
+    adapter: html_links
+    url: https://grodzisksport.pl/
+    link_pattern: 'grodzisksport\.pl/kalendarz-wydarzen/.+\.html$'
+    events: true              # termin z listy „Najnowsze wydarzenia” (DD - MM - RRRR, Godz. GG:MM)
+    home: https://grodzisksport.pl/kalendarz-wydarzen/

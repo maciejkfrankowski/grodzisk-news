@@ -35,8 +35,6 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 
 ## Otwarte
 - Potwierdzić, że źródła nie blokują adresów IP GitHub Actions (strona `/zrodla/`).
-- Policja: brak wglądu w budowę strony – potrzebny zapisany HTML listy aktualności.
-- Kalendarz OSiR (`grodzisksport.pl/kalendarz-wydarzen/`) do podpięcia pod Wydarzenia.
 - Kategorie w `admin/config.yml` trzeba zmieniać razem z `site.yaml`.
 - Logowanie do panelu dla osób bez konta GitHub (wymaga pośrednika OAuth) – na później.
 - PSP (gov.pl) wyłączone: nieosiągalne z GitHub Actions.

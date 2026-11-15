@@ -124,6 +124,29 @@ class SudokuTest(unittest.TestCase):
                 self.assertEqual(sorted(level["solution"][unit * 9:unit * 9 + 9]), list("123456789"))
 
 
+OSIR_HOME = """<html><body>
+<table class="cal"><tr><td><a href="/kalendarz-wydarzen/lotto-bogoria-vs-energia.html">LOTTO SUPERLIGA: Orlen Bogoria Grodzisk Mazowiecki VS. KS Energia TTCup</a></td>
+<td><a href="/kalendarz-wydarzen/stand-up.html">Stand-UP w programie ATLAS</a></td></tr></table>
+<div class="latest">
+ <div class="ev"><span>18 - 11 - 2026</span> <span>Godz. 18:00</span>
+   <a href="/kalendarz-wydarzen/lotto-bogoria-vs-energia.html">LOTTO SUPERLIGA: Orlen Bogoria Grodzisk Mazowiecki...</a></div>
+ <div class="ev"><a href="/kalendarz-wydarzen/folk.html">13 - 12 - 2026 Godz. 17:00 Grodzisk Folk Festiwal - Górale na Mazowszu</a></div>
+</div><a href="/kalendarz-wydarzen/">Kalendarz</a></body></html>"""
+
+
+class EventLinksTest(unittest.TestCase):
+    def test_events_from_listing(self):
+        source = dict(SOURCE, url="https://grodzisksport.pl/", events=True,
+                      link_pattern=r"grodzisksport\.pl/kalendarz-wydarzen/.+\.html$")
+        items = {i.url.rsplit("/", 1)[-1]: i for i in html_links.parse(OSIR_HOME, source)}
+        self.assertEqual(sorted(items), ["folk.html", "lotto-bogoria-vs-energia.html"])  # bez daty = pominięte
+        match = items["lotto-bogoria-vs-energia.html"]
+        self.assertEqual(match.event_date, "2026-11-18 18:00:00")
+        self.assertEqual(match.title, "LOTTO SUPERLIGA: Orlen Bogoria Grodzisk Mazowiecki VS. KS Energia TTCup")
+        self.assertEqual(items["folk.html"].title, "Grodzisk Folk Festiwal - Górale na Mazowszu")
+        self.assertEqual(items["folk.html"].event_date, "2026-12-13 17:00:00")
+
+
 class RssTest(unittest.TestCase):
     def test_parse(self):
         (item,) = rss.parse(RSS, SOURCE)

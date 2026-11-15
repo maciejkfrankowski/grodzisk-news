@@ -16,8 +16,12 @@ categories:
   - {slug: redakcja, name: Od redakcji, icon: pen, color: "#0b2a5b", nav: false}
 
 # Karta „Partner lokalny · Reklama” na stronie głównej
+# url: dokąd prowadzi karta (bez url przycisk otwiera e-mail kontaktowy); image: ścieżka w static/
 ad:
   enabled: true
-  name: Miejsce na Twoją firmę
-  text: Dotrzyj do mieszkańców Grodziska i okolic.
-  cta: Zapytaj o ofertę
+  name: Ares Pet Food
+  text: Kiełbaski dla psów.
+  cta: Zobacz ofertę
+  url: https://www.arespetfood.com
+  image: static/img/ad-pies.svg
+  image_alt: Uśmiechnięty pies

@@ -28,12 +28,17 @@
   <div class="grid">
     {% for e in top %}{{ m.card(e, root) }}{% endfor %}
     {% if site.ad.enabled %}
+    {% set ad_href = site.ad.url or ('mailto:' ~ site.contact_email ~ '?subject=Reklama%20w%20serwisie') %}
     <article class="card ad">
       <span class="ad-label">Partner lokalny · Reklama</span>
+      {% if site.ad.image %}
+      <a class="ad-img" href="{{ ad_href }}"{% if site.ad.url %} target="_blank" rel="sponsored noopener"{% endif %}>
+        <img src="{{ root ~ site.ad.image }}" alt="{{ site.ad.image_alt or site.ad.name }}" loading="lazy"></a>
+      {% endif %}
       <div class="card-body">
         <h3>{{ site.ad.name }}</h3>
         <p class="lead">{{ site.ad.text }}</p>
-        <a class="btn" href="mailto:{{ site.contact_email }}?subject=Reklama%20w%20serwisie">{{ site.ad.cta }} →</a>
+        <a class="btn" href="{{ ad_href }}"{% if site.ad.url %} target="_blank" rel="sponsored noopener"{% endif %}>{{ site.ad.cta }} →</a>
       </div>
     </article>
     {% endif %}

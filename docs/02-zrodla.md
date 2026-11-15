@@ -11,13 +11,13 @@ Wdrożone w `sources.yaml`: **gmina**, **powiat**, **gpa**, **biblioteka**, **ck
 | 2a | CK – podstrony | /kino-centrum-kultury/ , /kino-wolnosc/ , /mediateka/ , /dworek-chelmonskiego/ , /willa-niespodzianka/ , /willa-radogoszcz/ , /poczekalnia-pkp/ , /sas/ , /swietlice/ , /wystawy/ | rss per podstrona | feedy niepotwierdzone |
 | 3 | Biblioteka Publiczna | https://biblioteka.grodzisk.pl/aktualnosci/ | rss (`/feed/`) | wdrożone |
 | 4 | Powiat Grodziski | https://www.powiat-grodziski.pl/aktualnosci/wszystkie/ | html_links | wdrożone |
-| 5 | Policja – KPP (KSP) | https://ksp.policja.gov.pl/pl/aktualnosci/?ida[1]=1831 | ? | strona nie dała się odczytać; adres do ustalenia |
+| 5 | Policja – KPP (KSP) | https://ksp.policja.gov.pl/pl/aktualnosci/?ida[1]=1831 | html_links + require_date (https://grodzisk.policja.gov.pl/pgm/aktualnosci, tylko wpisy własne komendy) | wdrożone, sprawdzone na zapisanej stronie |
 | 6 | Straż Pożarna – KP PSP | https://www.gov.pl/web/kppsp-grodzisk-mazowiecki/aktualnosci | html_links + require_date | wdrożone (ok. 1 wpis/tydz.) |
 | 7 | Grodziskie Przewozy Autobusowe | https://gpagrodzisk.pl/aktualnosci/wszystkie/ | html_links | wdrożone |
 | 8 | Szpital Zachodni | https://szpitalzachodni.pl/aktualnosci/ | ? | struktura niesprawdzona |
 | 9 | Sołectwa | np. https://kludzienko.grodzisk.pl , https://opypy.grodzisk.pl | rss | pełna lista do zebrania |
 
-| 10 | OSiR | https://grodzisksport.pl/rss/aktualnosci.xml | rss | wdrożone; kalendarz `/kalendarz-wydarzen/` do zrobienia |
+| 10 | OSiR | https://grodzisksport.pl/rss/aktualnosci.xml | rss | wdrożone; kalendarz: `osir-wydarzenia` (html_links + `events`, lista „Najnowsze wydarzenia” ze strony głównej) |
 
 Sołectwa: wdrożone przez wspólny kanał https://solectwa.grodzisk.pl/feed/. Szpital: RSS https://szpitalzachodni.pl/feed/ z filtrem `exclude_title` (konkursy ofert, jadłospisy).
 

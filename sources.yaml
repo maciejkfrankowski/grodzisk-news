@@ -92,4 +92,13 @@ sources:
     adapter: rss
     url: https://wkd.com.pl/aktualnosci?format=feed&type=rss
     home: https://wkd.com.pl
+
+  - id: policja
+    name: Policja – KPP w Grodzisku Mazowieckim
+    category: bezpieczenstwo
+    adapter: html_links
+    url: https://grodzisk.policja.gov.pl/pgm/aktualnosci
+    link_pattern: 'grodzisk\.policja\.gov\.pl/pgm/aktualnosci/\d+,[^/?#]+\.html$'
+    require_date: true
+    home: https://grodzisk.policja.gov.pl
     

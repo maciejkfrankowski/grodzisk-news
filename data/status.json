@@ -1,0 +1,35 @@
+[
+ {
+  "id": "gmina",
+  "name": "Urząd Miejski w Grodzisku Mazowieckim",
+  "url": "https://grodzisk.pl/feed",
+  "home": "https://grodzisk.pl",
+  "checked_at": "2026-11-15T10:22:13+00:00",
+  "ok": true,
+  "found": 10,
+  "added": 10,
+  "error": ""
+ },
+ {
+  "id": "powiat",
+  "name": "Powiat Grodziski",
+  "url": "https://www.powiat-grodziski.pl/aktualnosci/wszystkie/",
+  "home": "https://www.powiat-grodziski.pl",
+  "checked_at": "2026-11-15T10:22:13+00:00",
+  "ok": true,
+  "found": 10,
+  "added": 10,
+  "error": ""
+ },
+ {
+  "id": "gpa",
+  "name": "Grodziskie Przewozy Autobusowe",
+  "url": "https://gpagrodzisk.pl/aktualnosci/wszystkie/",
+  "home": "https://gpagrodzisk.pl",
+  "checked_at": "2026-11-15T10:22:14+00:00",
+  "ok": true,
+  "found": 10,
+  "added": 10,
+  "error": ""
+ }
+]

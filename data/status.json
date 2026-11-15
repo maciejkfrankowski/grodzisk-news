@@ -4,18 +4,18 @@
   "name": "Urząd Miejski w Grodzisku Mazowieckim",
   "url": "https://grodzisk.pl/feed",
   "home": "https://grodzisk.pl",
-  "checked_at": "2026-11-15T11:37:38+00:00",
-  "ok": true,
-  "found": 10,
+  "checked_at": "2026-11-15T11:55:52+00:00",
+  "ok": false,
+  "found": 0,
   "added": 0,
-  "error": ""
+  "error": "0 wpisów w RSS. https://grodzisk.pl/feed: 415 Client Error: Unsupported Media Type for url: https://grodzisk.pl/feed | https://grodzisk.pl/feed/: 415 Client Error: Unsupported Media Type for url: https://grodzisk.pl/feed/ | https://grodzisk.pl/?feed=rss2: 415 Client Error: Unsupported Media Type for url: https://grodzisk.pl/?feed=rss2 | https://grodzisk.pl/category/wiadomosci/feed/: 415 Client Error: Unsupported Media Type for url: https://grodzisk.pl/cat"
  },
  {
   "id": "powiat",
   "name": "Powiat Grodziski",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/wszystkie/",
   "home": "https://www.powiat-grodziski.pl",
-  "checked_at": "2026-11-15T11:37:39+00:00",
+  "checked_at": "2026-11-15T11:56:33+00:00",
   "ok": true,
   "found": 10,
   "added": 0,
@@ -26,7 +26,7 @@
   "name": "Grodziskie Przewozy Autobusowe",
   "url": "https://gpagrodzisk.pl/aktualnosci/wszystkie/",
   "home": "https://gpagrodzisk.pl",
-  "checked_at": "2026-11-15T11:37:39+00:00",
+  "checked_at": "2026-11-15T11:56:34+00:00",
   "ok": true,
   "found": 10,
   "added": 0,
@@ -37,32 +37,32 @@
   "name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
   "url": "https://biblioteka.grodzisk.pl/feed/",
   "home": "https://biblioteka.grodzisk.pl",
-  "checked_at": "2026-11-15T11:37:40+00:00",
-  "ok": true,
-  "found": 10,
+  "checked_at": "2026-11-15T11:56:34+00:00",
+  "ok": false,
+  "found": 0,
   "added": 0,
-  "error": ""
+  "error": "0 wpisów w RSS. https://biblioteka.grodzisk.pl/feed/: 415 Client Error: Unsupported Media Type for url: https://biblioteka.grodzisk.pl/f"
  },
  {
   "id": "ck-wydarzenia",
   "name": "Centrum Kultury",
   "url": "https://www.centrumkultury.eu/wp-json/tribe/events/v1/events?per_page=50",
   "home": "https://www.centrumkultury.eu/wydarzenia/",
-  "checked_at": "2026-11-15T11:37:42+00:00",
-  "ok": true,
-  "found": 50,
+  "checked_at": "2026-11-15T11:56:45+00:00",
+  "ok": false,
+  "found": 0,
   "added": 0,
-  "error": ""
+  "error": "https://www.centrumkultury.eu/wp-json/tribe/events/v1/events?per_page=50: 415 Client Error: Unsupported Media Type for url: https://www.centrumkultury.eu/wp-json/tribe/events/v1/events?per_page=50"
  },
  {
   "id": "ck",
   "name": "Centrum Kultury – ogłoszenia",
   "url": "https://www.centrumkultury.eu/feed/",
   "home": "https://www.centrumkultury.eu",
-  "checked_at": "2026-11-15T11:37:47+00:00",
-  "ok": true,
-  "found": 10,
+  "checked_at": "2026-11-15T11:56:55+00:00",
+  "ok": false,
+  "found": 0,
   "added": 0,
-  "error": ""
+  "error": "0 wpisów w RSS. https://www.centrumkultury.eu/feed/: 415 Client Error: Unsupported Media Type for url: https://www.centrumkultury.eu/fee"
  }
 ]

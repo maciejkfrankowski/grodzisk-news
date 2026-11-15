@@ -112,3 +112,12 @@ sources:
     link_pattern: 'grodzisksport\.pl/kalendarz-wydarzen/.+\.html$'
     events: true              # termin z listy „Najnowsze wydarzenia” (DD - MM - RRRR, Godz. GG:MM)
     home: https://grodzisksport.pl/kalendarz-wydarzen/
+
+  - id: odpady
+    name: Gospodarka odpadami – Urząd Miejski
+    category: miasto
+    adapter: rss
+    url: https://gospodarkaodpadami.grodzisk.pl/category/aktualnosci/feed/
+    fallback_urls:
+      - https://gospodarkaodpadami.grodzisk.pl/feed/
+    home: https://gospodarkaodpadami.grodzisk.pl

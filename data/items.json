@@ -612,6 +612,30 @@
   "event_date": ""
  },
  {
+  "id": "5dde82585358998d",
+  "source": "policja",
+  "source_name": "Policja – KPP w Grodzisku Mazowieckim",
+  "category": "bezpieczenstwo",
+  "title": "Miał w domu ponad 130 gramów narkotyków",
+  "lead": "Uważność grodziskich policjantów z Wydziału Ruchu Drogowego podczas pełnienia służby zaowocowała zabezpieczeniem ponad 130 gramów różnych narkotyków. Nielegalne substancje zostały znalezione w domu, gdzie przebywały…",
+  "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154311,Mial-w-domu-ponad-130-gramow-narkotykow.html",
+  "published": "2026-11-12",
+  "fetched_at": "2026-11-15T13:23:28+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "3e8f1e71cb23d8f3",
+  "source": "policja",
+  "source_name": "Policja – KPP w Grodzisku Mazowieckim",
+  "category": "bezpieczenstwo",
+  "title": "Jest coraz zimniej - nie bądźmy obojętni na potrzebujących pomocy",
+  "lead": "Kiedy na zewnątrz panują niskie temperatury wiele osób narażonych jest na utratę życia lub zdrowia na skutek wychłodzenia organizmu. Problem ten dotyka przede wszystkim osoby bezdomne, samotne i w podeszłym wieku…",
+  "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154197,Jest-coraz-zimniej-nie-badzmy-obojetni-na-potrzebujacych-pomocy.html",
+  "published": "2026-11-12",
+  "fetched_at": "2026-11-15T13:23:28+00:00",
+  "event_date": ""
+ },
+ {
   "id": "1f0fbe46758206bb",
   "source": "gmina",
   "source_name": "Urząd Miejski w Grodzisku Mazowieckim",
@@ -659,6 +683,18 @@
   "event_date": ""
  },
  {
+  "id": "fc668f288edfb0e6",
+  "source": "policja",
+  "source_name": "Policja – KPP w Grodzisku Mazowieckim",
+  "category": "bezpieczenstwo",
+  "title": "Działania dla bezpieczeństwa użytkowników naszych dróg",
+  "lead": "Policjanci grodziskiej drogówki regularnie prowadzą działania w zakresie bezpieczeństwa różnych grup uczestników ruchu drogowego. W ostatnim czasie ich kontrolami objęte były osoby przemieszczające się w okolicach…",
+  "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154187,Dzialania-dla-bezpieczenstwa-uzytkownikow-naszych-drog.html",
+  "published": "2026-11-09",
+  "fetched_at": "2026-11-15T13:23:28+00:00",
+  "event_date": ""
+ },
+ {
   "id": "eb44b4b6ca7ef680",
   "source": "osir",
   "source_name": "OSiR Grodzisk Mazowiecki",
@@ -668,6 +704,18 @@
   "url": "https://grodzisksport.pl/aktualnosci/funkcjonowanie-plywalni-miejskiej-w-dniu-1111.html",
   "published": "2026-11-09",
   "fetched_at": "2026-11-15T12:42:28+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "31b86e0dd5f02973",
+  "source": "policja",
+  "source_name": "Policja – KPP w Grodzisku Mazowieckim",
+  "category": "bezpieczenstwo",
+  "title": "Namierzony sprawca kradzieży roweru",
+  "lead": "Szereg czynności wykonanych przez grodziskich policjantów w sprawie kradzieży roweru zakończyło się zatrzymaniem osoby podejrzanej. Mężczyzna wpadł w swoim domu. Na miejscu funkcjonariusze znaleźli ubrania, które miał…",
+  "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154177,Namierzony-sprawca-kradziezy-roweru.html",
+  "published": "2026-11-06",
+  "fetched_at": "2026-11-15T13:23:28+00:00",
   "event_date": ""
  },
  {
@@ -717,6 +765,18 @@
   "fetched_at": "2026-11-15T11:01:01+00:00"
  },
  {
+  "id": "e7ee88f2fcb89017",
+  "source": "policja",
+  "source_name": "Policja – KPP w Grodzisku Mazowieckim",
+  "category": "bezpieczenstwo",
+  "title": "Uwaga na leśne zwierzęta na drodze",
+  "lead": "Grodziscy policjanci apelują do kierowców o zwiększenie ostrożności podczas jazdy przez tereny leśne i zadrzewione. Zderzenie samochodu z sarną, dzikiem, czy łosiem może być tragiczne w skutkach, nie tylko dla tego…",
+  "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154131,Uwaga-na-lesne-zwierzeta-na-drodze.html",
+  "published": "2026-11-05",
+  "fetched_at": "2026-11-15T13:23:28+00:00",
+  "event_date": ""
+ },
+ {
   "id": "ef51eca7b985320b",
   "source": "biblioteka",
   "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
@@ -726,6 +786,18 @@
   "url": "https://biblioteka.grodzisk.pl/spotkanie-z-marcinem-dorocinskim/",
   "published": "2026-11-04",
   "fetched_at": "2026-11-15T11:21:12+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "9ee7ffed96e7111e",
+  "source": "policja",
+  "source_name": "Policja – KPP w Grodzisku Mazowieckim",
+  "category": "bezpieczenstwo",
+  "title": "Realizujemy działania w ramach kampanii „Życie to nie gra- masz je tylko jedno”",
+  "lead": "Profilaktyk z grodziskiej komendy prowadzi zajęcia z uczniami w ramach ogólnopolskiej kampanii „Życie to nie gra – masz je tylko jedno”. Celem prelekcji jest zwiększenie świadomości młodych ludzi w zakresie…",
+  "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154085,Realizujemy-dzialania-w-ramach-kampanii-Zycie-to-nie-gra-masz-je-tylko-jedno.html",
+  "published": "2026-11-03",
+  "fetched_at": "2026-11-15T13:23:28+00:00",
   "event_date": ""
  },
  {
@@ -807,6 +879,18 @@
   "url": "https://grodzisk.pl/2026/10/30/zakonczono-termomodernizacje-budynkow-oswiatowych/",
   "published": "2026-10-30",
   "fetched_at": "2026-11-15T11:01:00+00:00"
+ },
+ {
+  "id": "fefe4f5aed65c95f",
+  "source": "policja",
+  "source_name": "Policja – KPP w Grodzisku Mazowieckim",
+  "category": "bezpieczenstwo",
+  "title": "Policyjny wykład dla młodzieży w ramach działania „Po drugiej stronie ekranu”",
+  "lead": "Policjant z grodziskiej komendy wygłosił wykład podczas spotkania z najstarszymi uczniami szkół podstawowych z powiatu grodziskiego. Głównym organizatorem działania profilaktycznego pn. „Po drugiej stronie ekranu” była…",
+  "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/153895,Policyjny-wyklad-dla-mlodziezy-w-ramach-dzialania-Po-drugiej-stronie-ekranu.html",
+  "published": "2026-10-29",
+  "fetched_at": "2026-11-15T13:23:28+00:00",
+  "event_date": ""
  },
  {
   "id": "8b901d3dcf6b3222",

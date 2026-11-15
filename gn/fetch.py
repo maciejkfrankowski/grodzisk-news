@@ -63,7 +63,7 @@ def run() -> int:
             entry.update(ok=bool(fetched), found=len(fetched), added=added,
                          error="" if fetched else "0 wpisów – sprawdź strukturę strony")
         except Exception as error:  # noqa: BLE001 – jedno źródło nie może zatrzymać reszty
-            entry.update(ok=False, found=0, added=0, error=str(error)[:300])
+            entry.update(ok=False, found=0, added=0, error=str(error)[:600])
         status.append(entry)
         print(f"[{'OK ' if entry['ok'] else 'ERR'}] {entry['id']}: znaleziono {entry['found']}, "
               f"nowych {entry['added']} {entry['error']}")

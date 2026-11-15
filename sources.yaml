@@ -1,11 +1,16 @@
 # Katalog źródeł. Pełna lista kandydatów: docs/02-zrodla.md
-# adapter: rss | html_links (wymaga link_pattern – regex na pełnym URL wpisu)
+# adapter: rss | html_links (wymaga link_pattern – regex na pełnym URL wpisu;
+#          opcjonalnie strip – lista regexów wycinanych z tytułu i leadu)
 sources:
   - id: gmina
     name: Urząd Miejski w Grodzisku Mazowieckim
     category: miasto
     adapter: rss
     url: https://grodzisk.pl/feed
+    fallback_urls:            # używane, gdy główny adres zwróci 0 wpisów
+      - https://grodzisk.pl/feed/
+      - https://grodzisk.pl/?feed=rss2
+      - https://grodzisk.pl/category/wiadomosci/feed/
     home: https://grodzisk.pl
 
   - id: powiat
@@ -14,6 +19,7 @@ sources:
     adapter: html_links
     url: https://www.powiat-grodziski.pl/aktualnosci/wszystkie/
     link_pattern: '/aktualnosci/\d+/?$'
+    strip: ['\(Zam:[^)]*\)\s*\d*']   # „(Zam: data, godz.) liczba odsłon” doklejane do tytułu
     home: https://www.powiat-grodziski.pl
 
   - id: gpa
@@ -22,4 +28,5 @@ sources:
     adapter: html_links
     url: https://gpagrodzisk.pl/aktualnosci/wszystkie/
     link_pattern: '/aktualnosci/\d+/?$'
+    strip: ['\(Zam:[^)]*\)\s*\d*']   # „(Zam: data, godz.) liczba odsłon” doklejane do tytułu
     home: https://gpagrodzisk.pl

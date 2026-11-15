@@ -38,8 +38,17 @@ def _container(anchor: Tag, url: str, base: str, pattern: re.Pattern) -> Tag:
     return best
 
 
+def _tidy(text: str, strip: list[re.Pattern]) -> str:
+    """Usuwa fragmenty z `strip` (sources.yaml) oraz daty wplecione w tekst."""
+    for pattern in strip:
+        text = pattern.sub(" ", text)
+    text = re.sub(r"\b\d{1,2}\.\d{1,2}\.\d{4}\b|\b\d{4}-\d{2}-\d{2}\b", " ", text)
+    return clean_text(text)
+
+
 def parse(html: str, source: dict) -> list[Item]:
     base = source["url"]
+    strip = [re.compile(p) for p in source.get("strip", [])]
     pattern = re.compile(source["link_pattern"])
     soup = BeautifulSoup(html, "lxml")
     fetched = now_iso()
@@ -61,14 +70,15 @@ def parse(html: str, source: dict) -> list[Item]:
         titles = [c for c in candidates if len(c) >= MIN_TITLE and not find_date(c) == c]
         if not titles:
             continue
-        title = titles[0] if heading else max(titles, key=len)
-        title = re.sub(r"\s*\b\d{1,2}\.\d{1,2}\.\d{4}\b\s*", " ", title).strip()
+        raw_title = titles[0] if heading else max(titles, key=len)
 
         box_text = clean_text(box.get_text(" "))
         published = find_date(box_text) or date.today().isoformat()
-        lead = box_text.replace(title, " ")
-        lead = re.sub(r"\b\d{1,2}\.\d{1,2}\.\d{4}\b|\b\d{4}-\d{2}-\d{2}\b", " ", lead)
+        title = _tidy(raw_title, strip)
+        lead = _tidy(box_text.replace(raw_title, " "), strip).replace(title, " ")
         lead = re.sub(r"(?i)\b(czytaj (więcej|dalej)|więcej|zobacz)\b\s*[»>→]*", " ", lead)
+        if len(title) < MIN_TITLE:
+            continue
         items.append(
             Item(
                 id=make_id(url),

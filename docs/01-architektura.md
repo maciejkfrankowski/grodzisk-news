@@ -43,5 +43,3 @@ flowchart LR
 - Adaptery są przetestowane na próbkach offline; pierwszy przebieg na żywych stronach następuje w Actions.
 - Cron w Actions bywa opóźniony; harmonogram wyłącza się po 60 dniach bez aktywności w repo.
 - Pogoda (Open-Meteo) i wyszukiwarka działają w przeglądarce; brak newslettera i formularzy.
-- Dane startowe w `data/items.json` (id `seed-*`) to ręcznie wpisane prawdziwe nagłówki; po pierwszym
-  pobraniu te same wpisy mogą pojawić się drugi raz, jeśli tytuł ze strony różni się od wpisanego – wtedy usuń wpisy `seed-*`.

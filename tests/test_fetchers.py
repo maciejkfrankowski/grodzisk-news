@@ -46,6 +46,19 @@ class HtmlLinksTest(unittest.TestCase):
         self.assertEqual(self.items["726"].title, "Informacje dla inwestorów giełdowych")
 
 
+class StripTest(unittest.TestCase):
+    def test_strips_cms_suffix(self):
+        html = """<div><div class="n"><a href="/aktualnosci/728">Obchody Święta Niepodległości
+        (Zam: 06.11.2026 r., godz. 12.00) 193</a><p>Zapraszamy na uroczystości.</p></div>
+        <div class="n"><a href="/aktualnosci/727">Inny wpis powiatu (Zam: 30.10.2026 r., godz. 10.05) 224</a></div></div>"""
+        source = dict(SOURCE, strip=[r"\(Zam:[^)]*\)\s*\d*"])
+        first, second = html_links.parse(html, source)
+        self.assertEqual(first.title, "Obchody Święta Niepodległości")
+        self.assertEqual(first.published, "2026-11-06")
+        self.assertEqual(first.lead, "Zapraszamy na uroczystości.")
+        self.assertEqual(second.title, "Inny wpis powiatu")
+
+
 class RssTest(unittest.TestCase):
     def test_parse(self):
         (item,) = rss.parse(RSS, SOURCE)

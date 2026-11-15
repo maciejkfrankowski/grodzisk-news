@@ -16,7 +16,12 @@ def get(url: str) -> requests.Response:
             response = requests.get(
                 url,
                 timeout=TIMEOUT,
-                headers={"User-Agent": USER_AGENT, "Accept-Language": "pl"},
+                headers={
+                    "User-Agent": USER_AGENT,
+                    "Accept-Language": "pl",
+                    "Accept": "application/rss+xml, application/xml, text/html;q=0.9, */*;q=0.8",
+                    "Cache-Control": "no-cache",
+                },
             )
             response.raise_for_status()
             return response

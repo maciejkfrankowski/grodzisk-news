@@ -38,4 +38,18 @@ def parse(content: bytes | str, source: dict) -> list[Item]:
 
 
 def fetch(source: dict) -> list[Item]:
-    return parse(http.get(source["url"]).content, source)
+    """Próbuje `url`, a potem `fallback_urls`; przy 0 wpisów zgłasza, co zwrócił serwer."""
+    notes = []
+    for url in [source["url"], *source.get("fallback_urls", [])]:
+        try:
+            response = http.get(url)
+        except RuntimeError as error:
+            notes.append(str(error)[:120])
+            continue
+        items = parse(response.content, source)
+        if items:
+            return items
+        snippet = clean_text(response.text[:400])[:70]
+        notes.append(f"{url}: HTTP {response.status_code}, "
+                     f"{response.headers.get('Content-Type', '?')}, treść: „{snippet}”")
+    raise RuntimeError("0 wpisów w RSS. " + " | ".join(notes))

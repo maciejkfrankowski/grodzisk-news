@@ -36,3 +36,4 @@ useful:
   - {label: Urząd Miejski, note: Sprawy urzędowe, icon: building, url: "https://grodzisk.pl"}
   - {label: Szpital Zachodni, note: Informacje dla pacjentów, icon: heart, url: "https://szpitalzachodni.pl"}
   - {label: Policja, note: KPP w Grodzisku, icon: shield, url: "https://grodzisk.policja.gov.pl"}
+  - {label: Gdzie się ukryć, note: Schrony i sygnały alarmowe, icon: shield, url: "https://zarzadzaniekryzysowe.grodzisk.pl/aplikacja-schrony/"}

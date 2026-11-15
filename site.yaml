@@ -13,7 +13,7 @@ categories:
   - {slug: zdrowie, name: Zdrowie, icon: heart, color: "#be123c"}
   - {slug: bezpieczenstwo, name: Bezpieczeństwo, icon: shield, color: "#c2410c"}
   - {slug: transport, name: Transport, icon: bus, color: "#2e9e4f"}
-  - {slug: redakcja, name: Od redakcji, icon: pen, color: "#0b2a5b", nav: false}
+  - {slug: redakcja, name: Od redakcji, icon: pen, color: "#173b2a", nav: false}
 
 # Karta „Partner lokalny · Reklama” na stronie głównej
 # url: dokąd prowadzi karta (bez url przycisk otwiera e-mail kontaktowy); image: ścieżka w static/

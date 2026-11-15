@@ -2,11 +2,13 @@
 {% block main %}
 <section class="lead-row">
   {% if hero %}
-  <a class="hero" {{ m.link(hero, root) }} style="--c: {{ hero.cat.color }}{% if hero.image %}; background-image: linear-gradient(90deg, rgba(8,24,56,.85), rgba(8,24,56,.2)), url('{{ root ~ hero.image }}'){% endif %}">
+  <a class="hero{% if hero.image %} has-img{% endif %}" {{ m.link(hero, root) }}>
+    {% if hero.image %}<img class="hero-img" src="{{ root ~ hero.image }}" alt="">{% endif %}
     <span class="tag">{{ hero.cat.name }}</span>
     <h1>{{ hero.title }}</h1>
     {% if hero.lead %}<p>{{ hero.lead }}</p>{% endif %}
     <span class="hero-meta">{{ hero.date_pl }} · {{ hero.source_name }}</span>
+    {% if hero.image and hero.image_credit %}<span class="credit">Fot. {{ hero.image_credit }}</span>{% endif %}
   </a>
   {% endif %}
   <aside class="panel today-box">

@@ -51,6 +51,7 @@ collections:
           - {label: Transport, value: transport}
       - {label: Zajawka, name: lead, widget: text, required: false, hint: "Jedno–dwa zdania widoczne na kartach i pod tytułem."}
       - {label: Zdjęcie, name: image, widget: image, required: false}
+      - {label: Źródło zdjęcia, name: image_credit, widget: string, required: false, hint: "Autor lub instytucja, np. UM Grodzisk Mazowiecki. Wyświetla się jako „Fot. …”."}
       - {label: Wyróżnij na stronie głównej, name: featured, widget: boolean, default: false, hint: "Najnowszy wyróżniony artykuł trafia na górę strony głównej."}
       - {label: Szkic (nie publikuj), name: draft, widget: boolean, default: false}
       - {label: Treść, name: body, widget: markdown}

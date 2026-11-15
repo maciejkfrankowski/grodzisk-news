@@ -7,7 +7,10 @@
   <h1>{{ entry.title }}</h1>
   {{ m.meta(entry) }}
   {% if entry.lead %}<p class="article-lead">{{ entry.lead }}</p>{% endif %}
-  {% if entry.image %}<img src="{{ root ~ entry.image }}" alt="">{% endif %}
+  {% if entry.image %}
+  <figure><img src="{{ root ~ entry.image }}" alt="">
+    {% if entry.image_credit %}<figcaption>Fot. {{ entry.image_credit }}</figcaption>{% endif %}</figure>
+  {% endif %}
   <div class="prose">{{ entry.body|safe }}</div>
 </article>
 {% endblock %}

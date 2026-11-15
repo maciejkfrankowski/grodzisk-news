@@ -52,6 +52,7 @@ def load_articles() -> list[dict]:
             "published": str(meta["date"])[:10],
             "category": meta.get("category") or "redakcja",
             "image": str(meta.get("image") or "").lstrip("/"),
+            "image_credit": str(meta.get("image_credit") or "").strip(),
             "featured": bool(meta.get("featured")),
             "href": f"artykul/{slug}/",
             "external": False,
@@ -80,7 +81,7 @@ def event_labels(stamp: str) -> dict:
             "event_day": day, "event_mon": MONTHS[month - 1][:3]}
 
 
-BACK_BAR = ('<a href="../../" style="display:block;padding:10px 14px;background:#0b2a5b;color:#fff;'
+BACK_BAR = ('<a href="../../" style="display:block;padding:10px 14px;background:#173b2a;color:#fff;'
             'font:600 14px system-ui,sans-serif;text-decoration:none">← Grodzisk lokalnie · Rozrywka</a>')
 
 

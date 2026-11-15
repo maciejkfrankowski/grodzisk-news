@@ -54,6 +54,7 @@ date: 2026-11-20
 category: redakcja        # slug z site.yaml
 lead: Jedno zdanie zajawki.
 image: static/img/foto.jpg  # opcjonalnie
+image_credit: UM Grodzisk Mazowiecki  # opcjonalnie: podpis „Fot. …”
 featured: true              # opcjonalnie: trafia do hero
 draft: false                # true = nie publikuj
 ---

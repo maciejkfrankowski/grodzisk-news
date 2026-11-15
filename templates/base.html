@@ -1,0 +1,46 @@
+{% import "_macros.html" as m %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% block title %}{{ site.title }} {{ site.subtitle }} – {{ site.tagline }}{% endblock %}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="stylesheet" href="{{ root }}static/style.css">
+</head>
+<body data-root="{{ root }}" data-lat="{{ site.weather.lat }}" data-lon="{{ site.weather.lon }}">
+<header class="top wrap">
+  <a class="logo" href="{{ root or './' }}" aria-label="{{ site.title }} – strona główna">
+    <span class="logo-name">{{ site.title|upper }}</span>
+    <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="logo-sub">{{ site.subtitle }}</span>
+  </a>
+  <nav class="nav" aria-label="Główna">
+    <a href="{{ root or './' }}"{% if not active %} class="on"{% endif %}>Aktualności</a>
+    {% for c in nav %}<a href="{{ root }}kategoria/{{ c.slug }}/"{% if active == c.slug %} class="on"{% endif %}>{{ c.name }}</a>{% endfor %}
+    <a href="{{ root }}rozrywka/"{% if active == 'rozrywka' %} class="on"{% endif %}>Rozrywka</a>
+  </nav>
+  <div class="tools">
+    <p class="today"><span id="today"></span><span id="weather" hidden></span></p>
+    <label class="search">{{ m.icon('search') }}<span class="sr">Szukaj</span>
+      <input id="q" type="search" placeholder="Szukaj wiadomości…" autocomplete="off"></label>
+    <div id="results" class="results" hidden></div>
+  </div>
+</header>
+<main class="wrap">
+{% block main %}{% endblock %}
+</main>
+<footer class="foot wrap">
+  <p>{{ site.title }} {{ site.subtitle }} · aktualizacja: {{ build_date }}</p>
+  <p><a href="{{ root }}zrodla/">Źródła i stan pobierania</a> · Wpisy zewnętrzne prowadzą do stron źródłowych.</p>
+</footer>
+<nav class="tabbar" aria-label="Skróty">
+  <a href="{{ root or './' }}"{% if not active %} class="on"{% endif %}>{{ m.icon('home') }}Aktualności</a>
+  <a href="{{ root }}kategoria/miasto/"{% if active == 'miasto' %} class="on"{% endif %}>{{ m.icon('building') }}Miasto</a>
+  <a href="{{ root }}kategoria/kultura/"{% if active == 'kultura' %} class="on"{% endif %}>{{ m.icon('ticket') }}Kultura</a>
+  <a href="{{ root }}kategoria/transport/"{% if active == 'transport' %} class="on"{% endif %}>{{ m.icon('bus') }}Transport</a>
+  <a href="{{ root }}rozrywka/"{% if active == 'rozrywka' %} class="on"{% endif %}>{{ m.icon('puzzle') }}Rozrywka</a>
+</nav>
+<script src="{{ root }}static/app.js" defer></script>
+</body>
+</html>

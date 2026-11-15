@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ entry.title }} – {{ site.title }} {{ site.subtitle }}{% endblock %}
+{% block main %}
+<p class="crumbs"><a href="{{ root }}">Strona główna</a> › <a href="{{ root }}kategoria/{{ entry.cat.slug }}/">{{ entry.cat.name }}</a></p>
+<article class="article">
+  <span class="tag" style="--c: {{ entry.cat.color }}">{{ entry.cat.name }}</span>
+  <h1>{{ entry.title }}</h1>
+  {{ m.meta(entry) }}
+  {% if entry.lead %}<p class="article-lead">{{ entry.lead }}</p>{% endif %}
+  {% if entry.image %}<img src="{{ root ~ entry.image }}" alt="">{% endif %}
+  <div class="prose">{{ entry.body|safe }}</div>
+</article>
+{% endblock %}

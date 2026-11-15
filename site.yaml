@@ -1,0 +1,21 @@
+title: Grodzisk
+subtitle: lokalnie
+tagline: Wiadomości i rozrywka z Grodziska Mazowieckiego
+description: Codziennie aktualizowany przegląd lokalnych wiadomości z Grodziska Mazowieckiego.
+contact_email: kontakt@example.com   # TODO: podmień na docelowy adres
+weather: {lat: 52.107, lon: 20.629}
+
+categories:
+  - {slug: miasto, name: Miasto i gmina, icon: building, color: "#1557d6"}
+  - {slug: powiat, name: Powiat, icon: map, color: "#0b7a75"}
+  - {slug: kultura, name: Kultura, icon: ticket, color: "#8a3ffc"}
+  - {slug: bezpieczenstwo, name: Bezpieczeństwo, icon: shield, color: "#c2410c"}
+  - {slug: transport, name: Transport, icon: bus, color: "#2e9e4f"}
+  - {slug: redakcja, name: Od redakcji, icon: pen, color: "#0b2a5b", nav: false}
+
+# Karta „Partner lokalny · Reklama” na stronie głównej
+ad:
+  enabled: true
+  name: Miejsce na Twoją firmę
+  text: Dotrzyj do mieszkańców Grodziska i okolic.
+  cta: Zapytaj o ofertę

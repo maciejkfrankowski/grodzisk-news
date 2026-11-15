@@ -1,0 +1,25 @@
+# Katalog źródeł. Pełna lista kandydatów: docs/02-zrodla.md
+# adapter: rss | html_links (wymaga link_pattern – regex na pełnym URL wpisu)
+sources:
+  - id: gmina
+    name: Urząd Miejski w Grodzisku Mazowieckim
+    category: miasto
+    adapter: rss
+    url: https://grodzisk.pl/feed
+    home: https://grodzisk.pl
+
+  - id: powiat
+    name: Powiat Grodziski
+    category: powiat
+    adapter: html_links
+    url: https://www.powiat-grodziski.pl/aktualnosci/wszystkie/
+    link_pattern: '/aktualnosci/\d+/?$'
+    home: https://www.powiat-grodziski.pl
+
+  - id: gpa
+    name: Grodziskie Przewozy Autobusowe
+    category: transport
+    adapter: html_links
+    url: https://gpagrodzisk.pl/aktualnosci/wszystkie/
+    link_pattern: '/aktualnosci/\d+/?$'
+    home: https://gpagrodzisk.pl

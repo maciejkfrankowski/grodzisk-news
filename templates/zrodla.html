@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Źródła – {{ site.title }} {{ site.subtitle }}{% endblock %}
+{% block main %}
+<p class="crumbs"><a href="{{ root }}">Strona główna</a> › Źródła</p>
+<header class="sec"><h1>Źródła i stan pobierania</h1></header>
+<div class="panel table-wrap"><table>
+  <thead><tr><th>Źródło</th><th>Stan</th><th>Znaleziono</th><th>Nowych</th><th>Sprawdzono (UTC)</th></tr></thead>
+  <tbody>
+  {% for s in sources %}{% set st = status.get(s.id) %}
+  <tr>
+    <td><a href="{{ s.home or s.url }}" target="_blank" rel="noopener">{{ s.name }}</a></td>
+    <td>{% if not st %}jeszcze nie pobierano{% elif st.ok %}<span class="ok">OK</span>{% else %}<span class="err">Błąd</span> <small>{{ st.error }}</small>{% endif %}</td>
+    <td>{{ st.found if st else '–' }}</td><td>{{ st.added if st else '–' }}</td>
+    <td>{{ st.checked_at[:16]|replace('T', ' ') if st else '–' }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="lead-row">
+  {% if hero %}
+  <a class="hero" {{ m.link(hero, root) }} style="--c: {{ hero.cat.color }}{% if hero.image %}; background-image: linear-gradient(90deg, rgba(8,24,56,.85), rgba(8,24,56,.2)), url('{{ root ~ hero.image }}'){% endif %}">
+    <span class="tag">{{ hero.cat.name }}</span>
+    <h1>{{ hero.title }}</h1>
+    {% if hero.lead %}<p>{{ hero.lead }}</p>{% endif %}
+    <span class="hero-meta">{{ hero.date_pl }} · {{ hero.source_name }}</span>
+  </a>
+  {% endif %}
+  <aside class="panel today-box">
+    <header class="sec"><h2>{{ site.title }} dziś</h2></header>
+    <ul class="rows">
+      {% for e in today %}
+      <li><a {{ m.link(e, root) }}>
+        <span class="row-ico" style="--c: {{ e.cat.color }}">{{ m.icon(e.cat.icon) }}</span>
+        <span><strong>{{ e.title }}</strong><small>{{ e.cat.name }} · {{ e.date_pl }}</small></span>
+      </a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+</section>
+
+<section>
+  <header class="sec"><h2>Najważniejsze</h2></header>
+  <div class="grid">
+    {% for e in top %}{{ m.card(e, root) }}{% endfor %}
+    {% if site.ad.enabled %}
+    <article class="card ad">
+      <span class="ad-label">Partner lokalny · Reklama</span>
+      <div class="card-body">
+        <h3>{{ site.ad.name }}</h3>
+        <p class="lead">{{ site.ad.text }}</p>
+        <a class="btn" href="mailto:{{ site.contact_email }}?subject=Reklama%20w%20serwisie">{{ site.ad.cta }} →</a>
+      </div>
+    </article>
+    {% endif %}
+  </div>
+</section>
+
+<section class="panel contact">
+  <div class="contact-head">{{ m.icon('mail') }}
+    <div><h2>Napisz do nas</h2><p>Masz pytanie, pomysł lub problem? Wspólnie tworzymy lepszy Grodzisk.</p></div>
+  </div>
+  <div class="contact-btns">
+    <a href="mailto:{{ site.contact_email }}?subject=Mam%20temat">{{ m.icon('bulb') }}Mam temat</a>
+    <a href="mailto:{{ site.contact_email }}?subject=Dodaj%20wydarzenie">{{ m.icon('calendar') }}Dodaj wydarzenie</a>
+    <a href="mailto:{{ site.contact_email }}?subject=Zg%C5%82oszenie%20problemu">{{ m.icon('alert') }}Zgłoś problem</a>
+  </div>
+</section>
+
+<section class="cols">
+  {% for col in columns %}
+  <div>
+    <header class="sec"><h2>{{ col.cat.name }}</h2><a href="{{ root }}kategoria/{{ col.cat.slug }}/">Zobacz wszystkie →</a></header>
+    <ul class="rows panel">
+      {% for e in col.entries %}
+      <li><a {{ m.link(e, root) }}>
+        <span class="row-ico" style="--c: {{ e.cat.color }}">{{ m.icon(e.cat.icon) }}</span>
+        <span><strong>{{ e.title }}</strong><small>{{ e.date_pl }} · {{ e.source_name }}</small></span>
+      </a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

@@ -1,5 +1,41 @@
 [
  {
+  "id": "b5dfbf7aabcb4968",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "The Met: Live in HD 2026–27 – Silent Night Kevina Putsa",
+  "lead": "Centrum Kultury · Silent Night Kevina Putsa – 20 marca 2027, 18:00 (180 min / w tym jedna przerwa) Po sukcesie The Hours w Metropolitan Opera Kevin Puts powraca z nagrodzoną Pulitzerem operą…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/the-met-live-in-hd-2026-27-silent-night-kevina-putsa/",
+  "published": "2026-11-16",
+  "fetched_at": "2026-11-16T12:45:18+00:00",
+  "event_date": "2027-03-20 18:00:00"
+ },
+ {
+  "id": "d3d42cd33370a8eb",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "The Met: Live in HD 2026–27- Manon Masseneta",
+  "lead": "Centrum Kultury · Manon Masseneta – 3 kwietnia 2027, 18:00 (264 min / w tym dwie przerwy) Po olśniewającym występie w Romeo i Julii Gounoda, sopranistka Nadine Sierra wciela się w uwodzicielską…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/the-met-live-in-hd-2026-27-manon-masseneta/",
+  "published": "2026-11-16",
+  "fetched_at": "2026-11-16T12:45:18+00:00",
+  "event_date": "2027-04-03 18:00:00"
+ },
+ {
+  "id": "8baadfde9e12edc9",
+  "source": "powiat",
+  "source_name": "Powiat Grodziski",
+  "category": "powiat",
+  "title": "Zapraszamy na bezpłatne badania mammograficzne",
+  "lead": "20 listopada | 08.30-15.00 | Hala Widowiskowo-Sportowa, ul. Sportowa 29 Grodzisk Maz. Dział: Powiat",
+  "url": "https://www.powiat-grodziski.pl/aktualnosci/729/",
+  "published": "2026-11-16",
+  "fetched_at": "2026-11-16T12:45:11+00:00",
+  "event_date": ""
+ },
+ {
   "id": "44a8e25b5dca6652",
   "source": "osir-wydarzenia",
   "source_name": "OSiR Grodzisk Mazowiecki",

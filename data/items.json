@@ -1,5 +1,53 @@
 [
  {
+  "id": "a23ccc9d97be0dac",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Koncert zespołu Cichawoda",
+  "lead": "W piątek 27 listopada o godzinie 18.00 zapraszamy na koncert zespołu Cichawoda. Co wspólnego mają przemijanie, wampiry, atlas ptaków polskich i zupa pomidorowa? W świecie…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/koncert-zespolu-cichawoda/",
+  "published": "2026-11-17",
+  "fetched_at": "2026-11-17T13:26:26+00:00",
+  "event_date": "2026-11-27 18:00:00"
+ },
+ {
+  "id": "ef99b09c6e252e6e",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Spotkanie z Elizą Kącką",
+  "lead": "Zapraszamy 7 grudnia, godz. 18:00. Biblioteka Główna. Wstęp wolny!",
+  "url": "https://biblioteka.grodzisk.pl/spotkanie-z-eliza-kacka/",
+  "published": "2026-11-16",
+  "fetched_at": "2026-11-17T13:26:21+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "4e1c7e4640b6a17c",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Spotkanie z Barbarą Supeł, autorką “Jadzi Pętelki” (PJM)",
+  "lead": "Zapraszamy 21 listopada, godz. 12:00. Pawilon Kultury. Wstęp wolny!",
+  "url": "https://biblioteka.grodzisk.pl/spotkanie-z-barbara-supel-autorka-jadzi-petelki-pjm/",
+  "published": "2026-11-16",
+  "fetched_at": "2026-11-17T13:26:21+00:00",
+  "event_date": ""
+ },
+ {
+  "id": "9e4c1b46e481b07c",
+  "source": "powiat",
+  "source_name": "Powiat Grodziski",
+  "category": "powiat",
+  "title": "Wspólnie dla Niepodległej",
+  "lead": "11 listopada uczciliśmy 108. rocznicę odzyskania przez Polskę niepodległości Dział: Powiat",
+  "url": "https://www.powiat-grodziski.pl/aktualnosci/730/",
+  "published": "2026-11-16",
+  "fetched_at": "2026-11-17T13:26:19+00:00",
+  "event_date": ""
+ },
+ {
   "id": "b5dfbf7aabcb4968",
   "source": "ck-wydarzenia",
   "source_name": "Centrum Kultury",

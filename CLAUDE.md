@@ -11,8 +11,9 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 - Wpisy zewnętrzne: tylko tytuł, krótki lead (≤220 znaków), data i link do źródła.
   Nie kopiujemy pełnych treści ani zdjęć. Mediów komercyjnych nie pobieramy.
 - Każde źródło = wpis w `sources.yaml`. Nowy adapter tylko wtedy, gdy istniejące nie wystarczą.
-- Paczki z poprawkami nie zawierają `data/`, `content/articles/` ani `static/img/uploads/` – to treść
-  tworzona przez bota i redakcję w repo; paczka nadpisałaby ją starszą wersją.
+- Paczki z poprawkami zawierają wyłącznie kod. Nigdy: `data/`, `content/`, `static/img/uploads/`,
+  `site.yaml`, `sources.yaml`, `admin/config.yml` – te pliki żyją w repo (bot, redakcja, edycje na GitHubie).
+  Zmiany w konfiguracji przekazujemy jako fragment do wklejenia.
 - Adapter ma funkcję `parse(content, source) -> list[Item]` (testowalna offline) i `fetch(source)`.
 - Błąd jednego źródła nie może przerwać przebiegu; wynik trafia do `data/status.json`.
 - Linki w szablonach zawsze przez zmienną `root` (serwis działa w podkatalogu `/grodzisk-news/`).

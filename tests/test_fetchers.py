@@ -1,7 +1,10 @@
 """Testy adapterów na próbkach offline (bez sieci)."""
 import unittest
 
-from gn.fetch import merge
+from unittest import mock
+
+from gn import fetch
+from gn.fetch import add_images, merge
 from gn.fetchers import html_links, rss, tribe_events
 from gn.models import clean_lead
 from gn.sudoku import count_solutions, daily
@@ -145,6 +148,58 @@ class EventLinksTest(unittest.TestCase):
         self.assertEqual(match.title, "LOTTO SUPERLIGA: Orlen Bogoria Grodzisk Mazowiecki VS. KS Energia TTCup")
         self.assertEqual(items["folk.html"].title, "Grodzisk Folk Festiwal - Górale na Mazowszu")
         self.assertEqual(items["folk.html"].event_date, "2026-12-13 17:00:00")
+
+
+VRM_LIST = """<html><body><div class="news">
+ <div class="teaser"><h3>Förderbescheide an Landrat übergeben</h3><time>16.04.2026</time>
+   <a href="https://extern.example/presse">Pressemitteilung</a></div>
+ <div class="teaser"><h3>24 Buslinien starten ab dem 01.08.2026 mit neuen Betreibern</h3>
+   <span>17. Juli 2026</span><p>Die Verträge laufen am 31.07.2026 aus.</p>
+   <a href="/news/detailansicht/24-buslinien/">mehr erfahren</a></div>
+</div></body></html>"""
+
+
+class NeighbourAndDatesTest(unittest.TestCase):
+    def test_keeps_dates_in_title_and_ignores_neighbour(self):
+        source = dict(SOURCE, url="https://www.vrminfo.de/news/", require_date=True,
+                      link_pattern=r"/news/detailansicht/[^/?#]+/$")
+        (item,) = html_links.parse(VRM_LIST, source)
+        self.assertEqual(item.title, "24 Buslinien starten ab dem 01.08.2026 mit neuen Betreibern")
+        self.assertEqual(item.published, "2026-07-17")
+        self.assertEqual(item.lead, "Die Verträge laufen am 31.07.2026 aus.")
+
+    def test_merge_refreshes_title(self):
+        old = dict(id="a", source="s", title="Kreisverwaltung bleibt am geschlossen", lead="", published="2026-11-01",
+                   fetched_at="x")
+        new = dict(old, title="Kreisverwaltung bleibt am 24.12.2026 geschlossen", published="2026-11-16")
+        merged, added = merge([old], [new])
+        self.assertEqual((added, merged[0]["title"], merged[0]["published"]),
+                         (0, "Kreisverwaltung bleibt am 24.12.2026 geschlossen", "2026-11-01"))
+
+
+class ImagesTest(unittest.TestCase):
+    def test_rss_image_sources(self):
+        feed = """<?xml version="1.0"?><rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"
+          xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>x</title>
+        <item><title>Wpis ze zdjęciem w media</title><link>https://e.org/a</link>
+          <media:content url="https://e.org/a.jpg" medium="image"/></item>
+        <item><title>Wpis ze zdjęciem w treści</title><link>https://e.org/b</link>
+          <content:encoded><![CDATA[<p><img src="https://s.w.org/emoji/1.svg"><img src="https://e.org/b.jpg"></p>]]></content:encoded></item>
+        <item><title>Wpis bez zdjęcia w kanale</title><link>https://e.org/c</link></item></channel></rss>"""
+        first, second, third = rss.parse(feed, SOURCE)
+        self.assertEqual((first.image, second.image, third.image), ("https://e.org/a.jpg", "https://e.org/b.jpg", ""))
+        self.assertNotIn("image", third.to_dict())
+
+    def test_add_images_checks_each_item_once(self):
+        items = [{"url": "https://e.org/1"}, {"url": "https://e.org/2", "image": ""},
+                 {"url": "https://e.org/3", "event_date": "2026-11-20 10:00:00"}]
+        page = '<html><head><meta property="og:image" content="/img/foto.jpg?a=1&amp;b=2"></head></html>'
+        with mock.patch.object(fetch.http, "get", return_value=mock.Mock(text=page)) as get:
+            self.assertEqual(add_images(items), 1)
+            self.assertEqual(add_images(items), 0)
+        self.assertEqual(get.call_count, 1)
+        self.assertEqual(items[0]["image"], "https://e.org/img/foto.jpg?a=1&b=2")
+        self.assertNotIn("image", items[2])
 
 
 class RssTest(unittest.TestCase):

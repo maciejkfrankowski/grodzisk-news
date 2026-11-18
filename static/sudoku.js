@@ -5,6 +5,8 @@
 
   const data = JSON.parse(dataEl.textContent);
   const msg = document.getElementById("su-msg");
+  const text = document.getElementById("sudoku").dataset;
+  const fill = (template, values) => template.replace(/\{(\w+)\}/g, (_, key) => values[key]);
   const tabs = [...document.querySelectorAll(".su-levels button")];
   let level = data.levels[0];
   let values = [];
@@ -45,7 +47,7 @@
       cell.classList.toggle("sel", i === selected);
       cell.classList.toggle("peer", sameUnit && i !== selected);
       cell.classList.toggle("same", picked > 0 && values[i] === picked && i !== selected);
-      cell.setAttribute("aria-label", `Wiersz ${row + 1}, kolumna ${col + 1}: ${values[i] || "puste"}`);
+      cell.setAttribute("aria-label", fill(text.cell, { r: row + 1, c: col + 1, v: values[i] || text.empty }));
     });
   }
 
@@ -64,7 +66,7 @@
     save();
     render();
     if (values.join("") === level.solution) {
-      msg.textContent = "Brawo! Plansza rozwiązana.";
+      msg.textContent = text.solved;
       msg.classList.add("ok");
     }
   }
@@ -90,9 +92,9 @@
       if (!value) { empty += 1; return; }
       if (String(value) !== level.solution[i]) { wrong += 1; cells[i].classList.add("bad"); }
     });
-    if (wrong) { msg.textContent = `Błędne pola: ${wrong}.`; msg.classList.add("err"); }
-    else if (empty) msg.textContent = `Na razie bez błędów. Pozostało pól: ${empty}.`;
-    else { msg.textContent = "Brawo! Plansza rozwiązana."; msg.classList.add("ok"); }
+    if (wrong) { msg.textContent = fill(text.wrong, { n: wrong }); msg.classList.add("err"); }
+    else if (empty) msg.textContent = fill(text.left, { n: empty });
+    else { msg.textContent = text.solved; msg.classList.add("ok"); }
   });
   document.getElementById("su-reset").addEventListener("click", () => {
     values = level.puzzle.split("").map(Number);

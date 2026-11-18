@@ -1,6 +1,7 @@
 """Adapter RSS/Atom (WordPress i pokrewne)."""
 from __future__ import annotations
 
+import re
 import time
 from datetime import date
 
@@ -8,6 +9,25 @@ import feedparser
 
 from ..models import Item, clean_lead, clean_text, make_id, now_iso
 from . import http
+
+
+IMG = re.compile(r'<img[^>]+src=["\']([^"\']+)', re.I)
+
+
+def entry_image(entry) -> str:
+    """Miniatura wpisu, jeśli kanał ją podaje (media:content, enclosure albo pierwszy obraz w treści)."""
+    for key in ("media_content", "media_thumbnail"):
+        for media in entry.get(key, []):
+            if media.get("url") and "image" in (media.get("type") or media.get("medium") or "image"):
+                return media["url"]
+    for enclosure in entry.get("enclosures", []):
+        if enclosure.get("type", "").startswith("image") and enclosure.get("href"):
+            return enclosure["href"]
+    html = " ".join(part.get("value", "") for part in entry.get("content", [])) + entry.get("summary", "")
+    for url in IMG.findall(html):
+        if not re.search(r"emoji|\.svg|\.gif|pixel|gravatar", url, re.I):
+            return url
+    return ""
 
 
 def parse(content: bytes | str, source: dict) -> list[Item]:
@@ -32,6 +52,7 @@ def parse(content: bytes | str, source: dict) -> list[Item]:
                 url=url,
                 published=published,
                 fetched_at=fetched,
+                image=entry_image(entry),
             )
         )
     return items

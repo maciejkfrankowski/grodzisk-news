@@ -4,7 +4,8 @@
   // Data w nagłówku
   const today = document.getElementById("today");
   if (today) {
-    const text = new Date().toLocaleDateString("pl-PL", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+    const locale = { pl: "pl-PL", de: "de-DE" }[document.documentElement.lang] || "pl-PL";
+    const text = new Date().toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
     today.textContent = text.charAt(0).toUpperCase() + text.slice(1);
   }
 
@@ -34,7 +35,7 @@
     const hits = index.filter((e) => norm(`${e.t} ${e.l}`).includes(query)).slice(0, 8);
     if (!hits.length) {
       const empty = document.createElement("p");
-      empty.textContent = "Brak wyników";
+      empty.textContent = document.body.dataset.noResults || "—";
       box.append(empty);
     }
     for (const hit of hits) {

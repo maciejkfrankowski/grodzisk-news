@@ -48,6 +48,14 @@ Wpisy z `event_date` nie trafiają do strumienia wiadomości. Generator pokazuje
 (od dnia budowy), od najbliższego: dwa pierwsze w „Grodzisk dziś”, kolejne w sekcji „Najbliższe wydarzenia”
 i komplet na `/wydarzenia/`.
 
+## Miniatury ze źródeł
+Włączane w `site.yaml` kluczem `source_images: true` (Grodzisk tak, Boppard nie – tam wymagałoby to zgody źródeł).
+Adres miniatury bierzemy z kanału RSS, a gdy go tam nie ma – z nagłówka `og:image` strony artykułu
+(`gn.fetch.add_images`: najwyżej 40 stron na przebieg, każdy wpis sprawdzany raz). Zapisujemy tylko adres;
+plik zostaje na serwerze źródła i stamtąd jest wyświetlany (`referrerpolicy="no-referrer"`). Gdy obraz się nie
+wczyta, karta wraca do pastelowego kafelka kategorii. Ten sam obraz przy więcej niż dwóch wpisach jednego źródła
+uznajemy za logo i pomijamy. Wydarzenia zachowują kafelek z datą.
+
 ## Panel redakcji
 `admin/index.html` ładuje Sveltia CMS (wersja przypięta, z unpkg), `admin/config.yml` opisuje kolekcję
 `content/articles` (pola zgodne z nagłówkiem YAML czytanym przez `gn/build.py`). Logowanie: token GitHuba

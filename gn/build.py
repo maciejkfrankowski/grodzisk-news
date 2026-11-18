@@ -19,14 +19,15 @@ from .sudoku import daily
 
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
-MONTHS = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca",
-          "sierpnia", "września", "października", "listopada", "grudnia"]
-PL_MAP = str.maketrans("ąćęłńóśźż", "acelnoszz")
+T: dict = {}  # teksty interfejsu z i18n/<lang>.yaml, ładowane w build()
+PL_MAP = str.maketrans({**str.maketrans("ąćęłńóśźż", "acelnoszz"),
+                        ord("ä"): "ae", ord("ö"): "oe", ord("ü"): "ue", ord("ß"): "ss"})
 
 
 def date_pl(iso: str) -> str:
+    """Data w formacie języka serwisu (np. „14 listopada 2026” / „14. November 2026”)."""
     year, month, day = (int(part) for part in iso[:10].split("-"))
-    return f"{day} {MONTHS[month - 1]} {year}"
+    return T["date_fmt"].format(d=day, month=T["months"][month - 1], y=year)
 
 
 def slugify(text: str) -> str:
@@ -54,22 +55,32 @@ def load_articles() -> list[dict]:
             "image": str(meta.get("image") or "").lstrip("/"),
             "image_credit": str(meta.get("image_credit") or "").strip(),
             "featured": bool(meta.get("featured")),
-            "href": f"artykul/{slug}/",
+            "href": f"{T['paths']['article']}/{slug}/",
             "external": False,
-            "source_name": "Redakcja",
+            "source_name": T["editorial"],
             "body": markdown.markdown(match.group(2), extensions=["extra"]),
         })
     return articles
 
 
-def load_items() -> list[dict]:
+def load_items(show_images: bool = False) -> list[dict]:
     path = ROOT / "data" / "items.json"
     items = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
     for item in items:
-        item.update(href=item["url"], external=True, featured=False, image="",
+        item.update(href=item["url"], external=True, featured=False, image=item.get("image") or "",
                     event_date=item.get("event_date", ""))
         if not item["event_date"]:
             item["lead"] = clean_lead(item["lead"])
+    # Miniatury ze źródeł: tylko gdy włączone w site.yaml. Ten sam obraz przy wielu wpisach jednego
+    # źródła to zwykle logo serwisu, a nie zdjęcie artykułu – takie pomijamy.
+    counts: dict[tuple, int] = {}
+    for item in items:
+        if item["image"]:
+            counts[(item["source"], item["image"])] = counts.get((item["source"], item["image"]), 0) + 1
+    for item in items:
+        usable = show_images and item["image"].startswith(("https://", "data:")) and not item["event_date"]
+        if not usable or counts[(item["source"], item["image"])] > 2:
+            item["image"] = ""
     return items
 
 
@@ -77,42 +88,49 @@ def event_labels(stamp: str) -> dict:
     """Etykiety terminu wydarzenia z `RRRR-MM-DD GG:MM:SS`."""
     year, month, day = (int(part) for part in stamp[:10].split("-"))
     time = stamp[11:16] if stamp[11:16] not in ("", "00:00") else ""
-    return {"event_pl": f"{day} {MONTHS[month - 1]}" + (f", godz. {time}" if time else ""),
-            "event_day": day, "event_mon": MONTHS[month - 1][:3]}
+    label = T["event_fmt"].format(d=day, month=T["months"][month - 1], y=year)
+    return {"event_pl": label + (T["event_time_fmt"].format(time=time) if time else ""),
+            "event_day": day, "event_mon": T["months"][month - 1][:3]}
 
 
 BACK_BAR = ('<a href="../../" style="display:block;padding:10px 14px;background:#173b2a;color:#fff;'
-            'font:600 14px system-ui,sans-serif;text-decoration:none">← Grodzisk lokalnie · Rozrywka</a>')
+            'font:600 14px system-ui,sans-serif;text-decoration:none">← {label}</a>')
 
 
-def build_crosswords() -> list[dict]:
-    """Kopiuje gotowe krzyżówki (samodzielne pliki HTML) do dist/rozrywka/krzyzowki/.
+def build_crosswords(site: dict) -> list[dict]:
+    """Kopiuje gotowe krzyżówki (samodzielne pliki HTML) do dist/<fun>/<crosswords>/.
 
     Do każdej dokleja pasek powrotu do serwisu; plik źródłowy pozostaje bez zmian.
     """
+    base = f"{T['paths']['fun']}/{T['paths']['crosswords']}"
+    bar = BACK_BAR.format(label=f"{site['title']} {site['subtitle']} · {T['nav_fun']}")
     found = []
-    for path in sorted((ROOT / "content" / "krzyzowki").glob("*.html")):
+    folder = ROOT / "content" / "krzyzowki"
+    for path in sorted(folder.glob("*.html")) if folder.exists() else []:
         html = path.read_text(encoding="utf-8")
         title = re.search(r"<title>(.*?)</title>", html, re.S | re.I)
         slug = slugify(path.stem)
-        html = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + BACK_BAR.replace("../../", "../../"),
-                      html, count=1, flags=re.I)
-        target = DIST / "rozrywka" / "krzyzowki" / slug / "index.html"
+        html = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + bar, html, count=1, flags=re.I)
+        target = DIST / base / slug / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html, encoding="utf-8")
         name = (title.group(1).strip() if title else path.stem)
-        found.append({"title": re.sub(r"\s*[–-]\s*krzyżówka\s*$", "", name, flags=re.I),
-                      "href": f"rozrywka/krzyzowki/{slug}/"})
+        suffix = re.escape(T["crossword_suffix"])
+        found.append({"title": re.sub(rf"\s*[–-]\s*{suffix}\s*$", "", name, flags=re.I),
+                      "href": f"{base}/{slug}/"})
     return found
 
 
 def build() -> None:
     site = yaml.safe_load((ROOT / "site.yaml").read_text(encoding="utf-8"))
+    T.clear()
+    T.update(yaml.safe_load((ROOT / "i18n" / f"{site.get('lang', 'pl')}.yaml").read_text(encoding="utf-8")))
+    paths = T["paths"]
     categories = {c["slug"]: c for c in site["categories"]}
     fallback = site["categories"][0]
 
     today_iso = date.today().isoformat()
-    everything = load_articles() + load_items()
+    everything = load_articles() + load_items(bool(site.get("source_images")))
     for entry in everything:
         entry.setdefault("event_date", "")
         entry["cat"] = categories.get(entry["category"], fallback)
@@ -131,7 +149,10 @@ def build() -> None:
 
     env = Environment(loader=FileSystemLoader(ROOT / "templates"),
                       autoescape=select_autoescape(["html"]), trim_blocks=True, lstrip_blocks=True)
-    env.globals.update(site=site, nav=[c for c in site["categories"] if c.get("nav", True)],
+    # dolny pasek na telefonie: z konfiguracji albo pierwsza kategoria + transportowa (ikona autobusu)
+    transit = [c["slug"] for c in site["categories"][1:] if c.get("icon") == "bus"]
+    tab_slugs = site.get("tabbar") or [site["categories"][0]["slug"], *(transit or [c["slug"] for c in site["categories"][1:2]])]
+    env.globals.update(show_events=site.get("events_nav", True), tabs=[categories[s] for s in tab_slugs if s in categories], t=T, p=paths, lang=site.get("lang", "pl"), site=site, nav=[c for c in site["categories"] if c.get("nav", True)],
                        build_date=date_pl(date.today().isoformat()))
 
     if DIST.exists():
@@ -162,7 +183,7 @@ def build() -> None:
 
     # Kategorie
     for cat in site["categories"]:
-        render("list.html", f"kategoria/{cat['slug']}", cat=cat, active=cat["slug"],
+        render("list.html", f"{paths['cat']}/{cat['slug']}", cat=cat, active=cat["slug"],
                entries=[e for e in entries if e["category"] == cat["slug"]][:60])
 
     # Artykuły własne
@@ -170,12 +191,18 @@ def build() -> None:
         if not entry["external"]:
             render("article.html", entry["href"].strip("/"), entry=entry, active="")
 
-    crosswords = build_crosswords()
-    render("wydarzenia.html", "wydarzenia", entries=events[:80], active="wydarzenia")
-    render("rozrywka.html", "rozrywka", active="rozrywka", sudoku=daily(today_iso), crosswords=crosswords,
+    crosswords = build_crosswords(site)
+    sudoku = daily(today_iso)
+    for level in sudoku["levels"]:
+        level["name"] = T["sudoku_levels"].get(level["slug"], level["name"])
+    render("wydarzenia.html", paths["events"], entries=events[:80], active="events")
+    render("rozrywka.html", paths["fun"], active="fun", sudoku=sudoku, crosswords=crosswords,
            sudoku_date=date_pl(today_iso))
-    render("zrodla.html", "zrodla", sources=sources, active="",
+    render("zrodla.html", paths["sources"], sources=sources, active="",
            status={s["id"]: s for s in status})
+    if site.get("operator"):  # strony wymagane prawem (np. w Niemczech)
+        render("impressum.html", paths["imprint"], active="")
+        render("datenschutz.html", paths["privacy"], active="")
 
     search = [{"t": e["title"], "l": e["lead"], "u": e["href"], "x": e["external"],
                "d": e.get("event_pl") or e["date_pl"], "s": e["source_name"]}

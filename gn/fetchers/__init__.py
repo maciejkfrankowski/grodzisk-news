@@ -1,5 +1,5 @@
 """Rejestr adapterów: nazwa z sources.yaml -> funkcja fetch(source) -> list[Item]."""
-from . import html_links, rss, tribe_events
+from . import html_links, http, rss, tribe_events
 
 ADAPTERS = {
     "rss": rss.fetch,

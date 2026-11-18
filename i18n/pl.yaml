@@ -1,0 +1,65 @@
+# Teksty interfejsu – polski
+months: [stycznia, lutego, marca, kwietnia, maja, czerwca, lipca, sierpnia, września, października, listopada, grudnia]
+date_fmt: "{d} {month} {y}"
+event_fmt: "{d} {month}"
+event_time_fmt: ", godz. {time}"
+paths: {cat: kategoria, article: artykul, events: wydarzenia, fun: rozrywka, sources: zrodla, crosswords: krzyzowki, imprint: impressum, privacy: prywatnosc}
+home_label: strona główna
+nav_main: Główna
+nav_news: Aktualności
+nav_events: Wydarzenia
+nav_fun: Rozrywka
+tab_shortcuts: Skróty
+search: Szukaj
+search_placeholder: Szukaj wiadomości…
+no_results: Brak wyników
+updated: aktualizacja
+sources_link: Źródła i stan pobierania
+admin_link: Panel redakcji
+external_note: Wpisy zewnętrzne prowadzą do stron źródłowych.
+today_suffix: dziś
+top: Najważniejsze
+see_all: Zobacz wszystkie
+event: Wydarzenie
+upcoming: Najbliższe wydarzenia
+upcoming_title: Nadchodzące wydarzenia
+no_events: Brak nadchodzących wydarzeń w kalendarzu.
+useful: Przydatne
+ad_label: Partner lokalny · Reklama
+ad_subject: Reklama w serwisie
+contact_title: Napisz do nas
+contact_text: Masz pytanie, pomysł lub problem? Napisz do redakcji.
+contact_buttons: [Mam temat, Dodaj wydarzenie, Zgłoś problem]
+home: Strona główna
+empty_category: Źródła dla tej kategorii są w przygotowaniu.
+editorial: Redakcja
+photo_by: Fot.
+fun_title: "Rozrywka: sudoku i krzyżówki"
+sudoku_title: Sudoku dnia
+sudoku_link: Sudoku dnia
+sudoku_levels: {latwe: Łatwe, srednie: Średnie, trudne: Trudne}
+sudoku_level_label: Poziom trudności
+sudoku_board: Plansza sudoku
+sudoku_digits: Cyfry
+sudoku_erase: Wyczyść pole
+sudoku_check: Sprawdź
+sudoku_reset: Od nowa
+sudoku_help: Wybierz pole i wpisz cyfrę 1–9. W każdym wierszu, kolumnie i kwadracie 3×3 każda cyfra występuje raz. Nowa plansza codziennie.
+sudoku_solved: Brawo! Plansza rozwiązana.
+sudoku_wrong: "Błędne pola: {n}."
+sudoku_left: "Na razie bez błędów. Pozostało pól: {n}."
+sudoku_cell: "Wiersz {r}, kolumna {c}: {v}"
+sudoku_empty: puste
+crosswords: Krzyżówki
+crossword: Krzyżówka
+crossword_solve: Rozwiąż
+crosswords_soon: Krzyżówki pojawią się wkrótce.
+crossword_suffix: krzyżówka
+src_title: Źródła i stan pobierania
+src_cols: [Źródło, Stan, Znaleziono, Nowych, Sprawdzono (UTC)]
+src_off: wyłączone
+src_never: jeszcze nie pobierano
+src_ok: OK
+src_err: Błąd
+imprint: Impressum
+privacy: Prywatność

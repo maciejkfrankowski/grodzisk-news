@@ -130,7 +130,8 @@
   "url": "https://grodzisk.pl/2026/11/18/mobilna-kontenerowa-stacja-uzdatniania-wody/",
   "published": "2026-11-18",
   "fetched_at": "2026-11-18T13:02:45+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/11/Podpisanie-umowy-768x456.jpg"
  },
  {
   "id": "cfff4157b0a0ee3e",
@@ -142,7 +143,8 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/731/",
   "published": "2026-11-17",
   "fetched_at": "2026-11-18T13:02:46+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "a23ccc9d97be0dac",
@@ -166,7 +168,8 @@
   "url": "https://biblioteka.grodzisk.pl/spotkanie-z-eliza-kacka/",
   "published": "2026-11-16",
   "fetched_at": "2026-11-17T13:26:21+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/09/Na-strone-Kacka.png"
  },
  {
   "id": "4e1c7e4640b6a17c",
@@ -178,7 +181,8 @@
   "url": "https://biblioteka.grodzisk.pl/spotkanie-z-barbara-supel-autorka-jadzi-petelki-pjm/",
   "published": "2026-11-16",
   "fetched_at": "2026-11-17T13:26:21+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Na-strone-Barbara-Supel.png"
  },
  {
   "id": "9e4c1b46e481b07c",
@@ -190,7 +194,8 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/730/",
   "published": "2026-11-16",
   "fetched_at": "2026-11-17T13:26:19+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "b5dfbf7aabcb4968",
@@ -226,7 +231,8 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/729/",
   "published": "2026-11-16",
   "fetched_at": "2026-11-16T12:45:11+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "44a8e25b5dca6652",
@@ -886,7 +892,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/funkcjonowanie-hali-widowiskowo-sportowej-w-dniu-14112026-r.html",
   "published": "2026-11-14",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/basic_info/foto_news_slider_start.webp?ts=1744893802"
  },
  {
   "id": "5dde82585358998d",
@@ -898,7 +905,8 @@
   "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154311,Mial-w-domu-ponad-130-gramow-narkotykow.html",
   "published": "2026-11-12",
   "fetched_at": "2026-11-15T13:23:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-311551.jpg"
  },
  {
   "id": "3e8f1e71cb23d8f3",
@@ -910,7 +918,8 @@
   "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154197,Jest-coraz-zimniej-nie-badzmy-obojetni-na-potrzebujacych-pomocy.html",
   "published": "2026-11-12",
   "fetched_at": "2026-11-15T13:23:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-311393.jpg"
  },
  {
   "id": "1f0fbe46758206bb",
@@ -921,7 +930,8 @@
   "lead": "Gmina Grodzisk Mazowiecki zakończyła zadanie „Przebudowa odcinka drogi gminnej nr 150210W we wsi Kraśnicza Wola”. Odbiór końcowy robót odbył się 23 października 2026 r. Przebudowano odcinek drogi o długości ok. 440 m…",
   "url": "https://grodzisk.pl/2026/11/12/zakonczono-przebudowe-drogi-w-krasniczej-woli/",
   "published": "2026-11-12",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/11/Przebudowa-drogi-we-wsi-Krasnicza-Wola-768x456.jpg"
  },
  {
   "id": "ee9f425ddff020c2",
@@ -933,7 +943,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/hala-widowiskowo-sportowa-caiis-nieczynna-w-dniu-11-listopada.html",
   "published": "2026-11-10",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/375-akt-fotoc.webp?ts=1794297701"
  },
  {
   "id": "650015d49bffffc7",
@@ -945,7 +956,8 @@
   "url": "https://biblioteka.grodzisk.pl/wyznania-w-mlodziezowym-klubie-ksiazki/",
   "published": "2026-11-10",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Na-strone-MKK-16.11.png"
  },
  {
   "id": "540dbf4c1317afc1",
@@ -957,7 +969,8 @@
   "url": "https://biblioteka.grodzisk.pl/11-listopada-narodowe-swieto-niepodleglosci/",
   "published": "2026-11-10",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Na-strone-11listopada.png"
  },
  {
   "id": "fc668f288edfb0e6",
@@ -969,7 +982,8 @@
   "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154187,Dzialania-dla-bezpieczenstwa-uzytkownikow-naszych-drog.html",
   "published": "2026-11-09",
   "fetched_at": "2026-11-15T13:23:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-311394.jpg"
  },
  {
   "id": "eb44b4b6ca7ef680",
@@ -981,7 +995,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/funkcjonowanie-plywalni-miejskiej-w-dniu-1111.html",
   "published": "2026-11-09",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/374-akt-fotoc.webp?ts=1794234041"
  },
  {
   "id": "31b86e0dd5f02973",
@@ -993,7 +1008,8 @@
   "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154177,Namierzony-sprawca-kradziezy-roweru.html",
   "published": "2026-11-06",
   "fetched_at": "2026-11-15T13:23:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-311572.jpg"
  },
  {
   "id": "c54167cd17274cdd",
@@ -1005,7 +1021,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/hala-widowiskowo-sportowa-caiis-nieczynna-w-dniach-7-8-listopada.html",
   "published": "2026-11-06",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/373-akt-fotoc.webp?ts=1793971052"
  },
  {
   "id": "7d02be36f507dd46",
@@ -1017,7 +1034,8 @@
   "url": "https://biblioteka.grodzisk.pl/spotkanie-ze-zbigniewem-zamachowskim/",
   "published": "2026-11-06",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Na-strone-Zamachowski.png"
  },
  {
   "id": "a6c90bf1c7bd61c6",
@@ -1028,7 +1046,8 @@
   "lead": "Od 6 do 30 listopada 2026 r. GPA przeprowadza konsultacje Planu Transportowego Związku. Patrz Dział: GPA - Związek Powiatowo-Gminny",
   "url": "https://gpagrodzisk.pl/aktualnosci/101/",
   "published": "2026-11-06",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "068bc985ad49c5d4",
@@ -1039,7 +1058,8 @@
   "lead": "",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/728/",
   "published": "2026-11-06",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "e7ee88f2fcb89017",
@@ -1051,7 +1071,8 @@
   "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154131,Uwaga-na-lesne-zwierzeta-na-drodze.html",
   "published": "2026-11-05",
   "fetched_at": "2026-11-15T13:23:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-311272.jpg"
  },
  {
   "id": "ef51eca7b985320b",
@@ -1063,7 +1084,8 @@
   "url": "https://biblioteka.grodzisk.pl/spotkanie-z-marcinem-dorocinskim/",
   "published": "2026-11-04",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Na-strone-Dorocinski-Marcin.png"
  },
  {
   "id": "ae02c61dda794fdd",
@@ -1075,7 +1097,8 @@
   "url": "https://gospodarkaodpadami.grodzisk.pl/2026/11/03/piknik-ekologiczny-pelen-inspiracji/",
   "published": "2026-11-03",
   "fetched_at": "2026-11-15T17:29:09+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "9ee7ffed96e7111e",
@@ -1087,7 +1110,8 @@
   "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154085,Realizujemy-dzialania-w-ramach-kampanii-Zycie-to-nie-gra-masz-je-tylko-jedno.html",
   "published": "2026-11-03",
   "fetched_at": "2026-11-15T13:23:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-311193.jpg"
  },
  {
   "id": "6229bf193265a111",
@@ -1098,7 +1122,8 @@
   "lead": "INFORMUJEMY, że od 2 listopada br. Grodziską Kartę Mieszkańca będzie można wyrobić i zintegrować z PSZOK w Referacie Gospodarki Odpadami przy ulicy Kościuszki 32A w Grodzisku Mazowieckim w godzinach: Przypominamy, że…",
   "url": "https://grodzisk.pl/2026/11/03/nowy-punkt-obslugi-gkm/",
   "published": "2026-11-03",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/11/Nowy-punkt-obslugi-GKM-768x456.png"
  },
  {
   "id": "c686c918da71d2bc",
@@ -1110,7 +1135,8 @@
   "url": "https://biblioteka.grodzisk.pl/rodzinne-warsztaty-z-ilustratorka-magdalena-koziel-nowak/",
   "published": "2026-11-02",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Na-strone-800x5652-1.png"
  },
  {
   "id": "62e3df655588e9b6",
@@ -1122,7 +1148,8 @@
   "url": "https://gospodarkaodpadami.grodzisk.pl/2026/10/30/odbior-odpadow-tekstylnych/",
   "published": "2026-10-30",
   "fetched_at": "2026-11-15T17:29:09+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "3525d9a950cdd0fe",
@@ -1134,7 +1161,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/hala-widowiskowo-sportowa-caiis-nieczynna-w-dniu-1-listopada.html",
   "published": "2026-10-30",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/370-akt-fotoc.webp?ts=1793372235"
  },
  {
   "id": "c97b98561ac5cfc0",
@@ -1146,7 +1174,8 @@
   "url": "https://biblioteka.grodzisk.pl/listopadowe-spotkanie-organizacyjne-wolontariatu-mlodziezowego/",
   "published": "2026-10-30",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/04/Na-strone-Wolontariat.png"
  },
  {
   "id": "bf0c851fec119b33",
@@ -1157,7 +1186,8 @@
   "lead": "",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/727/",
   "published": "2026-10-30",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "0ed338ca764ccf39",
@@ -1168,7 +1198,8 @@
   "lead": "W związku ze wzmożonym ruchem w okresie Wszystkich Świętych informujemy, że w niedzielę, 1 listopada 2026 r., w rejonie cmentarza parafialnego w Grodzisku Mazowieckim zostanie wprowadzona czasowa organizacja ruchu…",
   "url": "https://grodzisk.pl/2026/10/30/zmiana-organizacji-ruchu-przy-cmentarzu-parafialnym/",
   "published": "2026-10-30",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/10/Zmiana-organizacji-ruchu-Wszystkich-Swietych-2026-768x456.jpg"
  },
  {
   "id": "7fe15d5cf06befde",
@@ -1179,7 +1210,8 @@
   "lead": "Zakończyła się realizacja projektu pn. „Poprawa efektywności energetycznej budynków oświatowych w gminie Grodzisk Mazowiecki – Etap I”, którego celem była poprawa efektywności energetycznej dwóch placówek oświatowych…",
   "url": "https://grodzisk.pl/2026/10/30/zakonczono-termomodernizacje-budynkow-oswiatowych/",
   "published": "2026-10-30",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/10/Termomodernizacja-szkol-768x456.jpg"
  },
  {
   "id": "fefe4f5aed65c95f",
@@ -1191,7 +1223,8 @@
   "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/153895,Policyjny-wyklad-dla-mlodziezy-w-ramach-dzialania-Po-drugiej-stronie-ekranu.html",
   "published": "2026-10-29",
   "fetched_at": "2026-11-15T13:23:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-310874.jpg"
  },
  {
   "id": "8b901d3dcf6b3222",
@@ -1203,7 +1236,8 @@
   "url": "https://szpitalzachodni.pl/swiatowy-dzien-udaru-mozgu/",
   "published": "2026-10-29",
   "fetched_at": "2026-11-15T12:42:32+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "06f150ed010d60de",
@@ -1215,7 +1249,8 @@
   "url": "https://biblioteka.grodzisk.pl/biblioteczny-klub-adapt-w-pawilonie-kultury-2/",
   "published": "2026-10-29",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/10/Na-strone-800x565-2-1.png"
  },
  {
   "id": "a22a01d9f8a782fd",
@@ -1226,7 +1261,8 @@
   "lead": "W Willi Niespodzianka 26 października 2026 roku podpisana została umowa na zagospodarowanie działki sołeckiej we Władkowie. Na terenie o powierzchni blisko 1500 m² powstanie miejsce dla dzieci, młodzieży i dorosłych. W…",
   "url": "https://grodzisk.pl/2026/10/29/wladkow-zyska-nowa-przestrzen-do-rekreacji/",
   "published": "2026-10-29",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/10/Podpisanie-umowy-ws.-zagospodarowanie-dzialki-soleckiej-w-Wladkowie-768x456.jpg"
  },
  {
   "id": "ac5b48c748edb71d",
@@ -1237,7 +1273,8 @@
   "lead": "Październikowe wydanie „Bogorii” informuje o zaprezentowaniu projektu Planu ogólnego gminy, który obecnie przechodzi etap opiniowania i uzgadniania z właściwymi instytucjami, a w pierwszym półroczu 2027 r. odbędą się…",
   "url": "https://grodzisk.pl/2026/10/29/pazdziernikowe-wydanie-bogorii/",
   "published": "2026-10-29",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/10/Bogoria-nr-362-pazdziernik-2026-713x456.png"
  },
  {
   "id": "698e746e5af36f36",
@@ -1249,7 +1286,8 @@
   "url": "https://biblioteka.grodzisk.pl/klub-ksiazki-true-crime-w-bibliotece-glownej-2/",
   "published": "2026-10-28",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/10/Na-strone-Trupia-Farma.png"
  },
  {
   "id": "9c9c61ae17542f07",
@@ -1260,7 +1298,8 @@
   "lead": "",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/726/",
   "published": "2026-10-28",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "97c0e02938a8a2bf",
@@ -1272,7 +1311,8 @@
   "url": "https://biblioteka.grodzisk.pl/rodzinne-warsztaty-z-eliza-piotrowska-autorka-cioci-jadzi-i-kapibary-barbary-pjm/",
   "published": "2026-10-27",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/10/Na-strone-Piotrowska.png"
  },
  {
   "id": "6c4e16ba17d4b418",

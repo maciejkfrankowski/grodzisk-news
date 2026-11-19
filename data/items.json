@@ -1,5 +1,42 @@
 [
  {
+  "id": "41c2689abb2a434b",
+  "source": "osir-wydarzenia",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Sylwester w stylu PRL „Gdzie się podziały...",
+  "lead": "",
+  "url": "https://grodzisksport.pl/kalendarz-wydarzen/sylwester-w-stylu-prl-gdzie-sie-podzialy-tamte-prywatki.html",
+  "published": "2026-11-19",
+  "fetched_at": "2026-11-19T13:06:56+00:00",
+  "event_date": "2026-12-31 20:00:00"
+ },
+ {
+  "id": "c9594eefd75719a0",
+  "source": "policja",
+  "source_name": "Policja – KPP w Grodzisku Mazowieckim",
+  "category": "bezpieczenstwo",
+  "title": "Policjant uczy młodzież bezpiecznych zachowań i reakcji na zagrożenia",
+  "lead": "Hasło ogólnopolskiej kampanii „Życie to nie gra – masz je tylko jedno” przyświeca profilaktykowi z grodziskiej komendy podczas prowadzenia zajęć z uczniami najstarszych klas szkół podstawowych. Celem prelekcji dla…",
+  "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154500,Policjant-uczy-mlodziez-bezpiecznych-zachowan-i-reakcji-na-zagrozenia.html",
+  "published": "2026-11-19",
+  "fetched_at": "2026-11-19T13:06:55+00:00",
+  "event_date": "",
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-311934.jpg"
+ },
+ {
+  "id": "a184e4106507a26a",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Wycieczka do Wrocławia dla Mieszkańców",
+  "lead": "W sobotę 19 Grudnia zapraszamy na wycieczkę do Wrocławia. Wycieczka adresowana jest do mieszkańców Gminy Grodzisk Mazowiecki. Dzieciom do 18 roku życia przysługuje zniżka. Zapisy…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/wycieczka-do-wroclawia-dla-mieszkancow/",
+  "published": "2026-11-19",
+  "fetched_at": "2026-11-19T13:06:50+00:00",
+  "event_date": "2026-12-19 06:30:00"
+ },
+ {
   "id": "8d8612c0a4a8bc37",
   "source": "ck-wydarzenia",
   "source_name": "Centrum Kultury",
@@ -1323,7 +1360,8 @@
   "lead": "Szanowni Pasażerowie, w najbliższą sobotę i niedzielę 31 października i 1 listopada 👉uruchomiona zostanie specjalna linia autobusowa 🚌C1 łącząca os. Teligi, Kopernika i centrum Grodzisk Mazowiecki ze starym cmentarzem…",
   "url": "https://gpagrodzisk.pl/aktualnosci/100/",
   "published": "2026-10-27",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "f17e8efff9b0ee60",
@@ -1334,7 +1372,8 @@
   "lead": "GPA wdrożyło automatyczny system skomunikowań pomiędzy połączeniami🚐❤️🚐. Jak działa system i gdzie zapewnione są skomunikowania - o tym przekonacie się w naszym krótkim filmie ☺️ To pierwszy tego typu system w Polsce 😁…",
   "url": "https://gpagrodzisk.pl/aktualnosci/99/",
   "published": "2026-10-27",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "f52ca87393ab777c",
@@ -1345,7 +1384,8 @@
   "lead": "",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/725/",
   "published": "2026-10-27",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "1763982593f9a645",
@@ -1357,7 +1397,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/hala-widowiskowo-sportowa-caiis-w-dniu-2410-jest-nieczynna.html",
   "published": "2026-10-23",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/369-akt-fotoc.webp?ts=1792761273"
  },
  {
   "id": "5a24265adbd6acf5",
@@ -1369,7 +1410,8 @@
   "url": "https://biblioteka.grodzisk.pl/spotkanie-z-autorem-kryminalow-markiem-krajewskim-pjm/",
   "published": "2026-10-23",
   "fetched_at": "2026-11-15T11:21:12+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/10/Na-strone-Krajewski.png"
  },
  {
   "id": "dc589311f1dbafe3",
@@ -1380,7 +1422,8 @@
   "lead": "Szanowni Pasażerowie, w związku z budową ronda od 24 października 2026 r. zmianie ulegają trasy linii 13, 18, 24, 26 i 27. Dział: GPA - Związek Powiatowo-Gminny",
   "url": "https://gpagrodzisk.pl/aktualnosci/96/",
   "published": "2026-10-23",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "78bd328095cdba9d",
@@ -1391,7 +1434,8 @@
   "lead": "Na podstawie art. 20 ust. 1 ustawy z dnia 8 marca 1990 roku o samorządzie gminnym (t.j. Dz. U. z 2026 r. poz. 662) zwołuję XXXV sesję Rady Miejskiej w Grodzisku Mazowieckim w dniu 28 października 2026 roku (środa) o…",
   "url": "https://grodzisk.pl/2026/10/23/xxxv-sesja-rady-miejskiej/",
   "published": "2026-10-23",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/10/XXXV-sesje-Rady-Miejskiej-768x456.jpeg"
  },
  {
   "id": "a100dbd7b1316f7f",
@@ -1402,7 +1446,8 @@
   "lead": "Masz pytania dotyczące projektu planu ogólnego naszej gminy?Zapraszamy na spotkania informacyjne! Co oznaczają kolory na mapie? Jak sprawdzić, jakie ustalenia projektu dotyczą Twojej okolicy? Gdzie znaleźć dokumenty i…",
   "url": "https://grodzisk.pl/2026/10/23/plan-ogolny-spotkania-informacyjne-dla-mieszkancow-2/",
   "published": "2026-10-23",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/10/POG-768x456.jpeg"
  },
  {
   "id": "478e80a81b8a6dc2",
@@ -1413,7 +1458,8 @@
   "lead": "Szanowni Pasażerowie, na wniosek pasażerów i mieszkańców od poniedziałku 26 października 2026 r. wprowadza się korektę rozkładu jazdy wybranych kursów linii 43. 🚐🚃Nowy rozkład jazdy zapewni skomunikowanie autobusu linii…",
   "url": "https://gpagrodzisk.pl/aktualnosci/97/",
   "published": "2026-10-22",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "3b098697d03ac8e7",
@@ -1424,7 +1470,8 @@
   "lead": "Szanowni Pasażerowie, na wniosek pasażerów i mieszkańców od poniedziałku 26 października 2026 r. wprowadza się korektę rozkładu jazdy linii 97. 🚐Nowy rozkład jazdy poprawi punktualność porannego kursu z Dziekanowa…",
   "url": "https://gpagrodzisk.pl/aktualnosci/98/",
   "published": "2026-10-22",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "65555eab12f51c40",
@@ -1435,7 +1482,8 @@
   "lead": "",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/724/",
   "published": "2026-10-22",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "60264a85c6bac72c",
@@ -1446,7 +1494,8 @@
   "lead": "Informujemy, że od 24 października do 30 listopada 2026 r. skrzyżowanie ul. Transportowej i ul. R. Traugutta w Chrzanowie Dużym będzie całkowicie zamknięte przez całą dobę. Utrudnienia są związane z przebudową…",
   "url": "https://grodzisk.pl/2026/10/22/przebudowa-drogi-powiatowej-budowa-ronda/",
   "published": "2026-10-22",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/10/Przebudowa-drogi-powiatowej-nr-1528-W-768x456.jpg"
  },
  {
   "id": "61ae27007be54edb",
@@ -1457,7 +1506,8 @@
   "lead": "",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/723/",
   "published": "2026-10-21",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "177327129d3d95cb",
@@ -1468,7 +1518,8 @@
   "lead": "Chcesz dowiedzieć się, jak przygotować dom na sytuacje awaryjne, jak prawidłowo reagować po usłyszeniu sygnału alarmowego oraz jak ratować życie, udzielając pierwszej pomocy? Przypominamy o bezpłatnych szkoleniach z…",
   "url": "https://grodzisk.pl/2026/10/20/bezplatne-szkolenia-z-obrony-cywilnej-juz-w-ten-weekend/",
   "published": "2026-10-20",
-  "fetched_at": "2026-11-15T11:01:00+00:00"
+  "fetched_at": "2026-11-15T11:01:00+00:00",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/10/szkolenie-obrona-cywilna-23-24-10-2026-zk-wyrozniajacy-1200x640-1-768x456.jpg"
  },
  {
   "id": "3f733ec549635d43",
@@ -1480,7 +1531,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/oferta-pracy-na-stanowisko-kasjer-kasjerka.html",
   "published": "2026-10-19",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/368-akt-fotoc.webp?ts=1792400376"
  },
  {
   "id": "0635846d54824724",
@@ -1492,7 +1544,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/sylwester-w-stylu-prl-gdzie-sie-podzialy-tamte-prywatki.html",
   "published": "2026-10-16",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/366-akt-fotoc.webp?ts=1792153915"
  },
  {
   "id": "dddb19e80f9f52a9",
@@ -1503,7 +1556,8 @@
   "lead": "",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/722/",
   "published": "2026-10-16",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "26dc38fa8655a958",
@@ -1514,7 +1568,8 @@
   "lead": "17 października, w godz. 10:00-14:00 | Zespół Szkół Technicznych i Licealnych nr 2 Dział: Powiat",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/721/",
   "published": "2026-10-16",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "14da7a2e76cbb21c",
@@ -1526,7 +1581,8 @@
   "url": "https://szpitalzachodni.pl/oswiadczanie-dyrekcji-szpitala-zachodniego-w-grodzisku-mazowieckim/",
   "published": "2026-10-14",
   "fetched_at": "2026-11-15T12:42:32+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "a4fd5a9454ffe342",
@@ -1538,7 +1594,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/w-dniu-dzisiejszym-1410-plywalnia-miejska-zostanie-ponownie-otwarta-od-godz-1700.html",
   "published": "2026-10-14",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/365-akt-fotoc.webp?ts=1791986190"
  },
  {
   "id": "1de46b5ea10040c6",
@@ -1550,7 +1607,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/1410-br-plywalnia-miejska-bedzie-nieczynna-w-godz-800-1600.html",
   "published": "2026-10-13",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/363-akt-fotoc.webp?ts=1791876787"
  },
  {
   "id": "92b8664a16301713",
@@ -1561,7 +1619,8 @@
   "lead": "Szczegóły w załączeniu Dział: Powiat",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/720/",
   "published": "2026-10-13",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "49390be6ee538203",
@@ -1572,7 +1631,8 @@
   "lead": "Informacje w załączeniu Dział: Powiat",
   "url": "https://www.powiat-grodziski.pl/aktualnosci/719/",
   "published": "2026-10-13",
-  "fetched_at": "2026-11-15T11:01:01+00:00"
+  "fetched_at": "2026-11-15T11:01:01+00:00",
+  "image": ""
  },
  {
   "id": "fec8d50ee4f3e8cf",
@@ -1584,7 +1644,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/musical-legend-mazowsza-gdzie-jest-roza-kopia.html",
   "published": "2026-10-08",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/basic_info/foto_news_slider_start.webp?ts=1744893802"
  },
  {
   "id": "3f259c4927f203f0",
@@ -1595,7 +1656,8 @@
   "lead": "Szanowni Pasażerowie, od poniedziałku 19 października 2026 r. w związku z uzyskaniem stosownych zezwoleń przez przewoźnika, autobusy linii 33😊🚐 będą dojeżdżać do Tarczyna🍎. 👉Tym samym mieszkańcy Gmin Grodzisk Mazowiecki…",
   "url": "https://gpagrodzisk.pl/aktualnosci/95/",
   "published": "2026-10-08",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "e8e97d52cb277205",
@@ -1606,7 +1668,8 @@
   "lead": "Szanowni Pasażerowie, od 12 października na wniosek mieszkańców i rodziców szkoły podstawowej w miejscowości Szczęsne wprowadza się nowy rozkład jazdy linii 50. Dział: GPA - Związek Powiatowo-Gminny",
   "url": "https://gpagrodzisk.pl/aktualnosci/94/",
   "published": "2026-10-06",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "b1cd5d9e39a9a15f",
@@ -1618,7 +1681,8 @@
   "url": "https://grodzisksport.pl/aktualnosci/iii-targi-sprzetu-branzy-djskiej.html",
   "published": "2026-10-05",
   "fetched_at": "2026-11-15T12:42:28+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/351-cal-fotoc.webp?ts=1791189920"
  },
  {
   "id": "994a8334b9b402a3",
@@ -1629,7 +1693,8 @@
   "lead": "👉Pięć lat temu zaczynaliśmy od projektu kilku samorządów. Dziś to ponad 115 linii, ponad 167 autobusów i setki tysięcy pasażerów każdego miesiąca. I co najważniejsze – cały czas idziemy do przodu. Dział: GPA - Związek…",
   "url": "https://gpagrodzisk.pl/aktualnosci/93/",
   "published": "2026-09-24",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "2c0454903f8056e2",
@@ -1641,7 +1706,8 @@
   "url": "https://solectwa.grodzisk.pl/informacja-pge/",
   "published": "2026-09-18",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "24fdf2a09fbea522",
@@ -1653,7 +1719,8 @@
   "url": "https://solectwa.grodzisk.pl/informacja-o-wsciekliznie-wsrod-lisow/",
   "published": "2026-09-15",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "f25a5725ce7e5262",
@@ -1664,7 +1731,8 @@
   "lead": "Przyjedź na biegi autobusem linii 65 Dział: GPA - Związek Powiatowo-Gminny",
   "url": "https://gpagrodzisk.pl/aktualnosci/92/",
   "published": "2026-09-15",
-  "fetched_at": "2026-11-15T11:01:02+00:00"
+  "fetched_at": "2026-11-15T11:01:02+00:00",
+  "image": ""
  },
  {
   "id": "e9c60f049345b54c",
@@ -1676,7 +1744,8 @@
   "url": "https://gospodarkaodpadami.grodzisk.pl/2026/09/10/rodzinny-piknik-ekologiczny/",
   "published": "2026-09-10",
   "fetched_at": "2026-11-15T17:29:09+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "27c10b1f755bc43d",
@@ -1688,7 +1757,8 @@
   "url": "https://solectwa.grodzisk.pl/dojazd-na-dozynki/",
   "published": "2026-08-28",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "d6211271c7c5e6b1",
@@ -1700,7 +1770,8 @@
   "url": "https://solectwa.grodzisk.pl/szczepienie-lisow-przeciwko-wsciekliznie-2/",
   "published": "2026-08-21",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "5abd2d3c248270a9",
@@ -1712,7 +1783,8 @@
   "url": "https://solectwa.grodzisk.pl/otwarcie-placu-zabaw-w-kozerach-nowych/",
   "published": "2026-08-14",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "dd699ed013fd19ad",
@@ -1724,7 +1796,8 @@
   "url": "https://solectwa.grodzisk.pl/dozynki-gminne/",
   "published": "2026-08-05",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "30eedea81dd9bb67",
@@ -1736,7 +1809,8 @@
   "url": "https://www.centrumkultury.eu/nabor-wystawcow-na-jarmark-dozynkowy-w-makowce/",
   "published": "2026-07-28",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://www.centrumkultury.eu/wp-content/uploads/2026/07/30.08-baner-1.jpg"
  },
  {
   "id": "fbd4c0996cc3238f",
@@ -1748,7 +1822,8 @@
   "url": "https://solectwa.grodzisk.pl/szkody-spowodowane-przez-susze/",
   "published": "2026-07-24",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "06b997b2d91ecd71",
@@ -1760,7 +1835,8 @@
   "url": "https://www.centrumkultury.eu/regulaminy/",
   "published": "2026-07-23",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "66c8dab4dbc3316b",

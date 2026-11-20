@@ -1,5 +1,143 @@
 [
  {
+  "id": "ac65d1a7986aa19f",
+  "source": "osir-wydarzenia",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Grodziskie Mikołajki",
+  "lead": "",
+  "url": "https://grodzisksport.pl/kalendarz-wydarzen/379-grodziskie-mikolajki.html",
+  "published": "2026-11-20",
+  "fetched_at": "2026-11-20T12:53:56+00:00",
+  "event_date": "2026-12-05 12:00:00"
+ },
+ {
+  "id": "c6c545ddf54832b0",
+  "source": "osir-wydarzenia",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Mikołajkowe Zawody Wspinaczkowe",
+  "lead": "",
+  "url": "https://grodzisksport.pl/kalendarz-wydarzen/378-mikolajkowe-zawody-wspinaczkowe.html",
+  "published": "2026-11-20",
+  "fetched_at": "2026-11-20T12:53:56+00:00",
+  "event_date": "2026-12-06 13:00:00"
+ },
+ {
+  "id": "083a0c3914be11a6",
+  "source": "szpital",
+  "source_name": "Szpital Zachodni",
+  "category": "zdrowie",
+  "title": "PANOWIE, CZAS ZADBAĆ O SIEBIE! – 21 listopada 2026 r. (sobota)",
+  "lead": "",
+  "url": "https://szpitalzachodni.pl/panowie-czas-zadbac-o-siebie-21-listopada-2026-r-sobota/",
+  "published": "2026-11-20",
+  "fetched_at": "2026-11-20T12:53:54+00:00",
+  "event_date": "",
+  "image": ""
+ },
+ {
+  "id": "ed9179b11c09e6c0",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Mikołajkowe Zawody Wspinaczkowe",
+  "lead": "Mikołajkowe Zawody Wspinaczkowe 2026! Przygotujcie swoje dłonie do chwytów i widzimy się w Grota Grodzisk! Pokonaj przeciwników i zdobądź zwycięstwo! 6 grudnia (niedziela) 2026 r. 13:00-19:00 Jak wziąć udział? Zakup…",
+  "url": "https://grodzisksport.pl/aktualnosci/378-mikolajkowe-zawody-wspinaczkowe.html",
+  "published": "2026-11-20",
+  "fetched_at": "2026-11-20T12:53:51+00:00",
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/378-cal-foto.webp"
+ },
+ {
+  "id": "19234e1c8d8bb599",
+  "source": "osir",
+  "source_name": "OSiR Grodzisk Mazowiecki",
+  "category": "sport",
+  "title": "Funkcjonowanie Hali Widowiskowo-Sportowej",
+  "lead": "INFORMACJA! Z powodu przerw w dostawie prądu w dniu 21.11 (sobota) Hala Widowiskowo-Sportowa będzie czynna w godz. 12:00-21:00.",
+  "url": "https://grodzisksport.pl/aktualnosci/377-funkcjonowanie-hali-widowiskowo-sportowej.html",
+  "published": "2026-11-20",
+  "fetched_at": "2026-11-20T12:53:51+00:00",
+  "event_date": "",
+  "image": "https://grodzisksport.pl/files/news/377-akt-foto.webp"
+ },
+ {
+  "id": "d18ddb5a2358b491",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Konferencja „Dziecko w cyberświecie”",
+  "lead": "W imieniu organizatorów: Ośrodek Pomocy Społecznej w Grodzisku Mazowieckim oraz Instytut Nowej Kultury zapraszamy do udziału w Konferencji „ Dziecko w cyberświecie – hejt…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/konferencja-dziecko-w-cyberswiecie/",
+  "published": "2026-11-20",
+  "fetched_at": "2026-11-20T12:53:50+00:00",
+  "event_date": "2026-11-25 10:00:00"
+ },
+ {
+  "id": "0b08704ea2483d83",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Wernisaż wystawy p. Tekielskich „Artystyczny dialog”",
+  "lead": "Wystawa pokazuje twórczość malarki Katarzyny Tekielskiej i jubilera Pawła Tekielskiego. Zapraszamy na spotkanie z artystami w piątek 27 listopada o godzinie 18:00. Przedstawione…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/wernisaz-wystawy-p-tekielskich-artystyczny-dialog/",
+  "published": "2026-11-20",
+  "fetched_at": "2026-11-20T12:53:50+00:00",
+  "event_date": "2026-11-27 18:00:00"
+ },
+ {
+  "id": "329c674a14d8efbe",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Wernisaż wystawy fotografii:,, Mieszkańcy WGM”",
+  "lead": "W sobotę 28 listopada o godz. 18.00 zapraszamy na wernisaż wystawy pt. „Mieszkańcy WGM” Codziennie mijamy się na ulicach, spotykamy w autobusach, sklepach, szkołach i podczas…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/wernisaz-wystawy-fotografii-mieszkancy-wgm/",
+  "published": "2026-11-20",
+  "fetched_at": "2026-11-20T12:53:50+00:00",
+  "event_date": "2026-11-28 18:00:00"
+ },
+ {
+  "id": "7d3716218356cb50",
+  "source": "gmina",
+  "source_name": "Urząd Miejski w Grodzisku Mazowieckim",
+  "category": "miasto",
+  "title": "Plan XXXVI Sesji Rady Miejskiej",
+  "lead": "Na podstawie art. 20 ust. 1 ustawy z dnia 8 marca 1990 roku o samorządzie gminnym (t. jedn. Dz. U. z 2026 r., poz. 662 z późn. zm.) zwołuję XXXVI sesję Rady Miejskiej w Grodzisku Mazowieckim w dniu 25 listopada 2026…",
+  "url": "https://grodzisk.pl/2026/11/20/plan-xxxvi-sesji-rady-miejskiej/",
+  "published": "2026-11-20",
+  "fetched_at": "2026-11-20T12:53:42+00:00",
+  "event_date": "",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/11/XXXVI-Sesja-Rady-Miejskiej-768x456.jpeg"
+ },
+ {
+  "id": "c17d4fcef84b130e",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Chem Lab. Warsztaty chemiczne w Pawilonie Kultury (dzieci 5+ lat)",
+  "lead": "Zapraszamy 28 listopada, godz. 12:00. Pawilon Kultury. Wstęp wolny!",
+  "url": "https://biblioteka.grodzisk.pl/chem-lab-warsztaty-chemiczne-w-pawilonie-kultury-dzieci-5-lat-2/",
+  "published": "2026-11-19",
+  "fetched_at": "2026-11-20T12:53:45+00:00",
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/09/Instagram-post-Chem-Lab-Zapisy-scaled.png"
+ },
+ {
+  "id": "b87df57f57071961",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Robotyka w Pawilonie Kultury (6+ lat)",
+  "lead": "Zapraszamy w czwartki, godz. 15:30-17:00. Pawilon Kultury. Wstęp wolny!",
+  "url": "https://biblioteka.grodzisk.pl/robotyka-w-pawilonie-kultury-6-lat-2/",
+  "published": "2026-11-19",
+  "fetched_at": "2026-11-20T12:53:45+00:00",
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/10/Instagram-post-Robotyka-Nowa-PK-scaled.png"
+ },
+ {
   "id": "41c2689abb2a434b",
   "source": "osir-wydarzenia",
   "source_name": "OSiR Grodzisk Mazowiecki",
@@ -1848,7 +1986,8 @@
   "url": "https://solectwa.grodzisk.pl/festiwal-kultur-swiata-2026/",
   "published": "2026-07-17",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "b77d2d34c2254406",
@@ -1860,7 +1999,8 @@
   "url": "https://gospodarkaodpadami.grodzisk.pl/2026/06/26/nie-wyrzucaj-kompostuj/",
   "published": "2026-06-26",
   "fetched_at": "2026-11-15T17:29:09+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "7b5c01bb0e13aba0",
@@ -1872,7 +2012,8 @@
   "url": "https://solectwa.grodzisk.pl/chron-zwierzeta-w-upaly/",
   "published": "2026-06-26",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "0f8215a751ec269c",
@@ -1884,7 +2025,8 @@
   "url": "https://solectwa.grodzisk.pl/piknik-rodzinny/",
   "published": "2026-06-25",
   "fetched_at": "2026-11-15T12:42:31+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "74ec65a87d7d6f65",
@@ -1896,7 +2038,8 @@
   "url": "https://gospodarkaodpadami.grodzisk.pl/2026/06/16/odpady/",
   "published": "2026-06-16",
   "fetched_at": "2026-11-15T17:29:09+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "47f3cbc23e847070",
@@ -1908,7 +2051,8 @@
   "url": "https://www.centrumkultury.eu/grodziski-chor-bogorya-tournee-do-austrii-i-czech/",
   "published": "2026-06-02",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://www.centrumkultury.eu/wp-content/uploads/2026/06/TV-W-PORTIERNI-5.jpg"
  },
  {
   "id": "aba13d6d69abe76d",
@@ -1920,7 +2064,8 @@
   "url": "https://www.centrumkultury.eu/miedzynarodowy-jarmark-produktow-regionalnych-w-grodzisku-mazowieckim/",
   "published": "2026-04-24",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://www.centrumkultury.eu/wp-content/uploads/2026/04/BANERY-FB-i-TV-6.png"
  },
  {
   "id": "eb470f1462f9e802",
@@ -1932,7 +2077,8 @@
   "url": "https://www.centrumkultury.eu/warszawska-syrenka-eliminacje/",
   "published": "2026-02-17",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://www.centrumkultury.eu/wp-content/uploads/2026/02/844_Warszawska-Syrenka_2026_internet.jpg"
  },
  {
   "id": "d40fa50b6d93061f",
@@ -1944,7 +2090,8 @@
   "url": "https://gospodarkaodpadami.grodzisk.pl/2025/12/18/zmiana-godzin-pracy/",
   "published": "2025-12-18",
   "fetched_at": "2026-11-15T17:29:09+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  },
  {
   "id": "da08fcf983d1025c",
@@ -1956,7 +2103,8 @@
   "url": "https://www.centrumkultury.eu/konkursy/",
   "published": "2025-03-10",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://www.centrumkultury.eu/wp-content/uploads/2025/03/WEJSCIOWKI.jpg"
  },
  {
   "id": "901c5cde358b049d",
@@ -1968,7 +2116,8 @@
   "url": "https://www.centrumkultury.eu/bezplatna-pomoc-prawna/",
   "published": "2025-02-11",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://www.centrumkultury.eu/wp-content/uploads/2025/02/TV-W-PORTIERNI-10.jpg"
  },
  {
   "id": "7751d14a1e0be570",
@@ -1980,7 +2129,8 @@
   "url": "https://www.centrumkultury.eu/skargi-i-wnioski/",
   "published": "2023-10-27",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://www.centrumkultury.eu/wp-content/uploads/2023/10/TV-W-PORTIERNI-12-1.jpg"
  },
  {
   "id": "14b8282ce2799ded",
@@ -1992,7 +2142,8 @@
   "url": "https://www.centrumkultury.eu/zalatw-sprawe-w-urzedzie-bez-wychodzenia-z-domu/",
   "published": "2022-12-05",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": "https://www.centrumkultury.eu/wp-content/uploads/2022/12/TV-W-PORTIERNI-6.png"
  },
  {
   "id": "77e94fcfa718cd81",
@@ -2004,6 +2155,7 @@
   "url": "https://www.centrumkultury.eu/polityka-prywatnosci/",
   "published": "2020-07-09",
   "fetched_at": "2026-11-15T11:21:17+00:00",
-  "event_date": ""
+  "event_date": "",
+  "image": ""
  }
 ]

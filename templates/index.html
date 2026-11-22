@@ -27,24 +27,29 @@
 
 <section>
   <header class="sec"><h2>{{ t.top }}</h2></header>
-  <div class="grid">
-    {% for e in top %}{{ m.card(e, root) }}{% endfor %}
-    {% if site.ad.enabled %}
-    {% set ad_href = site.ad.url or ('mailto:' ~ site.contact_email ~ '?subject=' ~ (t.ad_subject|urlencode)) %}
-    <article class="card ad">
-      <span class="ad-label">{{ t.ad_label }}</span>
-      {% if site.ad.image %}
-      <a class="ad-img" href="{{ ad_href }}"{% if site.ad.url %} target="_blank" rel="sponsored noopener"{% endif %}>
-        <img src="{{ root ~ site.ad.image }}" alt="{{ site.ad.image_alt or site.ad.name }}" loading="lazy"></a>
-      {% endif %}
-      <div class="card-body">
-        <h3>{{ site.ad.name }}</h3>
-        <p class="lead">{{ site.ad.text }}</p>
-        <a class="btn" href="{{ ad_href }}"{% if site.ad.url %} target="_blank" rel="sponsored noopener"{% endif %}>{{ site.ad.cta }} →</a>
-      </div>
-    </article>
+  <div class="top-row{% if not more %} solo{% endif %}">
+    <div class="top-big">{% for e in top %}{{ m.card(e, root) }}{% endfor %}</div>
+    {% if more %}
+    <div class="panel top-list">
+      <ul class="rows">
+        {% for e in more %}
+        <li><a {{ m.link(e, root) }}>
+          <span class="dot" style="background: {{ e.cat.color }}"></span>
+          <span><strong>{{ e.title }}</strong><small>{{ e.source_name }} · {{ e.date_pl }}</small></span>
+        </a></li>
+        {% endfor %}
+      </ul>
+    </div>
     {% endif %}
   </div>
+  {% if site.ad.enabled %}
+  {% set ad_href = site.ad.url or ('mailto:' ~ site.contact_email ~ '?subject=' ~ (t.ad_subject|urlencode)) %}
+  <aside class="ad-strip">
+    {% if site.ad.image %}<a class="ad-img" href="{{ ad_href }}"{% if site.ad.url %} target="_blank" rel="sponsored noopener"{% endif %}><img src="{{ root ~ site.ad.image }}" alt="{{ site.ad.image_alt or site.ad.name }}" loading="lazy"></a>{% endif %}
+    <div class="ad-text"><span class="ad-label">{{ t.ad_label }}</span><h3>{{ site.ad.name }}</h3><p class="lead">{{ site.ad.text }}</p></div>
+    <a class="btn" href="{{ ad_href }}"{% if site.ad.url %} target="_blank" rel="sponsored noopener"{% endif %}>{{ site.ad.cta }} →</a>
+  </aside>
+  {% endif %}
 </section>
 
 {% if site.useful %}

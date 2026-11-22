@@ -56,6 +56,12 @@ plik zostaje na serwerze źródła i stamtąd jest wyświetlany (`referrerpolicy
 wczyta, karta wraca do pastelowego kafelka kategorii. Ten sam obraz przy więcej niż dwóch wpisach jednego źródła
 uznajemy za logo i pomijamy. Wydarzenia zachowują kafelek z datą.
 
+## Ilustracje tematyczne i układ strony głównej
+Wpis bez zdjęcia dostaje ilustrację dobraną po tytule: `i18n/<lang>.yaml` → `topics` (temat → wyrażenie regularne,
+kolejność = pierwszeństwo), pliki w `static/img/topics/<temat>.svg` (17 tematów, własne rysunki). Bez dopasowania
+zostaje pastelowy kafelek kategorii. Sekcja „Najważniejsze”: dwie duże karty + zwarta lista sześciu wpisów;
+reklama (jeśli włączona) jako pasek pod sekcją. Wydarzenia o tym samym tytule i terminie z jednego źródła są scalane.
+
 ## Panel redakcji
 `admin/index.html` ładuje Sveltia CMS (wersja przypięta, z unpkg), `admin/config.yml` opisuje kolekcję
 `content/articles` (pola zgodne z nagłówkiem YAML czytanym przez `gn/build.py`). Logowanie: token GitHuba

@@ -63,3 +63,25 @@ src_ok: OK
 src_err: Fehler
 imprint: Impressum
 privacy: Datenschutz
+more_news: Alle Meldungen
+
+# Themenbilder für Meldungen ohne Foto: Thema -> regulärer Ausdruck, der im Titel gesucht wird
+# (Reihenfolge = Vorrang; ohne Treffer bleibt die Rubrik-Kachel).
+topics:
+  swim: '(schwimm|hallenbad|freibad|dlrg|rettungsschwimm)'
+  train: '(bahnhof|hunsrückbahn|zugverkehr|\bzüge|schienen|ersatzverkehr|rheinstrecke|\bbahn)'
+  bus: '(\bbus|buslinie|fahrplan|haltestelle|öpnv|verkehrsverbund|deutschlandticket|\bticket)'
+  fire: '(feuerwehr|\bbrand|katastrophenschutz|löschzug)'
+  police: '(polizei|diebstahl|einbruch|betrug|verkehrsunfall)'
+  waste: '(abfall|müll|entsorgung|wertstoff|sperrmüll|\btonne|recycling|kleidercontainer|strauchschnitt)'
+  water: '(wasser|hochbehälter|pumpwerk|abwasser|kanalisation)'
+  health: '(gesund|klinik|krankenhaus|\barzt|impf|pflege|blutspende)'
+  library: '(bücher|\bbuch\b|lesung|bibliothek|bücherei)'
+  cinema: '(\bkino|\bfilm)'
+  school: '(schule|schüler|\bkita|kindergarten|ausbildung|azubi|volkshochschule|\bvhs|schulbuch)'
+  council: '(stadtrat|sitzung|ausschuss|bürgermeister|haushalt|beschl[uü]ss|kreistag|satzung|\bwahl|kreisverwaltung)'
+  sport: '(heimspiel|turnier|\bliga|meisterschaft|sport|volkslauf|\blauf|sieg\b|volley|ruder|mannschaft|regatta|radsport)'
+  celebration: '(stadtfest|weinfest|\bfest\b|\\bfeier\\b|feierstunde|feierlich|jubiläum|ehrung|ausgezeichnet|weihnacht|kirmes|volkstrauertag|\bmarkt)'
+  stage: '(konzert|theater|ausstellung|festival|musik|orchester|\bchor|kultur)'
+  road: '(straße|strasse|sperrung|baustelle|bauarbeiten|umleitung|sanierung|brücke|radweg)'
+  notice: '(bekanntmachung|ausschreibung|auftrag|vergeben|hinweis|stellenangebot|umfrage|jahresabschluss|unterlagen)'

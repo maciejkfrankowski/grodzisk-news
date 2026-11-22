@@ -137,9 +137,18 @@ def build() -> None:
         entry["date_pl"] = date_pl(entry["published"])
         if entry["event_date"]:
             entry.update(event_labels(entry["event_date"]))
+    topics = [(name, re.compile(pattern, re.I)) for name, pattern in (T.get("topics") or {}).items()]
+    for entry in everything:  # ilustracja tematyczna tylko tam, gdzie nie ma zdjęcia
+        entry["topic"] = "" if entry["image"] or entry["event_date"] else next(
+            (name for name, pattern in topics if pattern.search(entry["title"])), "")
     # Wydarzenia (z terminem) idą osobnym torem: tylko nadchodzące, od najbliższego
     events = sorted((e for e in everything if e["event_date"][:10] >= today_iso),
                     key=lambda e: e["event_date"])
+    # to samo wydarzenie bywa u źródła pod dwoma adresami (np. strona główna i podstrona filii)
+    unique: dict[tuple, dict] = {}
+    for event in events:
+        unique.setdefault((event["source"], event["title"].casefold(), event["event_date"]), event)
+    events = list(unique.values())
     entries = [e for e in everything if not e["event_date"]]
     entries.sort(key=lambda e: (e["published"], not e["external"]), reverse=True)
 
@@ -175,10 +184,11 @@ def build() -> None:
         if entry["category"] not in seen:
             seen.add(entry["category"])
             today.append(entry)
-    top = [e for e in rest if e not in today[:4]][:3]
+    fresh = [e for e in rest if e not in today[:4]]
+    top, more = fresh[:2], fresh[2:8]  # dwie duże pozycje + zwarta lista
     columns = [{"cat": c, "entries": [e for e in rest if e["category"] == c["slug"]][:4]}
                for c in env.globals["nav"]]
-    render("index.html", "", hero=hero, today=today[:4], top=top, events=events[2:6] or events[:4],
+    render("index.html", "", hero=hero, today=today[:4], top=top, more=more, events=events[2:6] or events[:4],
            columns=[c for c in columns if c["entries"]][:3], active="")
 
     # Kategorie

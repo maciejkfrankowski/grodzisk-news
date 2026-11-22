@@ -4,6 +4,7 @@ import unittest
 from unittest import mock
 
 from gn import fetch
+from gn.build import photo_pool, pick_photo
 from gn.fetch import add_images, merge
 from gn.fetchers import html_links, rss, tribe_events
 from gn.models import clean_lead
@@ -200,6 +201,68 @@ class ImagesTest(unittest.TestCase):
         self.assertEqual(get.call_count, 1)
         self.assertEqual(items[0]["image"], "https://e.org/img/foto.jpg?a=1&b=2")
         self.assertNotIn("image", items[2])
+
+
+PROM_HOME = """<div class="repertuar_list">
+<div class="repertuar_item"><div class="link"><a href="https://promkultury.pl/wydarzenie/sinatra-koncert/">
+ <div class="repertuar_image"><img src="a.jpg" alt="" title="Sinatra – koncert"></div>
+ <div class="repertuar_timeline"><p class="timeline">21.11.2026, 19:00</p></div>
+ <div class="repertuar_content"><h3>Sinatra – Out of Lights koncert</h3><p>Portret muzyczny</p></div></a></div>
+ <p class="ticket"><a href="https://bilety.promkultury.pl/rezerwacja/x.html?id=3102">KUP BILET</a></p></div>
+<div class="repertuar_item"><div class="link"><a href="https://promkultury.pl/wydarzenie/kino-kepa-roza/">
+ <div class="repertuar_timeline"><p class="timeline">22.11.2026, 18:00</p></div>
+ <div class="repertuar_content"><h3>KINO KĘPA: Róża</h3><p>reż. Markus Schleinzer, Austria 2026, 94 min</p></div></a></div></div>
+</div>"""
+
+UM_LIST = """<ul><li><div class="t"><a href="https://pragapld.um.warszawa.pl/-/sesja-rady"><img src="x.png" alt="Znak">
+ <h3>XL Sesja Rady Dzielnicy Praga-Południe</h3></a></div>
+ <div><time datetime="2026-11-17 16:06:00">17.11.2026</time> <span> Artykuł </span></div>
+ <p>W dniu 24 listopada 2026 roku o godz. 14:00 odbędzie się sesja.</p>
+ <p>źródło: <a href="https://pragapld.um.warszawa.pl/-/sesja-rady"> pragapld.um.warszawa.pl </a></p></li>
+<li><div class="t"><a href="https://pragapld.um.warszawa.pl/-/spacer-po-kepie"><h3>Spacer śladami architektury</h3></a></div>
+ <div><time datetime="2026-11-13 14:57:00">13.11.2026</time> <span> Artykuł </span></div>
+ <p>Zbiórka przy ul. Francuskiej, na Saskiej Kępie.</p>
+ <p>źródło: <a href="https://pragapld.um.warszawa.pl/-/spacer-po-kepie"> pragapld.um.warszawa.pl </a></p></li></ul>"""
+
+
+class SaskaTest(unittest.TestCase):
+    def test_time_right_after_date(self):
+        source = dict(SOURCE, url="https://promkultury.pl/", events=True,
+                      link_pattern=r"promkultury\.pl/wydarzenie/[^/?#]+/?$")
+        first, second = html_links.parse(PROM_HOME, source)
+        self.assertEqual(first.title, "Sinatra – Out of Lights koncert")
+        self.assertEqual(first.event_date, "2026-11-21 19:00:00")
+        self.assertEqual(second.event_date, "2026-11-22 18:00:00")
+
+    def test_district_list_and_include(self):
+        source = dict(SOURCE, url="https://pragapld.um.warszawa.pl/aktualnosci", require_date=True,
+                      link_pattern=r"pragapld\.um\.warszawa\.pl/-/[^/?#]+$",
+                      strip=[r"\bArtykuł\b", r"źródło:\s*pragapld\.um\.warszawa\.pl"])
+        items = html_links.parse(UM_LIST, source)
+        self.assertEqual([i.published for i in items], ["2026-11-17", "2026-11-13"])
+        self.assertTrue(items[0].lead.startswith("W dniu 24 listopada"))
+        keep = fetch.include_pattern([r"sask\w+ kęp", "francusk"])
+        self.assertEqual([i.title for i in items if keep.search(f"{i.title} {i.lead}")],
+                         ["Spacer śladami architektury"])
+        self.assertTrue(fetch.include_pattern("KĘPA").search("kino kępa"))
+
+
+class PhotoPoolTest(unittest.TestCase):
+    def test_groups_and_stable_choice(self):
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp) / "static" / "img" / "topics-photo"
+            folder.mkdir(parents=True)
+            for name in ("road-1.jpg", "road-2.PNG", "general-1.webp", "notatki.txt", "bus.jpg"):
+                (folder / name).write_bytes(b"x")
+            pool = photo_pool(Path(tmp))
+        self.assertEqual(pool, {"general": ["general-1.webp"], "road": ["road-1.jpg", "road-2.PNG"]})
+        self.assertIn(pick_photo(pool, "road", "abc"), pool["road"])
+        self.assertEqual(pick_photo(pool, "road", "abc"), pick_photo(pool, "road", "abc"))
+        self.assertEqual(pick_photo(pool, "", "abc"), "general-1.webp")   # brak tematu -> grupa ogólna
+        self.assertEqual(pick_photo(pool, "cinema", "abc"), "general-1.webp")
+        self.assertEqual(pick_photo({}, "road", "abc"), "")
 
 
 class RssTest(unittest.TestCase):

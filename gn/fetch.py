@@ -92,6 +92,12 @@ def add_images(items: list[dict], budget: int = MAX_IMAGE_LOOKUPS) -> int:
     return done
 
 
+def include_pattern(include: str | list[str]) -> re.Pattern:
+    """Filtr `include` z sources.yaml: jeden regex albo lista regexów (dowolny pasujący wystarcza)."""
+    parts = [include] if isinstance(include, str) else list(include)
+    return re.compile("|".join(f"(?:{part})" for part in parts), re.I)
+
+
 def run() -> int:
     sources = yaml.safe_load((ROOT / "sources.yaml").read_text(encoding="utf-8"))["sources"]
     site = yaml.safe_load((ROOT / "site.yaml").read_text(encoding="utf-8"))
@@ -106,14 +112,21 @@ def run() -> int:
                  "home": source.get("home", source["url"]), "checked_at": now_iso()}
         try:
             fetched = ADAPTERS[source["adapter"]](source)
+            total = len(fetched)
             if source.get("exclude_title"):  # np. powtarzalne ogłoszenia bez wartości dla czytelnika
                 skip = re.compile(source["exclude_title"], re.I)
                 fetched = [item for item in fetched if not skip.search(item.title)]
+            if source.get("include"):  # źródło szersze niż serwis (dzielnica, miasto): tylko wpisy o okolicy
+                keep = include_pattern(source["include"])
+                fetched = [item for item in fetched if keep.search(f"{item.title} {item.lead}")]
+                entry["filtered"] = True
             fresh = sorted((i.to_dict() for i in fetched), key=lambda i: i["published"],
                            reverse=True)[:MAX_PER_RUN]
             items, added = merge(items, fresh)
-            entry.update(ok=bool(fetched), found=len(fetched), added=added,
-                         error="" if fetched else "0 wpisów – sprawdź strukturę strony")
+            # przy filtrze `include` zero trafień to normalny wynik, a nie błąd struktury strony
+            ok = bool(fetched) or (entry.pop("filtered", False) and total > 0)
+            entry.update(ok=ok, found=len(fetched), added=added,
+                         error="" if ok else "0 wpisów – sprawdź strukturę strony")
         except Exception as error:  # noqa: BLE001 – jedno źródło nie może zatrzymać reszty
             entry.update(ok=False, found=0, added=0, error=str(error)[:600])
         status.append(entry)

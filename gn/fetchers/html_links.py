@@ -6,7 +6,7 @@ Dzięki temu jeden adapter obsługuje strony typu /aktualnosci/{id}.
 
 Opcje źródła: `strip` (regexy wycinane z tytułu i leadu), `require_date` (pomija linki,
 przy których nie ma daty – przydatne, gdy wzorzec URL łapie też menu), `events` (wpisy to
-wydarzenia: data i „godz. GG:MM” z listy trafiają do `event_date`).
+wydarzenia: data i „godz. GG:MM” albo „DD.MM.RRRR, GG:MM” z listy trafiają do `event_date`).
 """
 from __future__ import annotations
 
@@ -23,6 +23,7 @@ MAX_CLIMB = 5
 MIN_TITLE = 8
 TITLE_CLASS = re.compile(r"title|tytul", re.I)
 ELLIPSIS = re.compile(r"\s*(\.{3}|…)\s*$")
+AFTER_DATE = re.compile(r"\s*,?\s*(\d{1,2})[:.](\d{2})\b")  # „21.11.2026, 19:00”
 TIME = re.compile(r"(?i)(?:\bgodz\.?\s*(\d{1,2})[:.](\d{2})|\b(\d{1,2})[:.](\d{2})\s*Uhr\b)")
 DATE = (r"\b\d{1,2}\s?[.\-/]\s?\d{1,2}\s?[.\-/]\s?\d{4}\b(\s*r\.)?|\b\d{4}-\d{2}-\d{2}\b"
         r"|\b\d{1,2}\.?\s+(?:Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember"
@@ -145,6 +146,12 @@ def parse(html: str, source: dict) -> list[Item]:
         if events:
             clock = TIME.search(box_text)
             hour, minute = (clock.group(1) or clock.group(3), clock.group(2) or clock.group(4)) if clock else (0, "00")
+            if not clock:  # godzina bez „godz.”, zaraz po dacie z listy
+                for match in DATE_RE.finditer(box_text):
+                    after = AFTER_DATE.match(box_text, match.end())
+                    if after and find_date(match.group()) == listed and int(after.group(1)) < 24:
+                        hour, minute = after.group(1), after.group(2)
+                        break
             event_date = f"{published} {int(hour):02d}:{minute}:00"
             published, lead = date.today().isoformat(), ""
         else:

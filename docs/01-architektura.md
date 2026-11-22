@@ -62,6 +62,12 @@ kolejność = pierwszeństwo), pliki w `static/img/topics/<temat>.svg` (17 temat
 zostaje pastelowy kafelek kategorii. Sekcja „Najważniejsze”: dwie duże karty + zwarta lista sześciu wpisów;
 reklama (jeśli włączona) jako pasek pod sekcją. Wydarzenia o tym samym tytule i terminie z jednego źródła są scalane.
 
+## Strona główna jako całość
+Kolejność: główny blok + „dziś” → „Najważniejsze” (+ reklama) → sekcje kategorii (po 8 najnowszych wpisów, link
+„Zobacz wszystkie” do podstrony, gdy jest ich więcej) → „Przydatne” → kontakt → wydarzenia (8 najbliższych) na końcu.
+Menu i dolny pasek prowadzą do kotwic `#<slug>` na stronie głównej (z podstron: `../../#<slug>`); kategoria bez
+wpisów zachowuje link do własnej podstrony. Podstrony kategorii i `/wydarzenia/` nadal istnieją jako pełne listy.
+
 ## Panel redakcji
 `admin/index.html` ładuje Sveltia CMS (wersja przypięta, z unpkg), `admin/config.yml` opisuje kolekcję
 `content/articles` (pola zgodne z nagłówkiem YAML czytanym przez `gn/build.py`). Logowanie: token GitHuba

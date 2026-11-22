@@ -234,3 +234,8 @@ th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--lin
   .ad-strip .ad-img { width: 84px; }
   .ad-strip .btn { flex: 1 0 100%; }
 }
+
+/* Sekcje kategorii na stronie głównej – cel przewijania z menu */
+html { scroll-behavior: smooth; }
+.anchor { scroll-margin-top: 16px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

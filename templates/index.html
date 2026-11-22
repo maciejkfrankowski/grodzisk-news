@@ -52,6 +52,13 @@
   {% endif %}
 </section>
 
+{% for section in sections %}
+<section id="{{ section.cat.slug }}" class="anchor">
+  <header class="sec"><h2>{{ section.cat.name }}</h2>{% if section.total > section.entries|length %}<a href="{{ root }}{{ p.cat }}/{{ section.cat.slug }}/">{{ t.see_all }} ({{ section.total }}) →</a>{% endif %}</header>
+  <div class="grid">{% for e in section.entries %}{{ m.card(e, root) }}{% endfor %}</div>
+</section>
+{% endfor %}
+
 {% if site.useful %}
 <section>
   <header class="sec"><h2>{{ t.useful }}</h2></header>
@@ -61,13 +68,6 @@
       <span><strong>{{ u.label }}</strong>{% if u.note %}<small>{{ u.note }}</small>{% endif %}</span></a>
     {% endfor %}
   </div>
-</section>
-{% endif %}
-
-{% if events %}
-<section>
-  <header class="sec"><h2>{{ t.upcoming }}</h2><a href="{{ root }}{{ p.events }}/">{{ t.see_all }} →</a></header>
-  <div class="grid">{% for e in events %}{{ m.card(e, root) }}{% endfor %}</div>
 </section>
 {% endif %}
 
@@ -84,19 +84,10 @@
 </section>
 {% endif %}
 
-<section class="cols">
-  {% for col in columns %}
-  <div>
-    <header class="sec"><h2>{{ col.cat.name }}</h2><a href="{{ root }}{{ p.cat }}/{{ col.cat.slug }}/">{{ t.see_all }} →</a></header>
-    <ul class="rows panel">
-      {% for e in col.entries %}
-      <li><a {{ m.link(e, root) }}>
-        <span class="row-ico" style="--c: {{ e.cat.color }}">{{ m.icon(e.cat.icon) }}</span>
-        <span><strong>{{ e.title }}</strong><small>{{ e.date_pl }} · {{ e.source_name }}</small></span>
-      </a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endfor %}
+{% if events %}
+<section id="{{ p.events }}" class="anchor">
+  <header class="sec"><h2>{{ t.upcoming }}</h2>{% if events_total > events|length %}<a href="{{ root }}{{ p.events }}/">{{ t.see_all }} ({{ events_total }}) →</a>{% endif %}</header>
+  <div class="grid">{% for e in events %}{{ m.card(e, root) }}{% endfor %}</div>
 </section>
+{% endif %}
 {% endblock %}

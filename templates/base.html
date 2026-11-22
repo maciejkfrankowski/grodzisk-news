@@ -17,8 +17,8 @@
   </a>
   <nav class="nav" aria-label="{{ t.nav_main }}">
     <a href="{{ root or './' }}"{% if not active %} class="on"{% endif %}>{{ t.nav_news }}</a>
-    {% if show_events %}<a href="{{ root }}{{ p.events }}/"{% if active == 'events' %} class="on"{% endif %}>{{ t.nav_events }}</a>{% endif %}
-    {% for c in nav %}<a href="{{ root }}{{ p.cat }}/{{ c.slug }}/"{% if active == c.slug %} class="on"{% endif %}>{{ c.name }}</a>{% endfor %}
+    {% for c in nav %}<a href="{{ root ~ '#' ~ c.slug if c.slug in anchors else root ~ p.cat ~ '/' ~ c.slug ~ '/' }}"{% if active == c.slug %} class="on"{% endif %}>{{ c.name }}</a>{% endfor %}
+    {% if show_events %}<a href="{{ root ~ '#' ~ p.events if events_anchor else root ~ p.events ~ '/' }}"{% if active == 'events' %} class="on"{% endif %}>{{ t.nav_events }}</a>{% endif %}
     <a href="{{ root }}{{ p.fun }}/"{% if active == 'fun' %} class="on"{% endif %}>{{ t.nav_fun }}</a>
   </nav>
   <div class="tools">
@@ -37,9 +37,9 @@
 </footer>
 <nav class="tabbar" aria-label="{{ t.tab_shortcuts }}">
   <a href="{{ root or './' }}"{% if not active %} class="on"{% endif %}>{{ m.icon('home') }}{{ t.nav_news }}</a>
-  {% for c in tabs[:1] %}<a href="{{ root }}{{ p.cat }}/{{ c.slug }}/"{% if active == c.slug %} class="on"{% endif %}>{{ m.icon(c.icon) }}{{ c.short or c.name.split()[0] }}</a>{% endfor %}
-  {% if show_events %}<a href="{{ root }}{{ p.events }}/"{% if active == 'events' %} class="on"{% endif %}>{{ m.icon('calendar') }}{{ t.nav_events }}</a>{% endif %}
-  {% for c in tabs[1:2] %}<a href="{{ root }}{{ p.cat }}/{{ c.slug }}/"{% if active == c.slug %} class="on"{% endif %}>{{ m.icon(c.icon) }}{{ c.short or c.name.split()[0] }}</a>{% endfor %}
+  {% for c in tabs[:1] %}<a href="{{ root ~ '#' ~ c.slug if c.slug in anchors else root ~ p.cat ~ '/' ~ c.slug ~ '/' }}"{% if active == c.slug %} class="on"{% endif %}>{{ m.icon(c.icon) }}{{ c.short or c.name.split()[0] }}</a>{% endfor %}
+  {% if show_events %}<a href="{{ root ~ '#' ~ p.events if events_anchor else root ~ p.events ~ '/' }}"{% if active == 'events' %} class="on"{% endif %}>{{ m.icon('calendar') }}{{ t.nav_events }}</a>{% endif %}
+  {% for c in tabs[1:2] %}<a href="{{ root ~ '#' ~ c.slug if c.slug in anchors else root ~ p.cat ~ '/' ~ c.slug ~ '/' }}"{% if active == c.slug %} class="on"{% endif %}>{{ m.icon(c.icon) }}{{ c.short or c.name.split()[0] }}</a>{% endfor %}
   <a href="{{ root }}{{ p.fun }}/"{% if active == 'fun' %} class="on"{% endif %}>{{ m.icon('puzzle') }}{{ t.nav_fun }}</a>
 </nav>
 <script src="{{ root }}static/app.js" defer></script>

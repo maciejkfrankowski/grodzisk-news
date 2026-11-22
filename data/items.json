@@ -1,5 +1,41 @@
 [
  {
+  "id": "b8da4e35590073c0",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "TAJEMNICA SZALONEGO NAUKOWCA – stacjonarny escape room",
+  "lead": "TAJEMNICA SZALONEGO NAUKOWCA – stacjonarny escape room. A gdybyś to Ty był jedyną osobą, która może uratować polskie wynalazki przed unicestwieniem? Gdyby od Twojego zespołu…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/tajemnica-szalonego-naukowca-stacjonarny-escape-room/",
+  "published": "2026-11-22",
+  "fetched_at": "2026-11-22T11:41:22+00:00",
+  "event_date": "2026-11-28 10:00:00"
+ },
+ {
+  "id": "ef989d826d368cc1",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Mobilna pracownia mammograficzna Mammo-Med Sp. z o.o.",
+  "lead": "Centrum Kultury · Mammo-Med Sp. z o.o. Centrum Diagnostyki i Usług Medycznych zaprasza mieszkanki Grodziska Mazowieckiego w wieku 45-74lat na bezpłatne badania mammograficzne w ramach Programu…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/mobilna-pracownia-mammograficzna-mammo-med-sp-z-o-o-14/",
+  "published": "2026-11-22",
+  "fetched_at": "2026-11-22T11:41:22+00:00",
+  "event_date": "2026-12-08 14:00:00"
+ },
+ {
+  "id": "f67d2b9dae0cad8b",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Muzyczni detektywi na tropie – koncert dla dzieci",
+  "lead": "Burmistrz Grodziska Mazowieckiego, Państwowa Szkoła Muzyczna I st. im. T. Bairda, Rada Miejska oraz Ośrodek Kultury serdecznie zapraszają dzieci w wieku od 4 do 10 lat wraz z…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/muzyczni-detektywi-na-tropie-koncert-dla-dzieci-3/",
+  "published": "2026-11-22",
+  "fetched_at": "2026-11-22T11:41:22+00:00",
+  "event_date": "2026-12-20 13:00:00"
+ },
+ {
   "id": "cc74cd063192a053",
   "source": "ck-wydarzenia",
   "source_name": "Centrum Kultury",

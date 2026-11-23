@@ -1,6 +1,5 @@
 title: Grodzisk
-subtitle: lokalos
-source_images: true
+subtitle: lokalnie
 tagline: Wiadomości i rozrywka z Grodziska Mazowieckiego
 description: Codziennie aktualizowany przegląd lokalnych wiadomości z Grodziska Mazowieckiego.
 contact_email: kontakt@example.com   # TODO: podmień na docelowy adres
@@ -37,4 +36,3 @@ useful:
   - {label: Urząd Miejski, note: Sprawy urzędowe, icon: building, url: "https://grodzisk.pl"}
   - {label: Szpital Zachodni, note: Informacje dla pacjentów, icon: heart, url: "https://szpitalzachodni.pl"}
   - {label: Policja, note: KPP w Grodzisku, icon: shield, url: "https://grodzisk.policja.gov.pl"}
-  - {label: Gdzie się ukryć, note: Schrony i sygnały alarmowe, icon: shield, url: "https://zarzadzaniekryzysowe.grodzisk.pl/aplikacja-schrony/"}

@@ -18,6 +18,7 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 - Adapter ma funkcję `parse(content, source) -> list[Item]` (testowalna offline) i `fetch(source)`.
 - Błąd jednego źródła nie może przerwać przebiegu; wynik trafia do `data/status.json`.
 - Linki w szablonach zawsze przez zmienną `root` (serwis działa w podkatalogu `/grodzisk-news/`).
+- Marka: napis „Lokalos” pod nazwą miejscowości jest stały (`BRAND` w `gn/build.py`), klucz `subtitle` z `site.yaml` jest ignorowany; pionowe kreski stoją po lewej stronie nazwy.
 - Wygląd: wariant „Zielony Grodzisk” (zmienne w `:root` w `static/style.css`). Główny blok: zdjęcie artykułu
   z zielonym przyciemnieniem albo – bez zdjęcia – rysowana panorama `static/img/panorama.svg`.
   Kafelki bez zdjęć: pastel w kolorze kategorii. Zdjęcia podpisujemy polem `image_credit` („Fot. …”).

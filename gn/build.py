@@ -20,6 +20,7 @@ from .sudoku import daily
 
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
+BRAND = "Lokalos"  # napis pod nazwą miejscowości, taki sam w każdym serwisie
 T: dict = {}  # teksty interfejsu z i18n/<lang>.yaml, ładowane w build()
 PL_MAP = str.maketrans({**str.maketrans("ąćęłńóśźż", "acelnoszz"),
                         ord("ä"): "ae", ord("ö"): "oe", ord("ü"): "ue", ord("ß"): "ss"})
@@ -172,6 +173,7 @@ def build_crosswords(site: dict) -> list[dict]:
 
 def build() -> None:
     site = yaml.safe_load((ROOT / "site.yaml").read_text(encoding="utf-8"))
+    site["subtitle"] = BRAND  # wspólna marka wszystkich serwisów; `subtitle` z site.yaml jest ignorowane
     T.clear()
     T.update(yaml.safe_load((ROOT / "i18n" / f"{site.get('lang', 'pl')}.yaml").read_text(encoding="utf-8")))
     paths = T["paths"]

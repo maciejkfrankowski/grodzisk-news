@@ -245,16 +245,18 @@ def build() -> None:
             today.append(entry)
     fresh = [e for e in rest if e not in today[:4]]
     top, more = fresh[:2], fresh[2:8]  # dwie duże pozycje + zwarta lista
-    # Strona główna zawiera też zawartość kategorii (po 8 najnowszych), a na końcu wydarzenia;
+    # Strona główna zawiera też zawartość kategorii (domyślnie po 4 najnowsze), a na końcu wydarzenia;
     # menu przewija do tych sekcji. Pełne listy zostają na podstronach kategorii.
+    per_category = int(site.get("home_per_category", 4))   # opcjonalne klucze w site.yaml
+    home_events = int(site.get("home_events", 8))
     sections = []
     for cat in env.globals["nav"]:
         found = [e for e in entries if e["category"] == cat["slug"]]
         if found:
-            sections.append({"cat": cat, "entries": found[:8], "total": len(found)})
+            sections.append({"cat": cat, "entries": found[:per_category], "total": len(found)})
     env.globals["anchors"] = {section["cat"]["slug"] for section in sections}
     env.globals["events_anchor"] = bool(events)
-    render("index.html", "", hero=hero, today=today[:4], top=top, more=more, events=events[:8],
+    render("index.html", "", hero=hero, today=today[:4], top=top, more=more, events=events[:home_events],
            events_total=len(events), sections=sections, active="")
 
     # Kategorie

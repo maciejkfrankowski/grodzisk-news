@@ -10,6 +10,9 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 - Brak backendu: stan trzymamy w repo (`data/*.json`, `content/articles/*.md`).
 - Wpisy zewnętrzne: tylko tytuł, krótki lead (≤220 znaków), data i link do źródła.
   Nie kopiujemy pełnych treści ani zdjęć. Mediów komercyjnych nie pobieramy.
+- Wyjątek: źródła z kluczem `article: auto|draft` w `sources.yaml` (tylko instytucje publiczne). Z ich komunikatów
+  model pisze własną notkę do `content/komunikaty/`; notka zawsze ma stopkę ze źródłem i linkiem do oryginału.
+  Treści komunikatu nie kopiujemy także tutaj. Pliki w `content/komunikaty/` zapisuje bot i redakcja, nie paczki.
 - Każde źródło = wpis w `sources.yaml`. Nowy adapter tylko wtedy, gdy istniejące nie wystarczą.
 - Paczki z poprawkami zawierają wyłącznie kod. Nigdy: `data/`, `content/`, `static/img/uploads/`,
   `static/img/topics-photo/`,
@@ -36,6 +39,8 @@ Etap: demo na darmowej infrastrukturze (GitHub Actions + Pages). Docelowo możli
 | `gn/sudoku.py`, `static/sudoku.js` | generator i gra „Sudoku dnia” |
 | `gn/build.py` | generator `dist/` |
 | `gn/photo_ai.py`, `gn/photo_scenes.yaml` | dobór ilustracji z puli modelem AI przy pobieraniu; katalog scen (opis w `docs/04-dobor-zdjec-ai.md`, lista do wygenerowania w `docs/05-rozbudowa-puli.md`) |
+| `gn/article_ai.py` | notki z oficjalnych komunikatów: treść ze strony źródła, model, kontrola faktów, zapis (opis w `docs/06-artykuly-z-komunikatow.md`) |
+| `content/komunikaty/` | notki z komunikatów (Markdown + YAML): opublikowane i szkice |
 | `templates/`, `static/` | szablony Jinja2, CSS, JS |
 | `static/img/topics-photo/` | pula ilustracji AI (pliki wgrywa redakcja; opis w `docs/03-pula-zdjec-ai.md`) |
 | `content/articles/` | własne artykuły (Markdown + YAML) |

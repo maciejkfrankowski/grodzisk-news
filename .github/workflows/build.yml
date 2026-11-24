@@ -40,7 +40,8 @@ jobs:
       - name: Pobierz źródła
         run: python -m gn.fetch
         env:
-          # dobór ilustracji modelem AI (gn/photo_ai.py); bez sekretu serwis działa na słowach-kluczach
+          # dobór ilustracji (gn/photo_ai.py) i notki z komunikatów (gn/article_ai.py);
+          # bez sekretu serwis działa na słowach-kluczach i samych kartach z linkiem
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
       - name: Zapisz dane w repo
@@ -48,6 +49,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
+          # notki z komunikatów pisane przez gn/article_ai.py (opublikowane i szkice)
+          if [ -d content/komunikaty ]; then git add content/komunikaty; fi
           git diff --cached --quiet || git commit -m "data: aktualizacja $(date -u +%F)"
           # W międzyczasie mógł dojść commit z panelu redakcji lub z poprzedniego przebiegu.
           # Przy konflikcie w data/ wygrywają dane z tego przebiegu (pliki są generowane).

@@ -3,7 +3,7 @@ months: [stycznia, lutego, marca, kwietnia, maja, czerwca, lipca, sierpnia, wrze
 date_fmt: "{d} {month} {y}"
 event_fmt: "{d} {month}"
 event_time_fmt: ", godz. {time}"
-paths: {cat: kategoria, article: artykul, events: wydarzenia, fun: rozrywka, sources: zrodla, crosswords: krzyzowki, imprint: impressum, privacy: prywatnosc}
+paths: {cat: kategoria, article: artykul, events: wydarzenia, fun: rozrywka, sources: zrodla, crosswords: krzyzowki, imprint: impressum, privacy: prywatnosc, release: komunikat}
 home_label: strona główna
 nav_main: Główna
 nav_news: Aktualności
@@ -72,6 +72,13 @@ photo_label: Ilustracja AI
 photo_pool: Pula ilustracji AI (temat i liczba plików)
 photo_ai_topics: Dobór ilustracji modelem AI – wpisy w grupach
 photo_ai_missing: Zdjęcia, których najczęściej brakowało (po angielsku, od modelu)
+release_note: "Opracowanie redakcji z pomocą AI na podstawie komunikatu. Źródło:"
+release_original: Zobacz oryginalny komunikat
+release_stats: Artykuły z komunikatów
+release_published: opublikowane
+release_drafts: szkice do zatwierdzenia w panelu
+release_states: {published: opublikowane, draft: szkice, skipped: pominięte, rejected: odrzucone}
+release_recent: Ostatnie wpisy według wyniku
 topics:
   boar: '\b(dzik(i|a|ów|om|ami|iem|u|ach)?\b|odłów|odstrzał|\basf\b|afrykański\w* pomór)'
   swim: '\b(pływaln|basen)'

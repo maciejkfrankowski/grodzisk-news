@@ -29,6 +29,14 @@ class Item:
         return data
 
 
+PL_MAP = str.maketrans({**str.maketrans("ąćęłńóśźż", "acelnoszz"),
+                        ord("ä"): "ae", ord("ö"): "oe", ord("ü"): "ue", ord("ß"): "ss"})
+
+
+def slugify(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", text.lower().translate(PL_MAP)).strip("-")
+
+
 def make_id(url: str) -> str:
     return hashlib.sha1(url.strip().encode("utf-8")).hexdigest()[:16]
 

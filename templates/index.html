@@ -3,7 +3,7 @@
 <section class="lead-row">
   {% if hero %}
   <a class="hero{% if hero.image %} has-img{% endif %}" {{ m.link(hero, root) }}>
-    {% if hero.image %}<img class="hero-img" src="{{ hero.image if hero.external else root ~ hero.image }}" alt=""{% if hero.external %} referrerpolicy="no-referrer"{% endif %}>{% endif %}
+    {% if hero.image %}<img class="hero-img" src="{{ hero.image if hero.image_remote else root ~ hero.image }}" alt=""{% if hero.image_remote %} referrerpolicy="no-referrer"{% endif %}>{% endif %}
     <span class="tag">{{ hero.cat.name }}</span>
     <h1>{{ hero.title }}</h1>
     {% if hero.lead %}<p>{{ hero.lead }}</p>{% endif %}

@@ -3,7 +3,7 @@ months: [Januar, Februar, März, April, Mai, Juni, Juli, August, September, Okto
 date_fmt: "{d}. {month} {y}"
 event_fmt: "{d}. {month}"
 event_time_fmt: ", {time} Uhr"
-paths: {cat: kategorie, article: artikel, events: veranstaltungen, fun: raetsel, sources: quellen, crosswords: kreuzwortraetsel, imprint: impressum, privacy: datenschutz}
+paths: {cat: kategorie, article: artikel, events: veranstaltungen, fun: raetsel, sources: quellen, crosswords: kreuzwortraetsel, imprint: impressum, privacy: datenschutz, release: meldung}
 home_label: Startseite
 nav_main: Hauptmenü
 nav_news: Aktuelles
@@ -72,6 +72,13 @@ photo_label: KI-Bild
 photo_pool: KI-Bilderpool (Thema und Anzahl)
 photo_ai_topics: KI-Bildauswahl – Beiträge je Gruppe
 photo_ai_missing: Am häufigsten fehlende Motive (englisch, vom Modell)
+release_note: "Von der Redaktion mit KI-Unterstützung auf Grundlage einer amtlichen Mitteilung verfasst. Quelle:"
+release_original: Originalmitteilung ansehen
+release_stats: Artikel aus Mitteilungen
+release_published: veröffentlicht
+release_drafts: Entwürfe zur Freigabe im Redaktionsbereich
+release_states: {published: veröffentlicht, draft: Entwürfe, skipped: übersprungen, rejected: verworfen}
+release_recent: Letzte Meldungen nach Ergebnis
 topics:
   boar: '\b(wildschwein|schwarzwild|wildsau|schweinepest)'
   swim: '(schwimm|hallenbad|freibad|dlrg|rettungsschwimm)'

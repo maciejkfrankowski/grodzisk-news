@@ -19,6 +19,9 @@
 {% if pool %}
 <p class="lead">{{ t.photo_pool }}: {% for topic, count in pool|dictsort %}{{ topic }} {{ count }}{{ ", " if not loop.last }}{% endfor %}.</p>
 {% endif %}
+{% if releases or release_drafts or article_states %}
+<p class="lead">{{ t.release_stats }}: {{ t.release_published }} {{ releases }}, {{ t.release_drafts }} {{ release_drafts }}.{% if article_states %} {{ t.release_recent }}: {% for state, count in article_states %}{{ t.release_states.get(state, state) }} {{ count }}{{ ", " if not loop.last }}{% endfor %}.{% endif %}</p>
+{% endif %}
 {% if photo_ai.asked %}
 <p class="lead">{{ t.photo_ai_topics }} ({{ photo_ai.asked }}): {% for topic, count in photo_ai.topics %}{{ topic }} {{ count }}{{ ", " if not loop.last }}{% endfor %}.</p>
 {% if photo_ai.missing %}

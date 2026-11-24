@@ -138,6 +138,8 @@ main > section, main > .grid, main > .panel { margin-bottom: 28px; }
 .article .meta .src { margin-left: 0; }
 .article-lead { font-size: 1.15rem; color: var(--navy); font-weight: 600; }
 .prose { font-size: 1.05rem; line-height: 1.7; }
+.source-note { margin-top: 28px; padding: 12px 14px; border-left: 3px solid var(--muted); background: rgba(0, 0, 0, .04); font-size: .9rem; color: var(--muted); border-radius: 0 var(--radius) var(--radius) 0; }
+.source-note a { white-space: nowrap; }
 .prose h2 { font-size: 1.4rem; margin: 1.6em 0 .4em; }
 
 /* Tabela źródeł */

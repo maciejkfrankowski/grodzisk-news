@@ -15,7 +15,8 @@ import markdown
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from .models import clean_lead
+from . import article_ai
+from .models import clean_lead, slugify
 from .photo_ai import NONE, POOL_DIR, photo_pool, stats as photo_stats
 from .sudoku import daily
 
@@ -23,8 +24,6 @@ ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 BRAND = "Lokalos"  # napis pod nazwą miejscowości, taki sam w każdym serwisie
 T: dict = {}  # teksty interfejsu z i18n/<lang>.yaml, ładowane w build()
-PL_MAP = str.maketrans({**str.maketrans("ąćęłńóśźż", "acelnoszz"),
-                        ord("ä"): "ae", ord("ö"): "oe", ord("ü"): "ue", ord("ß"): "ss"})
 
 
 POOL_WIDTH = 800  # `photo_pool` i `POOL_DIR` mieszkają w gn/photo_ai.py (potrzebne też przy pobieraniu)
@@ -117,20 +116,78 @@ def date_pl(iso: str) -> str:
     return T["date_fmt"].format(d=day, month=T["months"][month - 1], y=year)
 
 
-def slugify(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", text.lower().translate(PL_MAP)).strip("-")
-
-
-def load_articles() -> list[dict]:
-    """Własne artykuły: Markdown z nagłówkiem YAML między liniami `---`."""
-    articles = []
-    for path in sorted((ROOT / "content" / "articles").glob("*.md")):
+def read_markdown(folder: Path) -> list[tuple[Path, dict, str]]:
+    """Pliki Markdown z nagłówkiem YAML między liniami `---`: (ścieżka, nagłówek, treść)."""
+    found = []
+    for path in sorted(folder.glob("*.md")) if folder.is_dir() else []:
         raw = path.read_text(encoding="utf-8")
         match = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", raw, re.S)
         if not match:
             print(f"[POMINIĘTO] {path.name}: brak nagłówka YAML")
             continue
-        meta = yaml.safe_load(match.group(1)) or {}
+        try:
+            meta = yaml.safe_load(match.group(1)) or {}
+        except yaml.YAMLError as error:
+            print(f"[POMINIĘTO] {path.name}: błędny nagłówek YAML ({str(error)[:80]})")
+            continue
+        found.append((path, meta, match.group(2)))
+    return found
+
+
+def load_releases() -> tuple[list[dict], int]:
+    """Notki z oficjalnych komunikatów (`content/komunikaty/`, pisze je gn/article_ai.py).
+
+    Zwraca opublikowane notki i liczbę szkiców czekających na zatwierdzenie w panelu redakcji.
+    Notka ma własną stronę z linkiem do komunikatu; na listach zastępuje wpis, z którego powstała.
+    """
+    releases, drafts = [], 0
+    for path, meta, body in read_markdown(ROOT / article_ai.FOLDER):
+        if not meta.get("title") or not meta.get("date"):
+            continue
+        if meta.get("draft"):
+            drafts += 1
+            continue
+        releases.append({
+            "title": str(meta["title"]),
+            "lead": str(meta.get("lead") or ""),
+            "published": str(meta["date"])[:10],
+            "category": meta.get("category") or "redakcja",
+            "image": "",
+            "featured": bool(meta.get("featured")),
+            "href": f"{T['paths'].get('release', 'komunikat')}/{slugify(path.stem)}/",
+            "external": False,
+            "release": True,
+            "item_id": str(meta.get("item_id") or ""),
+            "source_name": str(meta.get("source_name") or T["editorial"]),
+            "source_url": str(meta.get("source_url") or ""),
+            "body": markdown.markdown(re.sub(r"<[^>]+>", "", body), extensions=["extra"]),
+        })
+    return releases, drafts
+
+
+def attach_releases(releases: list[dict], items: list[dict]) -> list[dict]:
+    """Łączy notki z wpisami, z których powstały. Zwraca wpisy, które zostają na listach.
+
+    Notka przejmuje od wpisu miniaturę, identyfikator i wybór ilustracji; wpis znika z list, bo zastępuje
+    go notka. Gdy wpisu już nie ma w `data/items.json` (stary), notka zostaje bez miniatury.
+    """
+    by_id = {item["id"]: item for item in items}
+    replaced = set()
+    for release in releases:
+        item = by_id.get(release["item_id"])
+        if not item or item["id"] in replaced:
+            continue
+        replaced.add(item["id"])
+        release.update(id=item["id"], image=item["image"], source=item["source"])
+        if item.get("photo_ai"):
+            release["photo_ai"] = item["photo_ai"]
+    return [item for item in items if item["id"] not in replaced]
+
+
+def load_articles() -> list[dict]:
+    """Własne artykuły redakcji z `content/articles/`."""
+    articles = []
+    for path, meta, body in read_markdown(ROOT / "content" / "articles"):
         if meta.get("draft") or not meta.get("title") or not meta.get("date"):
             continue
         slug = meta.get("slug") or slugify(path.stem)
@@ -145,7 +202,7 @@ def load_articles() -> list[dict]:
             "href": f"{T['paths']['article']}/{slug}/",
             "external": False,
             "source_name": T["editorial"],
-            "body": markdown.markdown(match.group(2), extensions=["extra"]),
+            "body": markdown.markdown(body, extensions=["extra"]),
         })
     return articles
 
@@ -218,9 +275,14 @@ def build() -> None:
     fallback = site["categories"][0]
 
     today_iso = date.today().isoformat()
-    everything = load_articles() + load_items(bool(site.get("source_images")))
+    items = load_items(bool(site.get("source_images")))
+    article_states = article_ai.stats(items)
+    releases, release_drafts = load_releases()
+    everything = load_articles() + releases + attach_releases(releases, items)
     for entry in everything:
         entry.setdefault("event_date", "")
+        # miniatura ze źródła (adres zewnętrzny) albo zdjęcie redakcji (plik w repo)
+        entry["image_remote"] = entry["image"].startswith(("http://", "https://", "data:"))
         entry["cat"] = categories.get(entry["category"], fallback)
         entry["date_pl"] = date_pl(entry["published"])
         if entry["event_date"]:
@@ -326,7 +388,8 @@ def build() -> None:
            sudoku_date=date_pl(today_iso))
     render("zrodla.html", paths["sources"], sources=sources, active="",
            status={s["id"]: s for s in status}, pool={topic: len(files) for topic, files in pool.items()},
-           photo_ai=photo_stats(everything))
+           photo_ai=photo_stats(everything), article_states=article_states, release_drafts=release_drafts,
+           releases=len(releases))
     if site.get("operator"):  # strony wymagane prawem (np. w Niemczech)
         render("impressum.html", paths["imprint"], active="")
         render("datenschutz.html", paths["privacy"], active="")

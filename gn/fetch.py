@@ -13,7 +13,7 @@ from pathlib import Path
 
 import yaml
 
-from . import photo_ai
+from . import article_ai, photo_ai
 from .fetchers import ADAPTERS, http
 from .models import now_iso
 
@@ -140,6 +140,10 @@ def run() -> int:
                                 site.get("photo_ai_model") or photo_ai.DEFAULT_MODEL))
     except Exception as error:  # noqa: BLE001
         print(f"Dobór zdjęć AI: pominięty ({str(error)[:300]})")
+    try:  # własne notki z oficjalnych komunikatów; po doborze zdjęć, bo korzysta z oznaczenia tematu wrażliwego
+        print(article_ai.annotate(items, sources, site, ROOT))
+    except Exception as error:  # noqa: BLE001
+        print(f"Artykuły AI: pominięte ({str(error)[:300]})")
     save_json(ITEMS_PATH, items)
     save_json(STATUS_PATH, status)
     return 0

@@ -10,7 +10,11 @@
   "published": "2026-11-24",
   "fetched_at": "2026-11-24T19:26:58+00:00",
   "event_date": "",
-  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Dorocinski-Kino.jpg"
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Dorocinski-Kino.jpg",
+  "article": {
+   "state": "rejected",
+   "note": "odpowiedź modelu nie do odczytania"
+  }
  },
  {
   "id": "a093e2162e63b05e",
@@ -23,7 +27,11 @@
   "published": "2026-11-24",
   "fetched_at": "2026-11-24T14:53:14+00:00",
   "event_date": "",
-  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-312083.jpg"
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-312083.jpg",
+  "article": {
+   "state": "published",
+   "file": "2026-11-24-22-latek-z-milanowka-zatrzymany-po-pobiciu-na-grodziskim-dep-a093e2.md"
+  }
  },
  {
   "id": "9cd65eae323209b8",
@@ -72,7 +80,11 @@
   "published": "2026-11-24",
   "fetched_at": "2026-11-24T14:53:03+00:00",
   "event_date": "",
-  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Chmielarz.png"
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Chmielarz.png",
+  "article": {
+   "state": "published",
+   "file": "2026-11-24-spotkanie-z-wojciechem-chmielarzem-w-bibliotece-glownej-12-g-b0a899.md"
+  }
  },
  {
   "id": "3f1f540e979c4b1b",
@@ -85,7 +97,11 @@
   "published": "2026-11-24",
   "fetched_at": "2026-11-24T14:53:03+00:00",
   "event_date": "",
-  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Bal-Andrzejkowy.jpg"
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Bal-Andrzejkowy.jpg",
+  "article": {
+   "state": "published",
+   "file": "2026-11-24-bal-andrzejkowy-w-filii-nr-1-w-kadach-w-sobote-28-listopada-3f1f54.md"
+  }
  },
  {
   "id": "5b7447d14a374e12",
@@ -105,6 +121,10 @@
     "swim-5",
     "swim-3"
    ]
+  },
+  "article": {
+   "state": "published",
+   "file": "2026-11-24-jedenascie-osob-z-powiatu-grodziskiego-zdobylo-tytul-ratowni-5b7447.md"
   }
  },
  {
@@ -209,6 +229,10 @@
     "health-3",
     "health-1"
    ]
+  },
+  "article": {
+   "state": "published",
+   "file": "2026-11-20-bezplatne-badania-profilaktyczne-dla-mezczyzn-w-mediatece-21-083a0c.md"
   }
  },
  {
@@ -222,7 +246,12 @@
   "published": "2026-11-20",
   "fetched_at": "2026-11-20T12:53:51+00:00",
   "event_date": "",
-  "image": "https://grodzisksport.pl/files/news/378-cal-foto.webp"
+  "image": "https://grodzisksport.pl/files/news/378-cal-foto.webp",
+  "article": {
+   "state": "draft",
+   "file": "2026-11-20-mikolajkowe-zawody-wspinaczkowe-w-grocie-grodzisk-6-grudnia-ed9179.md",
+   "note": "nazwy spoza komunikatu: Ośrodek, Rekreacji"
+  }
  },
  {
   "id": "19234e1c8d8bb599",
@@ -235,7 +264,11 @@
   "published": "2026-11-20",
   "fetched_at": "2026-11-20T12:53:51+00:00",
   "event_date": "",
-  "image": "https://grodzisksport.pl/files/news/377-akt-foto.webp"
+  "image": "https://grodzisksport.pl/files/news/377-akt-foto.webp",
+  "article": {
+   "state": "skipped",
+   "note": "only one short fact (reduced opening hours on 21 November due to power cuts), too little for a 500-900 character item wi"
+  }
  },
  {
   "id": "d18ddb5a2358b491",
@@ -284,7 +317,11 @@
   "published": "2026-11-20",
   "fetched_at": "2026-11-20T12:53:42+00:00",
   "event_date": "",
-  "image": "https://grodzisk.pl/wp-content/uploads/2026/11/XXXVI-Sesja-Rady-Miejskiej-768x456.jpeg"
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/11/XXXVI-Sesja-Rady-Miejskiej-768x456.jpeg",
+  "article": {
+   "state": "published",
+   "file": "2026-11-20-xxxvi-sesja-rady-miejskiej-w-grodzisku-mazowieckim-odbedzie-7d3716.md"
+  }
  },
  {
   "id": "c17d4fcef84b130e",
@@ -297,7 +334,11 @@
   "published": "2026-11-19",
   "fetched_at": "2026-11-20T12:53:45+00:00",
   "event_date": "",
-  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/09/Instagram-post-Chem-Lab-Zapisy-scaled.png"
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/09/Instagram-post-Chem-Lab-Zapisy-scaled.png",
+  "article": {
+   "state": "published",
+   "file": "2026-11-19-bezplatne-warsztaty-chemiczne-dla-dzieci-w-pawilonie-kultury-c17d4f.md"
+  }
  },
  {
   "id": "b87df57f57071961",

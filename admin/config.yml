@@ -55,3 +55,33 @@ collections:
       - {label: Wyróżnij na stronie głównej, name: featured, widget: boolean, default: false, hint: "Najnowszy wyróżniony artykuł trafia na górę strony głównej."}
       - {label: Szkic (nie publikuj), name: draft, widget: boolean, default: false}
       - {label: Treść, name: body, widget: markdown}
+    - name: releases
+    label: Artykuły z komunikatów
+    label_singular: Artykuł z komunikatu
+    folder: content/komunikaty
+    create: false
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}} ({{date}}) {{check_notes}}"
+    sortable_fields: [date, title]
+    fields:
+      - {label: Szkic (nie publikuj), name: draft, widget: boolean, default: true, hint: "Odznacz, żeby opublikować."}
+      - {label: Uwagi automatu, name: check_notes, widget: string, required: false, hint: "Co kontrola uznała za niepewne. Sprawdź z komunikatem."}
+      - {label: Tytuł, name: title, widget: string}
+      - {label: Zajawka, name: lead, widget: text, required: false}
+      - {label: Treść, name: body, widget: markdown}
+      - {label: Źródło, name: source_name, widget: string}
+      - {label: Adres komunikatu, name: source_url, widget: string}
+      - {label: Data publikacji, name: date, widget: datetime, type: date}
+      - label: Kategoria
+        name: category
+        widget: select
+        options:
+          - {label: Miasto i gmina, value: miasto}
+          - {label: Powiat, value: powiat}
+          - {label: Kultura, value: kultura}
+          - {label: Sport, value: sport}
+          - {label: Zdrowie, value: zdrowie}
+          - {label: Bezpieczeństwo, value: bezpieczenstwo}
+          - {label: Transport, value: transport}
+      - {name: item_id, widget: hidden}

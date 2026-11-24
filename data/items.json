@@ -351,7 +351,11 @@
   "published": "2026-11-19",
   "fetched_at": "2026-11-20T12:53:45+00:00",
   "event_date": "",
-  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/10/Instagram-post-Robotyka-Nowa-PK-scaled.png"
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/10/Instagram-post-Robotyka-Nowa-PK-scaled.png",
+  "article": {
+   "state": "published",
+   "file": "2026-11-19-bezplatne-zajecia-z-robotyki-dla-dzieci-w-pawilonie-kultury-b87df5.md"
+  }
  },
  {
   "id": "41c2689abb2a434b",
@@ -376,7 +380,11 @@
   "published": "2026-11-19",
   "fetched_at": "2026-11-19T13:06:55+00:00",
   "event_date": "",
-  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-311934.jpg"
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-311934.jpg",
+  "article": {
+   "state": "published",
+   "file": "2026-11-19-policjant-z-grodziskiej-komendy-uczy-mlodziez-bezpiecznych-z-c9594e.md"
+  }
  },
  {
   "id": "a184e4106507a26a",

@@ -1,0 +1,194 @@
+# Katalog scen puli ilustracji (static/img/topics-photo/) dla doboru zdjęć modelem AI (gn/photo_ai.py).
+# Klucz sceny = nazwa pliku bez rozszerzenia. Opisy sprawdzone z obrazami 23.11.2026.
+# Po podmianie lub dodaniu obrazu popraw tu jego opis; plik bez opisu nie jest proponowany modelowi.
+# `use` = o czym są artykuły z tej grupy (po angielsku, bo trafia do promptu wspólnego dla pl i de).
+
+boar:
+  use: wild boars in town, culling, African swine fever
+  scenes:
+    boar-1: a sow with striped piglets crossing a town street in daylight
+    boar-2: a single boar rooting in the grass verge beside a pavement
+    boar-3: a boar at night next to an overturned rubbish bin with spilled waste
+    boar-4: a group of boars with a piglet walking down a misty street
+    boar-5: a boar standing on a pavement by a metal fence
+    boar-6: a boar close-up at dusk by a playground fence
+
+road:
+  use: roadworks, street repairs, closures, detours, traffic changes, new pavements
+  scenes:
+    road-1: orange traffic cones lined up on fresh asphalt
+    road-2: a road roller compacting new asphalt on a residential street
+    road-3: a shovel and stacked paving stones beside a half-finished pavement
+    road-4: an excavator bucket by a trench, red-white barrier tape, closed street
+    road-5: wet cobbled street at dusk with blurred car lights
+    road-6: an empty roundabout with trees in morning mist
+
+bus:
+  use: buses, local public transport, timetables, stops, routes
+  scenes:
+    bus-1: an empty bus shelter with a bench on a quiet street
+    bus-2: empty seats and yellow handrails inside a city bus
+    bus-3: a city bus passing by with motion blur
+    bus-4: a hand holding a handrail inside a bus
+    bus-5: yellow bus-bay road markings, no vehicles
+    bus-6: open bus doors at a stop on a rainy evening, warm interior light
+
+train:
+  use: railway, commuter trains, stations, level crossings
+  scenes:
+    train-1: railway tracks curving between trees at golden hour
+    train-2: an empty small-town platform with a bench and a lamp post
+    train-3: empty seats inside a commuter train
+    train-4: close-up of steel rails and gravel
+    train-5: a level crossing with raised barriers on a country road
+    train-6: a commuter train arriving at a platform, motion blur
+
+stage:
+  use: concerts, theatre, exhibitions, recitals, festivals, meetings with artists
+  scenes:
+    stage-1: a microphone on a stand on an empty stage
+    stage-2: dark empty theatre stage with curtains and a spotlight on the floor
+    stage-3: hands playing a grand piano
+    stage-4: a gallery wall with abstract framed paintings and a bench
+    stage-5: rows of empty red theatre seats
+    stage-6: a violin and a sheet-music stand in a rehearsal room
+
+cinema:
+  use: cinema, film screenings, film events
+  scenes:
+    cinema-1: a projector beam cutting through a dark cinema hall
+    cinema-2: empty cinema seats facing a blank white screen
+    cinema-3: a bucket of popcorn on a cinema armrest
+    cinema-4: a vintage film projector with reels
+    cinema-5: dim cinema aisle with floor lights and a blank screen
+    cinema-6: a film clapperboard with a blank slate
+
+library:
+  use: library, books, reading clubs, author meetings
+  scenes:
+    library-1: tall bookshelves in a quiet library aisle
+    library-2: an open book on a table by a window
+    library-3: a stack of hardcover books next to a cup of tea
+    library-4: a reading corner with an armchair and a floor lamp
+    library-5: a hand taking a book from a shelf
+    library-6: colourful children's books in a wooden box
+
+school:
+  use: schools, kindergartens, pupils, teachers, enrolment, education
+  scenes:
+    school-1: an empty classroom with wooden desks and a green chalkboard
+    school-2: coloured pencils and an open blank notebook
+    school-3: school backpacks hanging on hooks in a corridor
+    school-4: an empty school corridor with lockers
+    school-5: wooden blocks and toys on a kindergarten carpet
+    school-6: an empty school playground with a basketball hoop
+
+health:
+  use: health, hospital, clinics, screenings, vaccinations, blood donation, first aid courses
+  scenes:
+    health-1: a stethoscope next to a blank clipboard
+    health-2: an empty bright clinic corridor with chairs
+    health-3: a blood-pressure cuff on a table in a doctor's office
+    health-4: medical gloves and a sealed syringe on a tray
+    health-5: an empty hospital bed by a window
+    health-6: a plain first-aid case on a table
+
+waste:
+  use: waste collection, recycling, sorting, collection schedules, composting, ecology
+  scenes:
+    waste-1: a row of yellow, blue, green and brown recycling bins by a fence
+    waste-2: a garbage truck lifting a bin
+    waste-3: flattened cardboard and glass bottles sorted into crates
+    waste-4: a hand dropping a plastic bottle into a yellow bin
+    waste-5: a wooden compost bin with autumn leaves
+    waste-6: tied waste bags placed at the kerb
+
+water:
+  use: tap water, waterworks, sewerage, pipe failures, supply interruptions, river
+  scenes:
+    water-1: a glass being filled with tap water at a kitchen sink
+    water-2: a red street hydrant on a wet pavement
+    water-3: an open trench with a new blue water pipe and tools
+    water-4: a round manhole cover on a wet cobbled street
+    water-5: water flowing from an outdoor tap into a metal bucket
+    water-6: a calm river bank with reeds in morning mist
+
+police:
+  use: police, safety, theft, fraud warnings, traffic checks, crime prevention
+  scenes:
+    police-1: blurred blue emergency lights reflected on a wet street at night
+    police-2: a reflective safety vest and a torch on a car bonnet at dusk
+    police-3: an empty zebra crossing at night under a street lamp
+    police-4: a bicycle locked with a heavy chain to a rack
+    police-5: a key in a sturdy front-door lock
+    police-6: a speed camera on a tripod by a roadside
+
+fire:
+  use: fire brigade, volunteer firefighters, fire safety, equipment
+  scenes:
+    fire-1: a coiled red fire hose with a brass nozzle
+    fire-2: a red firefighter's helmet and gloves on a bench
+    fire-3: chrome valves and gauges on the side of a fire engine
+    fire-4: a red fire extinguisher mounted on a wall
+    fire-5: a red fire engine in an open fire-station garage
+    fire-6: a smoke detector on a ceiling
+
+council:
+  use: town hall, council sessions, resolutions, mayor, budget, elections, public consultations, spatial planning
+  scenes:
+    council-1: an empty council chamber with desks and microphones
+    council-2: a fountain pen lying on a stack of documents
+    council-3: the stone facade and wooden door of a small-town hall
+    council-4: a clear ballot box on a table in an empty hall
+    council-5: a conference table with glasses of water and notepads
+    council-6: architectural plans and a scale ruler on a desk
+
+celebration:
+  use: holidays, anniversaries, commemorations, fairs, festivals, picnics, parades
+  scenes:
+    celebration-1: colourful bunting strung across a town street on a sunny day
+    celebration-2: candles burning in glass holders at dusk
+    celebration-3: a wreath of flowers leaning against a stone monument base
+    celebration-4: a market stall with gingerbread hearts and warm string lights
+    celebration-5: brass trumpets and a drum resting on chairs before a parade
+    celebration-6: picnic tables with checked tablecloths and balloons in a park
+
+sport:
+  use: sport, matches, tournaments, races, leagues, sports halls
+  scenes:
+    sport-1: a football on a grass pitch
+    sport-2: running shoes on a red athletics track
+    sport-3: an empty indoor sports hall with a handball goal
+    sport-4: a table-tennis bat and ball on a blue table
+    sport-5: a volleyball net on an outdoor court
+    sport-6: a row of medals with ribbons on a table
+
+swim:
+  use: swimming pool, swimming lessons, pool opening hours
+  scenes:
+    swim-1: empty indoor pool lanes with lane ropes
+    swim-2: starting blocks at the edge of an outdoor pool
+    swim-3: swimming goggles and a folded towel on the pool edge
+    swim-4: light patterns on calm pool water
+    swim-5: a pool ladder with chrome handrails
+    swim-6: a stack of colourful kickboards by a pool
+
+notice:
+  use: official announcements, calls for applications, grants, competitions, tenders, office hours, forms
+  scenes:
+    notice-1: a cork notice board with blank sheets pinned to it
+    notice-2: a letterbox with an envelope sticking out
+    notice-3: a blank desk calendar, a pen and reading glasses
+    notice-4: a hand filling in a form with a pen
+    notice-5: an office counter with a small bell and a blank information stand
+    notice-6: a laptop with a blank screen next to a coffee cup
+
+general:
+  use: neutral small-town views for articles that fit no other group
+  scenes:
+    general-1: a quiet market square with a fountain in morning light
+    general-2: a bench under trees in a town park in autumn
+    general-3: tiled rooftops of a small town at sunrise, seen from above
+    general-4: a tree-lined residential street with parked bicycles
+    general-5: a wooden footbridge over a small river
+    general-6: red geraniums on the windowsills of a townhouse

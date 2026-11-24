@@ -98,7 +98,14 @@
   "published": "2026-11-24",
   "fetched_at": "2026-11-24T14:52:16+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "swim",
+   "picks": [
+    "swim-5",
+    "swim-3"
+   ]
+  }
  },
  {
   "id": "d20090b8bfcca7d3",
@@ -195,7 +202,14 @@
   "published": "2026-11-20",
   "fetched_at": "2026-11-20T12:53:54+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "health",
+   "picks": [
+    "health-3",
+    "health-1"
+   ]
+  }
  },
  {
   "id": "ed9179b11c09e6c0",
@@ -480,7 +494,14 @@
   "published": "2026-11-17",
   "fetched_at": "2026-11-18T13:02:46+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "health",
+   "picks": [
+    "health-6",
+    "health-1"
+   ]
+  }
  },
  {
   "id": "a23ccc9d97be0dac",
@@ -531,7 +552,14 @@
   "published": "2026-11-16",
   "fetched_at": "2026-11-17T13:26:19+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "celebration",
+   "picks": [
+    "celebration-1",
+    "celebration-5"
+   ]
+  }
  },
  {
   "id": "b5dfbf7aabcb4968",
@@ -568,7 +596,14 @@
   "published": "2026-11-16",
   "fetched_at": "2026-11-16T12:45:11+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "health",
+   "picks": [
+    "health-3",
+    "health-2"
+   ]
+  }
  },
  {
   "id": "44a8e25b5dca6652",
@@ -1383,7 +1418,14 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/101/",
   "published": "2026-11-06",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-1",
+    "bus-5"
+   ]
+  }
  },
  {
   "id": "068bc985ad49c5d4",
@@ -1395,7 +1437,14 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/728/",
   "published": "2026-11-06",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "celebration",
+   "picks": [
+    "celebration-5",
+    "celebration-1"
+   ]
+  }
  },
  {
   "id": "e7ee88f2fcb89017",
@@ -1434,7 +1483,14 @@
   "published": "2026-11-03",
   "fetched_at": "2026-11-15T17:29:09+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "waste",
+   "picks": [
+    "waste-5",
+    "waste-1"
+   ]
+  }
  },
  {
   "id": "9ee7ffed96e7111e",
@@ -1485,7 +1541,14 @@
   "published": "2026-10-30",
   "fetched_at": "2026-11-15T17:29:09+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "waste",
+   "picks": [
+    "waste-6",
+    "waste-1"
+   ]
+  }
  },
  {
   "id": "3525d9a950cdd0fe",
@@ -1523,7 +1586,14 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/727/",
   "published": "2026-10-30",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "health",
+   "picks": [
+    "health-1",
+    "health-2"
+   ]
+  }
  },
  {
   "id": "0ed338ca764ccf39",
@@ -1573,7 +1643,14 @@
   "published": "2026-10-29",
   "fetched_at": "2026-11-15T12:42:32+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "health",
+   "picks": [
+    "health-1",
+    "health-3"
+   ]
+  }
  },
  {
   "id": "06f150ed010d60de",
@@ -1635,7 +1712,14 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/726/",
   "published": "2026-10-28",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "notice",
+   "picks": [
+    "notice-6",
+    "notice-3"
+   ]
+  }
  },
  {
   "id": "97c0e02938a8a2bf",
@@ -1660,7 +1744,14 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/100/",
   "published": "2026-10-27",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-1",
+    "bus-6"
+   ]
+  }
  },
  {
   "id": "f17e8efff9b0ee60",
@@ -1672,7 +1763,14 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/99/",
   "published": "2026-10-27",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-3",
+    "bus-2"
+   ]
+  }
  },
  {
   "id": "f52ca87393ab777c",
@@ -1684,7 +1782,14 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/725/",
   "published": "2026-10-27",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "school",
+   "picks": [
+    "school-1",
+    "school-2"
+   ]
+  }
  },
  {
   "id": "1763982593f9a645",
@@ -1722,7 +1827,14 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/96/",
   "published": "2026-10-23",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "road",
+   "picks": [
+    "road-6",
+    "road-4"
+   ]
+  }
  },
  {
   "id": "78bd328095cdba9d",
@@ -1758,7 +1870,14 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/97/",
   "published": "2026-10-22",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-1",
+    "bus-6"
+   ]
+  }
  },
  {
   "id": "3b098697d03ac8e7",
@@ -1770,7 +1889,14 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/98/",
   "published": "2026-10-22",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-1",
+    "bus-2"
+   ]
+  }
  },
  {
   "id": "65555eab12f51c40",
@@ -1782,7 +1908,13 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/724/",
   "published": "2026-10-22",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "council",
+   "picks": [
+    "council-4"
+   ]
+  }
  },
  {
   "id": "60264a85c6bac72c",
@@ -1806,7 +1938,13 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/723/",
   "published": "2026-10-21",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "general",
+   "picks": [
+    "general-1"
+   ]
+  }
  },
  {
   "id": "177327129d3d95cb",
@@ -1856,7 +1994,14 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/722/",
   "published": "2026-10-16",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "school",
+   "picks": [
+    "school-1",
+    "school-5"
+   ]
+  }
  },
  {
   "id": "26dc38fa8655a958",
@@ -1868,7 +2013,14 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/721/",
   "published": "2026-10-16",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "general",
+   "picks": [
+    "general-4",
+    "general-2"
+   ]
+  }
  },
  {
   "id": "14da7a2e76cbb21c",
@@ -1881,7 +2033,14 @@
   "published": "2026-10-14",
   "fetched_at": "2026-11-15T12:42:32+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "health",
+   "picks": [
+    "health-2",
+    "health-1"
+   ]
+  }
  },
  {
   "id": "a4fd5a9454ffe342",
@@ -1919,7 +2078,13 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/720/",
   "published": "2026-10-13",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "notice",
+   "picks": [
+    "notice-6"
+   ]
+  }
  },
  {
   "id": "49390be6ee538203",
@@ -1931,7 +2096,14 @@
   "url": "https://www.powiat-grodziski.pl/aktualnosci/719/",
   "published": "2026-10-13",
   "fetched_at": "2026-11-15T11:01:01+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "council",
+   "picks": [
+    "council-5",
+    "council-1"
+   ]
+  }
  },
  {
   "id": "fec8d50ee4f3e8cf",
@@ -1956,7 +2128,15 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/95/",
   "published": "2026-10-08",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-3",
+    "bus-1",
+    "bus-5"
+   ]
+  }
  },
  {
   "id": "e8e97d52cb277205",
@@ -1968,7 +2148,15 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/94/",
   "published": "2026-10-06",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-1",
+    "bus-2",
+    "bus-3"
+   ]
+  }
  },
  {
   "id": "b1cd5d9e39a9a15f",
@@ -1993,7 +2181,15 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/93/",
   "published": "2026-09-24",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-3",
+    "bus-2",
+    "bus-6"
+   ]
+  }
  },
  {
   "id": "2c0454903f8056e2",
@@ -2006,7 +2202,12 @@
   "published": "2026-09-18",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "general",
+   "picks": [],
+   "missing": "power lines"
+  }
  },
  {
   "id": "24fdf2a09fbea522",
@@ -2019,7 +2220,14 @@
   "published": "2026-09-15",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "health",
+   "picks": [
+    "health-1"
+   ],
+   "missing": "fox"
+  }
  },
  {
   "id": "f25a5725ce7e5262",
@@ -2031,7 +2239,14 @@
   "url": "https://gpagrodzisk.pl/aktualnosci/92/",
   "published": "2026-09-15",
   "fetched_at": "2026-11-15T11:01:02+00:00",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-3",
+    "bus-6"
+   ]
+  }
  },
  {
   "id": "e9c60f049345b54c",
@@ -2044,7 +2259,14 @@
   "published": "2026-09-10",
   "fetched_at": "2026-11-15T17:29:09+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "celebration",
+   "picks": [
+    "celebration-6",
+    "celebration-1"
+   ]
+  }
  },
  {
   "id": "27c10b1f755bc43d",
@@ -2057,7 +2279,14 @@
   "published": "2026-08-28",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "bus",
+   "picks": [
+    "bus-3",
+    "bus-1"
+   ]
+  }
  },
  {
   "id": "d6211271c7c5e6b1",
@@ -2070,7 +2299,14 @@
   "published": "2026-08-21",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "health",
+   "picks": [
+    "health-4",
+    "health-1"
+   ]
+  }
  },
  {
   "id": "5abd2d3c248270a9",
@@ -2083,7 +2319,14 @@
   "published": "2026-08-14",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "general",
+   "picks": [
+    "general-2"
+   ],
+   "missing": "playground"
+  }
  },
  {
   "id": "dd699ed013fd19ad",
@@ -2096,7 +2339,15 @@
   "published": "2026-08-05",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "celebration",
+   "picks": [
+    "celebration-1",
+    "celebration-4",
+    "celebration-5"
+   ]
+  }
  },
  {
   "id": "30eedea81dd9bb67",
@@ -2122,7 +2373,12 @@
   "published": "2026-07-24",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "general",
+   "picks": [],
+   "missing": "drought crops"
+  }
  },
  {
   "id": "06b997b2d91ecd71",
@@ -2135,7 +2391,13 @@
   "published": "2026-07-23",
   "fetched_at": "2026-11-15T11:21:17+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "celebration",
+   "picks": [
+    "celebration-1"
+   ]
+  }
  },
  {
   "id": "66c8dab4dbc3316b",
@@ -2148,7 +2410,14 @@
   "published": "2026-07-17",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "celebration",
+   "picks": [
+    "celebration-1",
+    "celebration-4"
+   ]
+  }
  },
  {
   "id": "b77d2d34c2254406",
@@ -2161,7 +2430,14 @@
   "published": "2026-06-26",
   "fetched_at": "2026-11-15T17:29:09+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "waste",
+   "picks": [
+    "waste-5",
+    "waste-1"
+   ]
+  }
  },
  {
   "id": "7b5c01bb0e13aba0",
@@ -2174,7 +2450,14 @@
   "published": "2026-06-26",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "water",
+   "picks": [
+    "water-5",
+    "water-1"
+   ]
+  }
  },
  {
   "id": "0f8215a751ec269c",
@@ -2187,7 +2470,14 @@
   "published": "2026-06-25",
   "fetched_at": "2026-11-15T12:42:31+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "celebration",
+   "picks": [
+    "celebration-6",
+    "celebration-1"
+   ]
+  }
  },
  {
   "id": "74ec65a87d7d6f65",
@@ -2200,7 +2490,14 @@
   "published": "2026-06-16",
   "fetched_at": "2026-11-15T17:29:09+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "waste",
+   "picks": [
+    "waste-1",
+    "waste-6"
+   ]
+  }
  },
  {
   "id": "47f3cbc23e847070",
@@ -2252,7 +2549,14 @@
   "published": "2025-12-18",
   "fetched_at": "2026-11-15T17:29:09+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "notice",
+   "picks": [
+    "notice-3",
+    "notice-5"
+   ]
+  }
  },
  {
   "id": "da08fcf983d1025c",
@@ -2317,6 +2621,13 @@
   "published": "2020-07-09",
   "fetched_at": "2026-11-15T11:21:17+00:00",
   "event_date": "",
-  "image": ""
+  "image": "",
+  "photo_ai": {
+   "topic": "notice",
+   "picks": [
+    "notice-6",
+    "notice-4"
+   ]
+  }
  }
 ]

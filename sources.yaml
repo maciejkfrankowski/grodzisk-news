@@ -14,6 +14,7 @@ sources:
       - https://grodzisk.pl/?feed=rss2
       - https://grodzisk.pl/category/wiadomosci/feed/
     home: https://grodzisk.pl
+    article: auto
 
   - id: powiat
     name: Powiat Grodziski
@@ -23,6 +24,7 @@ sources:
     link_pattern: '/aktualnosci/\d+/?$'
     strip: ['\(Zam:[^)]*\)\s*\d*']   # „(Zam: data, godz.) liczba odsłon” doklejane do tytułu
     home: https://www.powiat-grodziski.pl
+    article: auto
 
   - id: gpa
     name: Grodziskie Przewozy Autobusowe
@@ -32,6 +34,7 @@ sources:
     link_pattern: '/aktualnosci/\d+/?$'
     strip: ['\(Zam:[^)]*\)\s*\d*']   # „(Zam: data, godz.) liczba odsłon” doklejane do tytułu
     home: https://gpagrodzisk.pl
+    article: auto
 
   - id: biblioteka
     name: Biblioteka Publiczna Gminy Grodzisk Mazowiecki
@@ -39,6 +42,7 @@ sources:
     adapter: rss
     url: https://biblioteka.grodzisk.pl/feed/
     home: https://biblioteka.grodzisk.pl
+    article: auto
 
   - id: ck-wydarzenia
     name: Centrum Kultury
@@ -46,6 +50,7 @@ sources:
     adapter: tribe_events
     url: https://www.centrumkultury.eu/wp-json/tribe/events/v1/events?per_page=50
     home: https://www.centrumkultury.eu/wydarzenia/
+    article: auto
 
   - id: ck
     name: Centrum Kultury – ogłoszenia
@@ -53,6 +58,7 @@ sources:
     adapter: rss
     url: https://www.centrumkultury.eu/feed/
     home: https://www.centrumkultury.eu
+    article: auto
 
   - id: psp
     name: Straż Pożarna – KP PSP w Grodzisku Mazowieckim
@@ -63,6 +69,7 @@ sources:
     require_date: true        # wzorzec łapie też menu; wpisy z listy mają datę
     enabled: false            # gov.pl nieosiągalne z serwerów GitHub Actions; włączyć po migracji na VPS
     home: https://www.gov.pl/web/kppsp-grodzisk-mazowiecki
+    article: auto
 
   - id: osir
     name: OSiR Grodzisk Mazowiecki
@@ -70,6 +77,7 @@ sources:
     adapter: rss
     url: https://grodzisksport.pl/rss/aktualnosci.xml
     home: https://grodzisksport.pl
+    article: auto
 
   - id: solectwa
     name: Sołectwa Gminy Grodzisk Mazowiecki
@@ -77,6 +85,7 @@ sources:
     adapter: rss
     url: https://solectwa.grodzisk.pl/feed/
     home: https://solectwa.grodzisk.pl
+    article: auto
 
   - id: szpital
     name: Szpital Zachodni
@@ -85,6 +94,7 @@ sources:
     url: https://szpitalzachodni.pl/feed/
     exclude_title: '^(konkurs ofert|jadłospis)'
     home: https://szpitalzachodni.pl
+    article: auto
 
   - id: wkd
     name: Warszawska Kolej Dojazdowa
@@ -93,6 +103,7 @@ sources:
     url: https://wkd.com.pl/aktualnosci?format=feed&type=rss
     home: https://wkd.com.pl
     enabled: false   # 403 dla GitHub Actions (strona HTML i RSS); włączyć po migracji na VPS lub zgodzie WKD
+    article: auto
 
   - id: policja
     name: Policja – KPP w Grodzisku Mazowieckim
@@ -103,6 +114,7 @@ sources:
     link_pattern: 'grodzisk\.policja\.gov\.pl/pgm/aktualnosci/\d+,[^/?#]+\.html$'
     require_date: true
     home: https://grodzisk.policja.gov.pl
+    article: auto
 
   - id: osir-wydarzenia
     name: OSiR Grodzisk Mazowiecki
@@ -112,6 +124,7 @@ sources:
     link_pattern: 'grodzisksport\.pl/kalendarz-wydarzen/.+\.html$'
     events: true              # termin z listy „Najnowsze wydarzenia” (DD - MM - RRRR, Godz. GG:MM)
     home: https://grodzisksport.pl/kalendarz-wydarzen/
+    article: auto
 
   - id: odpady
     name: Gospodarka odpadami – Urząd Miejski
@@ -121,3 +134,4 @@ sources:
     fallback_urls:
       - https://gospodarkaodpadami.grodzisk.pl/feed/
     home: https://gospodarkaodpadami.grodzisk.pl
+    article: auto

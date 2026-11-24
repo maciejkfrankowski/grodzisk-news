@@ -55,7 +55,7 @@ collections:
       - {label: Wyróżnij na stronie głównej, name: featured, widget: boolean, default: false, hint: "Najnowszy wyróżniony artykuł trafia na górę strony głównej."}
       - {label: Szkic (nie publikuj), name: draft, widget: boolean, default: false}
       - {label: Treść, name: body, widget: markdown}
-- name: releases
+  - name: releases
     label: Artykuły z komunikatów
     label_singular: Artykuł z komunikatu
     folder: content/komunikaty

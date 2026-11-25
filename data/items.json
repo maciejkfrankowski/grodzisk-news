@@ -1,5 +1,34 @@
 [
  {
+  "id": "d1c8c352798829ac",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Spotkanie Klubu Małego Odkrywcy: Fauna i flora Syberii",
+  "lead": "W sobotę, 12 grudnia, zapraszamy na kolejne spotkanie Grodziskiego Klubu Małego Odkrywcy! Tym razem wybierzemy się w fascynującą podróż na Syberię! Poznamy niezwykły świat…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/spotkanie-klubu-malego-odkrywcy-fauna-i-flora-syberii/",
+  "published": "2026-11-25",
+  "fetched_at": "2026-11-25T14:22:36+00:00",
+  "event_date": "2026-12-12 11:00:00"
+ },
+ {
+  "id": "d86eb55a519e0e60",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Logoczytanki odwołane!",
+  "lead": "25 listopada Logoczytanki odwołane. Za utrudnienia przepraszamy.",
+  "url": "https://biblioteka.grodzisk.pl/logoczytanki-odwolane/",
+  "published": "2026-11-25",
+  "fetched_at": "2026-11-25T14:22:32+00:00",
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Logoczytanki-odwolane.jpeg",
+  "article": {
+   "state": "published",
+   "file": "2026-11-25-logoczytanki-odwolane-25-listopada-biblioteka-zapowiada-nowe-d86eb5.md"
+  }
+ },
+ {
   "id": "2bdfdc2fa5ac642e",
   "source": "biblioteka",
   "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",

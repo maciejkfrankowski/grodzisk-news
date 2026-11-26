@@ -1,5 +1,85 @@
 [
  {
+  "id": "895cc490814139d0",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Grodziskie Mikołajki",
+  "lead": "Inna lokalizacja · Serdecznie zapraszamy w sobotę 5 grudnia 2026 roku o godz.12.00 na Grodziskie Mikołajki, które odbędą się w hali sportowej CAiIS w Grodzisku Mazowieckim przy ul. Sportowej 29…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/grodziskie-mikolajki-11/",
+  "published": "2026-11-26",
+  "fetched_at": "2026-11-26T13:54:45+00:00",
+  "event_date": "2026-12-05 12:00:00"
+ },
+ {
+  "id": "57c2dc8bee87c254",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Magiczna Kraina Świętego Mikołaja",
+  "lead": "Zapraszamy 3, 10, 17 grudnia, godz. 12:00-14:00. Pawilon Kultury. Wstęp wolny!",
+  "url": "https://biblioteka.grodzisk.pl/magiczna-kraina-swietego-mikolaja/",
+  "published": "2026-11-26",
+  "fetched_at": "2026-11-26T13:54:40+00:00",
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Magiczna-Kraina-scaled.png",
+  "article": {
+   "state": "published",
+   "file": "2026-11-26-swiateczne-warsztaty-dla-dzieci-w-bibliotece-w-grodzisku-maz-57c2dc.md"
+  }
+ },
+ {
+  "id": "646a892f5b6440fd",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Mikołajki w Filii w Kadach",
+  "lead": "Zapraszamy 5 grudnia do Filii nr 1 w Kadach na wyjątkowe Mikołajki dla dzieci! Warsztaty świąteczne i teatrzyk. Wstęp wolny",
+  "url": "https://biblioteka.grodzisk.pl/mikolajki-w-filii-w-kadach/",
+  "published": "2026-11-26",
+  "fetched_at": "2026-11-26T13:54:40+00:00",
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-152-scaled.png",
+  "article": {
+   "state": "published",
+   "file": "2026-11-26-mikolajki-w-filii-w-kadach-warsztaty-i-teatrzyk-dla-dzieci-646a89.md"
+  }
+ },
+ {
+  "id": "7069bb5ab8f27f7f",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Spotkaj Mikołaja w Pawilonie Kultury!",
+  "lead": "Zapraszamy 5, 12, 19 grudnia, w godz. 12:00-14:00. Pawilon Kultury. Wstęp wolny!",
+  "url": "https://biblioteka.grodzisk.pl/spotkaj-mikolaja-w-pawilonie-kultury/",
+  "published": "2026-11-26",
+  "fetched_at": "2026-11-26T13:54:40+00:00",
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Spotkaj-Mikolaja-scaled.png",
+  "article": {
+   "state": "published",
+   "file": "2026-11-26-spotkania-z-mikolajem-w-pawilonie-kultury-w-grudniu-7069bb.md"
+  }
+ },
+ {
+  "id": "fc1b206dfcfcd2b7",
+  "source": "gmina",
+  "source_name": "Urząd Miejski w Grodzisku Mazowieckim",
+  "category": "miasto",
+  "title": "PODSUMOWANIE XXXVI SESJI RADY MIEJSKIEJ",
+  "lead": "Wieloletnia Prognoza Finansowa Radni uchwalili Zmianę Wieloletniej Prognozy Finansowej – zmiany w WPF dotyczą zmian dokonanych w budżecie gminy na 2026 r. polegających na przesunięciu kwot z bieżącego roku na rok 2027 w…",
+  "url": "https://grodzisk.pl/2026/11/26/podsumowanie-xxxvi-sesji-rady-miejskiej/",
+  "published": "2026-11-26",
+  "fetched_at": "2026-11-26T13:54:37+00:00",
+  "event_date": "",
+  "image": "https://grodzisk.pl/wp-content/uploads/2026/11/PODSUMOWANIE-XXXVI-SESJI-RADY-MIEJSKIEJ-W-GRODZISKU-MAZOWIECKIM-768x456.png",
+  "article": {
+   "state": "published",
+   "file": "2026-11-26-rada-miejska-zmienila-budzet-na-2026-rok-i-ustalila-stawki-p-fc1b20.md"
+  }
+ },
+ {
   "id": "d1c8c352798829ac",
   "source": "ck-wydarzenia",
   "source_name": "Centrum Kultury",

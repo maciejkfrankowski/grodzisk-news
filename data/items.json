@@ -1,5 +1,187 @@
 [
  {
+  "id": "d6bf192fa6a927be",
+  "source": "odpady",
+  "source_name": "Gospodarka odpadami – Urząd Miejski",
+  "category": "miasto",
+  "title": "UWAGA!",
+  "lead": "Zmiana godzin pracy Punktu Selektywnej Zbiórki Odpadów Komunalnych przy ul. Ekologicznej 1 w Chrzanowie Dużym:",
+  "url": "https://gospodarkaodpadami.grodzisk.pl/2026/11/27/uwaga/",
+  "published": "2026-11-27",
+  "fetched_at": "2026-11-27T13:51:56+00:00",
+  "event_date": "",
+  "image": "",
+  "photo_ai": {
+   "topic": "waste",
+   "picks": [
+    "waste-1",
+    "waste-4",
+    "waste-3"
+   ]
+  },
+  "article": {
+   "state": "skipped",
+   "note": "krótki komunikat (338 znaków)"
+  }
+ },
+ {
+  "id": "cd334a24707f80a1",
+  "source": "policja",
+  "source_name": "Policja – KPP w Grodzisku Mazowieckim",
+  "category": "bezpieczenstwo",
+  "title": "Trudne warunki na drogach - zadbajmy o bezpieczeństwo",
+  "lead": "Padający śnieg lub deszcz, śliskie jezdnie i chodniki oraz szybko zapadający zmierzch to warunki pogodowe, z jakimi muszą liczyć się w najbliższym czasie wszyscy użytkownicy dróg. Panująca obecnie aura niestety sprzyja…",
+  "url": "https://grodzisk.policja.gov.pl/pgm/aktualnosci/154598,Trudne-warunki-na-drogach-zadbajmy-o-bezpieczenstwo.html",
+  "published": "2026-11-27",
+  "fetched_at": "2026-11-27T13:51:54+00:00",
+  "event_date": "",
+  "image": "https://grodzisk.policja.gov.pl/dokumenty/zalaczniki/170/oryginal/170-312108.jpg",
+  "article": {
+   "state": "rejected",
+   "note": "odpowiedź modelu nie do odczytania"
+  }
+ },
+ {
+  "id": "5074ba266e437ac0",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Spotkanie z Aleksandrą Malinowską, autorką książki „Dziedzictwo przemysłowe w przestrzeni Grodziska Mazowieckiego”",
+  "lead": "W czwartek 10 grudnia o godzinie 18.00 zapraszamy na spotkanie z Aleksandrą Malinowską, autorką książki „Dziedzictwo przemysłowe w przestrzeni Grodziska Mazowieckiego”, mieszkanką…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/spotkanie-z-aleksandra-malinowska-autorka-ksiazki-dziedzictwo-przemyslowe-w-przestrzeni-grodziska-mazowieckiego/",
+  "published": "2026-11-27",
+  "fetched_at": "2026-11-27T13:51:50+00:00",
+  "event_date": "2026-12-10 18:00:00"
+ },
+ {
+  "id": "7f15635d0a9b0156",
+  "source": "ck-wydarzenia",
+  "source_name": "Centrum Kultury",
+  "category": "kultura",
+  "title": "Zimowy Koncert Musicalowy",
+  "lead": "Centrum Kultury · Zapraszamy na Zimowy Koncert Musicalowy 12 grudnia 2026 g. 12.00 sala widowiskowa Centrum Kultury, ul Spółdzielcza 9 koncert podsumowujący pierwszy semestr utwory taneczne i…",
+  "url": "https://www.centrumkultury.eu/wydarzenie/zimowy-koncert-musicalowy-5/",
+  "published": "2026-11-27",
+  "fetched_at": "2026-11-27T13:51:50+00:00",
+  "event_date": "2026-12-12 12:00:00"
+ },
+ {
+  "id": "16399536f596a736",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Onkolife. Fitness z Martą Tarczyńską",
+  "lead": "Zapraszamy 1 grudnia, godz. 18:00. Boks interaktywny w Bibliotece Głównej. Wstęp wolny dla osób leczących się onkologicznie.",
+  "url": "https://biblioteka.grodzisk.pl/onkolife-fitness-z-marta-tarczynska/",
+  "published": "2026-11-27",
+  "fetched_at": "2026-11-27T13:51:46+00:00",
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Onkolife-1.12-scaled.jpg",
+  "article": {
+   "state": "published",
+   "file": "2026-11-27-spotkanie-onkolife-z-marta-tarczynska-w-bibliotece-glownej-w-163995.md"
+  }
+ },
+ {
+  "id": "8011c6f1c74cb0bb",
+  "source": "powiat",
+  "source_name": "Powiat Grodziski",
+  "category": "powiat",
+  "title": "Prezes Rady Ministrów przedłużył obowiązywanie stopni alarmowych",
+  "lead": "",
+  "url": "https://www.powiat-grodziski.pl/aktualnosci/734/",
+  "published": "2026-11-27",
+  "fetched_at": "2026-11-27T13:51:44+00:00",
+  "event_date": "",
+  "image": "",
+  "photo_ai": {
+   "topic": "police",
+   "picks": [
+    "police-1",
+    "police-3"
+   ]
+  },
+  "article": {
+   "state": "published",
+   "file": "2026-11-27-prezes-rady-ministrow-przedluzyl-stopnie-alarmowe-na-kolei-o-8011c6.md"
+  }
+ },
+ {
+  "id": "01ae8b0b8ddd094d",
+  "source": "powiat",
+  "source_name": "Powiat Grodziski",
+  "category": "powiat",
+  "title": "Razem dla mieszkańców",
+  "lead": "",
+  "url": "https://www.powiat-grodziski.pl/aktualnosci/733/",
+  "published": "2026-11-27",
+  "fetched_at": "2026-11-27T13:51:44+00:00",
+  "event_date": "",
+  "image": "",
+  "photo_ai": {
+   "topic": "council",
+   "picks": [
+    "council-3",
+    "council-5"
+   ]
+  },
+  "article": {
+   "state": "published",
+   "file": "2026-11-27-spotkanie-z-okazji-dnia-pracownika-socjalnego-i-plany-nowej-01ae8b.md"
+  }
+ },
+ {
+  "id": "a73497b05be1ed6c",
+  "source": "gmina",
+  "source_name": "Urząd Miejski w Grodzisku Mazowieckim",
+  "category": "miasto",
+  "title": "AKCJA ZIMA 2026/2027",
+  "lead": "Zakład Gospodarki Komunalnej w Grodzisku Mazowieckim Sp z o. o. jest gotowy do realizacji zimowego utrzymania dróg i ciągów pieszych na terenie miasta i gminy. Zimowym utrzymaniem objętych jest około 408 km dróg. Miasto…",
+  "url": "https://grodzisk.pl/2026/11/27/akcja-zima-2026-2027/",
+  "published": "2026-11-27",
+  "fetched_at": "2026-11-27T13:51:43+00:00",
+  "event_date": "",
+  "image": "https://grodzisk.pl/wp-content/uploads/cache/2026/11/IMG_20261123_123718/927307352.jpg",
+  "article": {
+   "state": "rejected",
+   "note": "odpowiedź modelu nie do odczytania"
+  }
+ },
+ {
+  "id": "5ea902188738a737",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "Dyskusyjny Klub Książki w Kadach",
+  "lead": "Zapraszamy 27 listopada o godzinie 18:00 w Filii nr 1 w Kadach. Wstęp wolny!",
+  "url": "https://biblioteka.grodzisk.pl/dyskusyjny-klub-ksiazki-w-kadach-3/",
+  "published": "2026-11-26",
+  "fetched_at": "2026-11-27T13:51:46+00:00",
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-1271-scaled.jpg",
+  "article": {
+   "state": "published",
+   "file": "2026-11-26-dyskusyjny-klub-ksiazki-w-kadach-omowi-cool-po-koreansku-5ea902.md"
+  }
+ },
+ {
+  "id": "ddfac96b68b342ca",
+  "source": "biblioteka",
+  "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
+  "category": "kultura",
+  "title": "“Wichrowe Wzgórza” w Bibliotecznym Klubie Adapt!",
+  "lead": "Zapraszamy 9 grudnia, godz. 18:00. Pawilon Kultury. Wstęp wolny!",
+  "url": "https://biblioteka.grodzisk.pl/wichrowe-wzgorza-w-bibliotecznym-klubie-adapt/",
+  "published": "2026-11-26",
+  "fetched_at": "2026-11-27T13:51:46+00:00",
+  "event_date": "",
+  "image": "https://biblioteka.grodzisk.pl/wp-content/uploads/2026/11/Instagram-post-Klub-Adapt-9.12-scaled.jpg",
+  "article": {
+   "state": "rejected",
+   "note": "odpowiedź modelu nie do odczytania"
+  }
+ },
+ {
   "id": "895cc490814139d0",
   "source": "ck-wydarzenia",
   "source_name": "Centrum Kultury",
@@ -34,7 +216,7 @@
   "source_name": "Biblioteka Publiczna Gminy Grodzisk Mazowiecki",
   "category": "kultura",
   "title": "Mikołajki w Filii w Kadach",
-  "lead": "Zapraszamy 5 grudnia do Filii nr 1 w Kadach na wyjątkowe Mikołajki dla dzieci! Warsztaty świąteczne i teatrzyk. Wstęp wolny",
+  "lead": "Zapraszamy 5 grudnia do Filii nr 1 w Kadach. Warsztaty świąteczne i teatrzyk. Wstęp wolny",
   "url": "https://biblioteka.grodzisk.pl/mikolajki-w-filii-w-kadach/",
   "published": "2026-11-26",
   "fetched_at": "2026-11-26T13:54:40+00:00",
